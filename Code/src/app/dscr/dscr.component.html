@@ -1,0 +1,1956 @@
+<div class="aliceblue" style="padding: 1rem; border-bottom: 1px solid #333;">
+    <mat-grid-list cols="24" rowHeight="2:1">
+      <mat-grid-tile [colspan]="24">
+        <span class="sectionHeading"> Debt Service Coverage Ratio  (DSCR):</span>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <div class="aliceblue" style="padding: 1rem; border-bottom: 1px solid #333;">
+    <mat-grid-list cols="24" rowHeight="2:1">
+      <mat-grid-tile [colspan]="24">
+        <span class="sectionHeading"> Calculation of Debt Service Coverage Ratio </span>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <app-sheet-heading [year]="id"></app-sheet-heading>
+
+  <form #frm="ngForm" (ngSubmit)="savedata(frm.value)" >
+
+  <div [ngSwitch]="id">
+
+    <div *ngSwitchCase="'1'">
+      <div class="Contain" >
+          <div class="ContainNo">
+         a
+          </div>
+          <div class="ContainName" >
+             Profit After Taxes  </div>
+             
+      
+      <!-- <div class="ContainValue" >
+            
+                      <input type="number"  class="ipt"   name="a1" [(ngModel)]="a1" (keyup)="update()"> 
+                           
+                    </div>
+                    <div class="ContainValue" >
+            
+                      <input type="number"  class="ipt" name="a2" [(ngModel)]="a2" (keyup)="update()"> 
+                          
+                    </div>
+                     -->
+                     <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="a3" [(ngModel)]="a3" (keyup)="update()"> 
+                      
+                    </div>
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="a4" [(ngModel)]="a4" (keyup)="update()"> 
+                      
+                    </div>
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="ta1"  [(ngModel)]="ta1" (keyup)="update()"> 
+                      
+                    </div>
+                   
+        </div>
+
+      </div>
+  <div *ngSwitchCase="'2'">
+  <div class="Contain" >
+      <div class="ContainNo">
+     a
+      </div>
+      <div class="ContainName" >
+         Profit After Taxes  </div>
+         
+  
+  <!-- <div class="ContainValue" >
+        
+                  <input type="number"  class="ipt"  name="a1"  [(ngModel)]="a1" (keyup)="update()"> 
+                       
+                </div>
+                <div class="ContainValue" >
+        
+                  <input type="number"  class="ipt"  name="a2"  [(ngModel)]="a2" (keyup)="update()"> 
+                      
+                </div>
+                 -->
+                 <div class="ContainValue" >
+                  <input type="number"  class="ipt"  name="a3"  [(ngModel)]="a3" (keyup)="update()"> 
+                  
+                </div>
+                <div class="ContainValue" >
+                  <input type="number"  class="ipt"  name="a4"  [(ngModel)]="a4" (keyup)="update()"> 
+                  
+                </div>
+                <div class="ContainValue" >
+                  <input type="number"  class="ipt"  name="a5"  [(ngModel)]="a5" (keyup)="update()"> 
+                  
+                </div>
+         
+                <div class="ContainValue" >
+                  <input type="number"  class="ipt"  name="ta2"  [(ngModel)]="ta2" (keyup)="update()"> 
+                  
+                </div>
+              
+      
+    </div>
+  </div>
+  <div *ngSwitchCase="'3'">
+      <div class="Contain" >
+          <div class="ContainNo">
+         a
+          </div>
+          <div class="ContainName" >
+             Profit After Taxes 
+           </div>
+             
+      
+      <!-- <div class="ContainValue" >
+            
+                      <input type="number"  class="ipt"  name="a1"  [(ngModel)]="a1" (keyup)="update()"> 
+                           
+                    </div>
+                    <div class="ContainValue" >
+            
+                      <input type="number"  class="ipt"  name="a2"  [(ngModel)]="a2" (keyup)="update()"> 
+                          
+                    </div>
+                    -->
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="a3"  [(ngModel)]="a3" (keyup)="update()"> 
+                      
+                    </div>
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="a4"  [(ngModel)]="a4" (keyup)="update()"> 
+                      
+                    </div>
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="a5"  [(ngModel)]="a5" (keyup)="update()"> 
+                      
+                    </div>
+             
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="a6"  [(ngModel)]="a6" (keyup)="update()"> 
+                      
+                    </div>
+                  
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="ta3"  [(ngModel)]="ta3" (keyup)="update()"> 
+                      
+                    </div>
+                  
+          
+        </div>
+      </div>
+      <div *ngSwitchCase="'4'">
+          <div class="Contain" >
+              <div class="ContainNo">
+             a
+              </div>
+              <div class="ContainName" >
+                 Profit After Taxes  </div>
+                 
+          
+          <!-- <div class="ContainValue" >
+                
+                          <input type="number"  class="ipt"  name="a1"  [(ngModel)]="a1" (keyup)="update()"> 
+                               
+                        </div>
+                        <div class="ContainValue" >
+                
+                          <input type="number"  class="ipt"  name="a2"  [(ngModel)]="a2" (keyup)="update()"> 
+                              
+                        </div>
+                       -->
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="a3"  [(ngModel)]="a3" (keyup)="update()"> 
+                          
+                        </div>
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="a4"  [(ngModel)]="a4" (keyup)="update()"> 
+                          
+                        </div>
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="a5"  [(ngModel)]="a5" (keyup)="update()"> 
+                          
+                        </div>
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="a6"  [(ngModel)]="a6" (keyup)="update()"> 
+                          
+                        </div>
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="a7"  [(ngModel)]="a7" (keyup)="update()"> 
+                          
+                        </div>
+                        
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="ta4"  [(ngModel)]="ta4" (keyup)="update()"> 
+                          
+                        </div>
+                      
+                 
+                      
+              
+            </div>
+          </div>
+          <div *ngSwitchCase="'5'">
+              <div class="Contain" >
+                  <div class="ContainNo">
+                 a
+                  </div>
+                  <div class="ContainName" >
+                     Profit After Taxes  </div>
+                     
+              
+              <!-- <div class="ContainValue" >
+                    
+                              <input type="number"  class="ipt"  name="a1"  [(ngModel)]="a1" (keyup)="update()"> 
+                                   
+                            </div>
+                            <div class="ContainValue" >
+                    
+                              <input type="number"  class="ipt"  name="a2"  [(ngModel)]="a2" (keyup)="update()"> 
+                                  
+                            </div> -->
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="a3"  [(ngModel)]="a3" (keyup)="update()"> 
+                              
+                            </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="a4"  [(ngModel)]="a4" (keyup)="update()"> 
+                              
+                            </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="a5"  [(ngModel)]="a5" (keyup)="update()"> 
+                              
+                            </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="a6"  [(ngModel)]="a6" (keyup)="update()"> 
+                              
+                            </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="a7"  [(ngModel)]="a7" (keyup)="update()"> 
+                              
+                            </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="a8"  [(ngModel)]="a8" (keyup)="update()"> 
+                              
+                            </div>
+                          
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="t5"  [(ngModel)]="t5" (keyup)="update()"> 
+                              
+                            </div>
+                          
+                </div>
+              </div>
+
+
+    <div *ngSwitchCase="'1'">
+      <div class="Contain" >
+          <div class="ContainNo">
+         b
+          </div>
+          <div class="ContainName" >
+            Depreciation  </div>
+             
+<!--       
+      <div class="ContainValue" >
+            
+                      <input type="number"  class="ipt"   name="dp1" [(ngModel)]="dp1" (keyup)="update()"> 
+                           
+                    </div>
+                    <div class="ContainValue" >
+            
+                      <input type="number"  class="ipt" name="dp2" [(ngModel)]="dp2" (keyup)="update()"> 
+                          
+                    </div>
+                    -->
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="dp3" [(ngModel)]="dp3" (keyup)="update()"> 
+                      
+                    </div> 
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="dp4" [(ngModel)]="dp4" (keyup)="update()"> 
+                      
+                    </div>
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="tp1"  [(ngModel)]="tp1" (keyup)="update()"> 
+                      
+                    </div>
+                   
+        </div>
+
+      </div>
+  <div *ngSwitchCase="'2'">
+  <div class="Contain" >
+      <div class="ContainNo">
+     b
+      </div>
+      <div class="ContainName" >
+        Depreciation  </div>
+         
+  
+  <!-- <div class="ContainValue" >
+        
+                  <input type="number"  class="ipt"  name="dp1"  [(ngModel)]="dp1" (keyup)="update()"> 
+                       
+                </div>
+                <div class="ContainValue" >
+        
+                  <input type="number"  class="ipt"  name="dp2"  [(ngModel)]="dp2" (keyup)="update()"> 
+                      
+                </div>
+              -->
+              <div class="ContainValue" >
+                <input type="number"  class="ipt"  name="dp3"  [(ngModel)]="dp3" (keyup)="update()"> 
+                
+              </div> 
+                <div class="ContainValue" >
+                  <input type="number"  class="ipt"  name="dp4"  [(ngModel)]="dp4" (keyup)="update()"> 
+                  
+                </div>
+                <div class="ContainValue" >
+                  <input type="number"  class="ipt"  name="dp5"  [(ngModel)]="dp5" (keyup)="update()"> 
+                  
+                </div>
+         
+                <div class="ContainValue" >
+                  <input type="number"  class="ipt"  name="tp2"  [(ngModel)]="tp2" (keyup)="update()"> 
+                  
+                </div>
+              
+      
+    </div>
+  </div>
+  <div *ngSwitchCase="'3'">
+      <div class="Contain" >
+          <div class="ContainNo">
+         b
+          </div>
+          <div class="ContainName" >
+            Depreciation 
+           </div>
+             
+      
+      <!-- <div class="ContainValue" >
+            
+                      <input type="number"  class="ipt"  name="dp1"  [(ngModel)]="dp1" (keyup)="update()"> 
+                           
+                    </div>
+                    <div class="ContainValue" >
+            
+                      <input type="number"  class="ipt"  name="dp2"  [(ngModel)]="dp2" (keyup)="update()"> 
+                          
+                    </div>
+                    -->
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="dp3"  [(ngModel)]="dp3" (keyup)="update()"> 
+                      
+                    </div>
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="dp4"  [(ngModel)]="dp4" (keyup)="update()"> 
+                      
+                    </div>
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="dp5"  [(ngModel)]="dp5" (keyup)="update()"> 
+                      
+                    </div>
+             
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="dp6"  [(ngModel)]="dp6" (keyup)="update()"> 
+                      
+                    </div>
+                  
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="tp3"  [(ngModel)]="tp3" (keyup)="update()"> 
+                      
+                    </div>
+                  
+          
+        </div>
+      </div>
+      <div *ngSwitchCase="'4'">
+          <div class="Contain" >
+              <div class="ContainNo">
+             b
+              </div>
+              <div class="ContainName" >
+                Depreciation  </div>
+                 
+          
+          <!-- <div class="ContainValue" >
+                
+                          <input type="number"  class="ipt"  name="dp1"  [(ngModel)]="dp1" (keyup)="update()"> 
+                               
+                        </div>
+                        <div class="ContainValue" >
+                
+                          <input type="number"  class="ipt"  name="dp2"  [(ngModel)]="dp2" (keyup)="update()"> 
+                              
+                        </div>
+                       -->
+                       <div class="ContainValue" >
+                        <input type="number"  class="ipt"  name="dp3"  [(ngModel)]="dp3" (keyup)="update()"> 
+                        
+                      </div>
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="dp4"  [(ngModel)]="dp4" (keyup)="update()"> 
+                          
+                        </div>
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="dp5"  [(ngModel)]="dp5" (keyup)="update()"> 
+                          
+                        </div>
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="dp6"  [(ngModel)]="dp6" (keyup)="update()"> 
+                          
+                        </div>
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="dp7"  [(ngModel)]="dp7" (keyup)="update()"> 
+                          
+                        </div>
+                        
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="tp4"  [(ngModel)]="tp4" (keyup)="update()"> 
+                          
+                        </div>
+                      
+                 
+                      
+              
+            </div>
+          </div>
+          <div *ngSwitchCase="'5'">
+              <div class="Contain" >
+                  <div class="ContainNo">
+                 b
+                  </div>
+                  <div class="ContainName" >
+                    Depreciation </div>
+                     
+<!--               
+              <div class="ContainValue" >
+                    
+                              <input type="number"  class="ipt"  name="dp1"  [(ngModel)]="dp1" (keyup)="update()"> 
+                                   
+                            </div>
+                            <div class="ContainValue" >
+                    
+                              <input type="number"  class="ipt"  name="dp2"  [(ngModel)]="dp2" (keyup)="update()"> 
+                                  
+                            </div>
+                            -->
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="dp3"  [(ngModel)]="dp3" (keyup)="update()"> 
+                              
+                            </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="dp4"  [(ngModel)]="dp4" (keyup)="update()"> 
+                              
+                            </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="dp5"  [(ngModel)]="dp5" (keyup)="update()"> 
+                              
+                            </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="dp6"  [(ngModel)]="dp6" (keyup)="update()"> 
+                              
+                            </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="dp7"  [(ngModel)]="dp7" (keyup)="update()"> 
+                              
+                            </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="dp8"  [(ngModel)]="dp8" (keyup)="update()"> 
+                              
+                            </div>
+                          
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="dp9"  [(ngModel)]="dp9" (keyup)="update()"> 
+                              
+                            </div>
+                          
+                </div>
+              </div>
+
+
+    <div *ngSwitchCase="'1'">
+      <div class="Contain" >
+          <div class="ContainNo">
+         c
+          </div>
+          <div class="ContainName" >
+            Interest</div>
+             
+      
+      <!-- <div class="ContainValue" >
+            
+                      <input type="number"  class="ipt"   name="in1" [(ngModel)]="in1" (keyup)="update()"> 
+                           
+                    </div>
+                    <div class="ContainValue" >
+            
+                      <input type="number"  class="ipt" name="in2" [(ngModel)]="in2" (keyup)="update()"> 
+                          
+                    </div> -->
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="in3" [(ngModel)]="in3" (keyup)="update()"> 
+                      
+                    </div>
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="in4" [(ngModel)]="in4" (keyup)="update()"> 
+                      
+                    </div>
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="tn1"  [(ngModel)]="tn1" (keyup)="update()"> 
+                      
+                    </div>
+                   
+        </div>
+
+      </div>
+  <div *ngSwitchCase="'2'">
+  <div class="Contain" >
+      <div class="ContainNo">
+     c
+      </div>
+      <div class="ContainName" >
+        Interest </div>
+         
+  
+  <!-- <div class="ContainValue" >
+        
+                  <input type="number"  class="ipt"  name="in1"  [(ngModel)]="in1" (keyup)="update()"> 
+                       
+                </div>
+                <div class="ContainValue" >
+        
+                  <input type="number"  class="ipt"  name="in2"  [(ngModel)]="in2" (keyup)="update()"> 
+                      
+                </div> -->
+                <div class="ContainValue" >
+                  <input type="number"  class="ipt"  name="in3"  [(ngModel)]="in3" (keyup)="update()"> 
+                  
+                </div>
+                <div class="ContainValue" >
+                  <input type="number"  class="ipt"  name="in4"  [(ngModel)]="in4" (keyup)="update()"> 
+                  
+                </div>
+                <div class="ContainValue" >
+                  <input type="number"  class="ipt"  name="in5"  [(ngModel)]="in5" (keyup)="update()"> 
+                  
+                </div>
+         
+                <div class="ContainValue" >
+                  <input type="number"  class="ipt"  name="tn2"  [(ngModel)]="tn2" (keyup)="update()"> 
+                  
+                </div>
+              
+      
+    </div>
+  </div>
+  <div *ngSwitchCase="'3'">
+      <div class="Contain" >
+          <div class="ContainNo">
+         c
+          </div>
+          <div class="ContainName" >
+            Interest
+           </div>
+             
+      
+      <!-- <div class="ContainValue" >
+            
+                      <input type="number"  class="ipt"  name="in1"  [(ngModel)]="in1" (keyup)="update()"> 
+                           
+                    </div>
+                    <div class="ContainValue" >
+            
+                      <input type="number"  class="ipt"  name="in2"  [(ngModel)]="in2" (keyup)="update()"> 
+                          
+                    </div> -->
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="in3"  [(ngModel)]="in3" (keyup)="update()"> 
+                      
+                    </div>
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="in4"  [(ngModel)]="in4" (keyup)="update()"> 
+                      
+                    </div>
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="in5"  [(ngModel)]="in5" (keyup)="update()"> 
+                      
+                    </div>
+             
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="in6"  [(ngModel)]="in6" (keyup)="update()"> 
+                      
+                    </div>
+                  
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="tn3"  [(ngModel)]="tn3" (keyup)="update()"> 
+                      
+                    </div>
+                  
+          
+        </div>
+      </div>
+      <div *ngSwitchCase="'4'">
+          <div class="Contain" >
+              <div class="ContainNo">
+             c
+              </div>
+              <div class="ContainName" >
+                Interest  </div>
+                 
+          
+          <!-- <div class="ContainValue" >
+                
+                          <input type="number"  class="ipt"  name="in1"  [(ngModel)]="in1" (keyup)="update()"> 
+                               
+                        </div>
+                        <div class="ContainValue" >
+                
+                          <input type="number"  class="ipt"  name="in2"  [(ngModel)]="in2" (keyup)="update()"> 
+                              
+                        </div> -->
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="in3"  [(ngModel)]="in3" (keyup)="update()"> 
+                          
+                        </div>
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="in4"  [(ngModel)]="in4" (keyup)="update()"> 
+                          
+                        </div>
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="in5"  [(ngModel)]="in5" (keyup)="update()"> 
+                          
+                        </div>
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="in6"  [(ngModel)]="in6" (keyup)="update()"> 
+                          
+                        </div>
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="in7"  [(ngModel)]="in7" (keyup)="update()"> 
+                          
+                        </div>
+                        
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="tn4"  [(ngModel)]="tn4" (keyup)="update()"> 
+                          
+                        </div>
+                      
+                 
+                      
+              
+            </div>
+          </div>
+          <div *ngSwitchCase="'5'">
+              <div class="Contain" >
+                  <div class="ContainNo">
+                c
+                  </div>
+                  <div class="ContainName" >
+                    Interest  </div>
+                     
+              
+              <!-- <div class="ContainValue" >
+                    
+                              <input type="number"  class="ipt"  name="in1"  [(ngModel)]="in1" (keyup)="update()"> 
+                                   
+                            </div>
+                            <div class="ContainValue" >
+                    
+                              <input type="number"  class="ipt"  name="in2"  [(ngModel)]="in2" (keyup)="update()"> 
+                                  
+                            </div> -->
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="in3"  [(ngModel)]="in3" (keyup)="update()"> 
+                              
+                            </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="in4"  [(ngModel)]="in4" (keyup)="update()"> 
+                              
+                            </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="in5"  [(ngModel)]="in5" (keyup)="update()"> 
+                              
+                            </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="in6"  [(ngModel)]="in6" (keyup)="update()"> 
+                              
+                            </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="in7"  [(ngModel)]="in7" (keyup)="update()"> 
+                              
+                            </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="in8"  [(ngModel)]="in8" (keyup)="update()"> 
+                              
+                            </div>
+                          
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="in9"  [(ngModel)]="in9" (keyup)="update()"> 
+                              
+                            </div>
+                          
+                </div>
+              </div>
+
+
+    <div *ngSwitchCase="'1'">
+      <div class="ContainAns" >
+          <div class="ContainNo">
+            A. 
+          </div>
+          <div class="ContainName" >
+            Cash Inflows  </div>
+             
+      
+      <!-- <div class="ContainValue" >
+            
+                      <input type="number"  class="ipt"   name="ci1" [(ngModel)]="ci1" (keyup)="update()"> 
+                           
+                    </div>
+                    <div class="ContainValue" >
+            
+                      <input type="number"  class="ipt" name="ci2" [(ngModel)]="ci2" (keyup)="update()"> 
+                          
+                    </div> -->
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="ci3" [(ngModel)]="ci3" (keyup)="update()"> 
+                      
+                    </div>
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="ci4" [(ngModel)]="ci4" (keyup)="update()"> 
+                      
+                    </div>
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="ti1"  [(ngModel)]="ti1" (keyup)="update()"> 
+                      
+                    </div>
+                   
+        </div>
+
+      </div>
+  <div *ngSwitchCase="'2'">
+  <div class="ContainAns" >
+      <div class="ContainNo">
+        A. 
+      </div>
+      <div class="ContainName" >
+        Cash Inflows </div>
+         
+  
+  <!-- <div class="ContainValue" >
+        
+                  <input type="number"  class="ipt"  name="ci1"  [(ngModel)]="ci1" (keyup)="update()"> 
+                       
+                </div>
+                <div class="ContainValue" >
+        
+                  <input type="number"  class="ipt"  name="ci2"  [(ngModel)]="ci2" (keyup)="update()"> 
+                      
+                </div>
+                -->
+                <div class="ContainValue" >
+                  <input type="number"  class="ipt"  name="ci3"  [(ngModel)]="ci3" (keyup)="update()"> 
+                  
+                </div>
+                <div class="ContainValue" >
+                  <input type="number"  class="ipt"  name="ci4"  [(ngModel)]="ci4" (keyup)="update()"> 
+                  
+                </div>
+                <div class="ContainValue" >
+                  <input type="number"  class="ipt"  name="ci5"  [(ngModel)]="ci5" (keyup)="update()"> 
+                  
+                </div>
+         
+                <div class="ContainValue" >
+                  <input type="number"  class="ipt"  name="ti2"  [(ngModel)]="ti2" (keyup)="update()"> 
+                  
+                </div>
+              
+      
+    </div>
+  </div>
+  <div *ngSwitchCase="'3'">
+      <div class="ContainAns" >
+          <div class="ContainNo">
+            A. 
+          </div>
+          <div class="ContainName" >
+            Cash Inflows
+           </div>
+             
+      
+      <!-- <div class="ContainValue" >
+            
+                      <input type="number"  class="ipt"  name="ci1"  [(ngModel)]="ci1" (keyup)="update()"> 
+                           
+                    </div>
+                    <div class="ContainValue" >
+            
+                      <input type="number"  class="ipt"  name="ci2"  [(ngModel)]="ci2" (keyup)="update()"> 
+                          
+                    </div>
+   -->
+   <div class="ContainValue" >
+    <input type="number"  class="ipt"  name="ci3"  [(ngModel)]="ci3" (keyup)="update()"> 
+    
+  </div> 
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="ci4"  [(ngModel)]="ci4" (keyup)="update()"> 
+                      
+                    </div>
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="ci5"  [(ngModel)]="ci5" (keyup)="update()"> 
+                      
+                    </div>
+             
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="ci6"  [(ngModel)]="ci6" (keyup)="update()"> 
+                      
+                    </div>
+                  
+                    <div class="ContainValue" >
+                      <input type="number"  class="ipt"  name="ti3"  [(ngModel)]="ti3" (keyup)="update()"> 
+                      
+                    </div>
+                  
+          
+        </div>
+      </div>
+      <div *ngSwitchCase="'4'">
+          <div class="ContainAns" >
+              <div class="ContainNo">
+                A. 
+              </div>
+              <div class="ContainName" >
+                Cash Inflows  </div>
+                 
+          
+          <!-- <div class="ContainValue" >
+                
+                          <input type="number"  class="ipt"  name="ci1"  [(ngModel)]="ci1" (keyup)="update()"> 
+                               
+                        </div>
+                        <div class="ContainValue" >
+                
+                          <input type="number"  class="ipt"  name="ci2"  [(ngModel)]="ci2" (keyup)="update()"> 
+                              
+                        </div>
+                        -->
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="ci3"  [(ngModel)]="ci3" (keyup)="update()"> 
+                          
+                        </div>
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="ci4"  [(ngModel)]="ci4" (keyup)="update()"> 
+                          
+                        </div>
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="ci5"  [(ngModel)]="ci5" (keyup)="update()"> 
+                          
+                        </div>
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="ci6"  [(ngModel)]="ci6" (keyup)="update()"> 
+                          
+                        </div>
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="ci7"  [(ngModel)]="ci7" (keyup)="update()"> 
+                          
+                        </div>
+                        
+                        <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="ti4"  [(ngModel)]="ti4" (keyup)="update()"> 
+                          
+                        </div>
+                      
+                 
+                      
+              
+            </div>
+          </div>
+          <div *ngSwitchCase="'5'">
+              <div class="ContainAns" >
+                  <div class="ContainNo">
+                    A. 
+                  </div>
+                  <div class="ContainName" >
+                  Cash Inflows </div>
+                     
+              
+              <!-- <div class="ContainValue" >
+                    
+                              <input type="number"  class="ipt"  name="ci1"  [(ngModel)]="ci1" (keyup)="update()"> 
+                                   
+                            </div>
+                            <div class="ContainValue" >
+                    
+                              <input type="number"  class="ipt"  name="ci2"  [(ngModel)]="ci2" (keyup)="update()"> 
+                                  
+                            </div>
+                           -->
+                           <div class="ContainValue" >
+                            <input type="number"  class="ipt"  name="ci3"  [(ngModel)]="ci3" (keyup)="update()"> 
+                            
+                          </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="ci4"  [(ngModel)]="ci4" (keyup)="update()"> 
+                              
+                            </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="ci5"  [(ngModel)]="ci5" (keyup)="update()"> 
+                              
+                            </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="ci6"  [(ngModel)]="ci6" (keyup)="update()"> 
+                              
+                            </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="ci7"  [(ngModel)]="ci7" (keyup)="update()"> 
+                              
+                            </div>
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="ci8"  [(ngModel)]="ci8" (keyup)="update()"> 
+                              
+                            </div>
+                          
+                            <div class="ContainValue" >
+                              <input type="number"  class="ipt"  name="ci9"  [(ngModel)]="ci9" (keyup)="update()"> 
+                              
+                            </div>
+                          
+                </div>
+              </div>
+              <div class="Contain title">
+                <div class="ContainNo"></div>
+                <div class="ContainName"></div>
+                <div class="ContainValue"></div>
+              </div>
+
+              <div *ngSwitchCase="'1'">
+                <div class="Contain" >
+                    <div class="ContainNo">
+                   a
+                    </div>
+                    <div class="ContainName" >
+                      Instalments Payable. </div>
+                       
+                
+                <!-- <div class="ContainValue" >
+                      
+                                <input type="number"  class="ipt"   name="il1" [(ngModel)]="il1" (keyup)="update()"> 
+                                     
+                              </div>
+                              <div class="ContainValue" >
+                      
+                                <input type="number"  class="ipt" name="il2" [(ngModel)]="il2" (keyup)="update()"> 
+                                    
+                              </div>
+                              -->
+                              <div class="ContainValue" >
+                                <input type="number"  class="ipt"  name="il3" [(ngModel)]="il3" (keyup)="update()"> 
+                                
+                              </div>
+                              <div class="ContainValue" >
+                                <input type="number"  class="ipt"  name="il4" [(ngModel)]="il4" (keyup)="update()"> 
+                                
+                              </div>
+                              <div class="ContainValue" >
+                                <input type="number"  class="ipt"  name="tl1"  [(ngModel)]="tl1" (keyup)="update()"> 
+                                
+                              </div>
+                             
+                  </div>
+          
+                </div>
+            <div *ngSwitchCase="'2'">
+            <div class="Contain" >
+                <div class="ContainNo">
+               a
+                </div>
+                <div class="ContainName" >
+                  Instalments Payable.</div>
+                   
+            
+            <!-- <div class="ContainValue" >
+                  
+                            <input type="number"  class="ipt"  name="il1"  [(ngModel)]="il1" (keyup)="update()"> 
+                                 
+                          </div>
+                          <div class="ContainValue" >
+                  
+                            <input type="number"  class="ipt"  name="il2"  [(ngModel)]="il2" (keyup)="update()"> 
+                                
+                          </div>
+                         -->
+                         <div class="ContainValue" >
+                          <input type="number"  class="ipt"  name="il3"  [(ngModel)]="il3" (keyup)="update()"> 
+                          
+                        </div> 
+                          <div class="ContainValue" >
+                            <input type="number"  class="ipt"  name="il4"  [(ngModel)]="il4" (keyup)="update()"> 
+                            
+                          </div>
+                          <div class="ContainValue" >
+                            <input type="number"  class="ipt"  name="il5"  [(ngModel)]="il5" (keyup)="update()"> 
+                            
+                          </div>
+                   
+                          <div class="ContainValue" >
+                            <input type="number"  class="ipt"  name="tl2"  [(ngModel)]="tl2" (keyup)="update()"> 
+                            
+                          </div>
+                        
+                
+              </div>
+            </div>
+            <div *ngSwitchCase="'3'">
+                <div class="Contain" >
+                    <div class="ContainNo">
+                   a
+                    </div>
+                    <div class="ContainName" >
+                      Instalments Payable.
+                     </div>
+                       
+                
+                <!-- <div class="ContainValue" >
+                      
+                                <input type="number"  class="ipt"  name="il1"  [(ngModel)]="il1" (keyup)="update()"> 
+                                     
+                              </div>
+                              <div class="ContainValue" >
+                      
+                                <input type="number"  class="ipt"  name="il2"  [(ngModel)]="il2" (keyup)="update()"> 
+                                    
+                              </div>
+                              -->
+                              <div class="ContainValue" >
+                                <input type="number"  class="ipt"  name="il3"  [(ngModel)]="il3" (keyup)="update()"> 
+                                
+                              </div> 
+                              <div class="ContainValue" >
+                                <input type="number"  class="ipt"  name="il4"  [(ngModel)]="il4" (keyup)="update()"> 
+                                
+                              </div>
+                              <div class="ContainValue" >
+                                <input type="number"  class="ipt"  name="il5"  [(ngModel)]="il5" (keyup)="update()"> 
+                                
+                              </div>
+                       
+                              <div class="ContainValue" >
+                                <input type="number"  class="ipt"  name="il6"  [(ngModel)]="il6" (keyup)="update()"> 
+                                
+                              </div>
+                            
+                              <div class="ContainValue" >
+                                <input type="number"  class="ipt"  name="tl3"  [(ngModel)]="tl3" (keyup)="update()"> 
+                                
+                              </div>
+                            
+                    
+                  </div>
+                </div>
+                <div *ngSwitchCase="'4'">
+                    <div class="Contain" >
+                        <div class="ContainNo">
+                       a
+                        </div>
+                        <div class="ContainName" >
+                          Instalments Payable.</div>
+                           
+                    
+                    <!-- <div class="ContainValue" >
+                          
+                                    <input type="number"  class="ipt"  name="il1"  [(ngModel)]="il1" (keyup)="update()"> 
+                                         
+                                  </div>
+                                  <div class="ContainValue" >
+                          
+                                    <input type="number"  class="ipt"  name="il2"  [(ngModel)]="il2" (keyup)="update()"> 
+                                        
+                                  </div>
+                                  -->
+                                  <div class="ContainValue" >
+                                    <input type="number"  class="ipt"  name="il3"  [(ngModel)]="il3" (keyup)="update()"> 
+                                    
+                                  </div> 
+                                  <div class="ContainValue" >
+                                    <input type="number"  class="ipt"  name="il4"  [(ngModel)]="il4" (keyup)="update()"> 
+                                    
+                                  </div>
+                                  <div class="ContainValue" >
+                                    <input type="number"  class="ipt"  name="il5"  [(ngModel)]="il5" (keyup)="update()"> 
+                                    
+                                  </div>
+                                  <div class="ContainValue" >
+                                    <input type="number"  class="ipt"  name="il6"  [(ngModel)]="il6" (keyup)="update()"> 
+                                    
+                                  </div>
+                                  <div class="ContainValue" >
+                                    <input type="number"  class="ipt"  name="il7"  [(ngModel)]="il7" (keyup)="update()"> 
+                                    
+                                  </div>
+                                  
+                                  <div class="ContainValue" >
+                                    <input type="number"  class="ipt"  name="tl4"  [(ngModel)]="tl4" (keyup)="update()"> 
+                                    
+                                  </div>
+                                
+                           
+                                
+                        
+                      </div>
+                    </div>
+                    <div *ngSwitchCase="'5'">
+                        <div class="Contain" >
+                            <div class="ContainNo">
+                           a
+                            </div>
+                            <div class="ContainName" >
+                              Instalments Payable. </div>
+                               
+                        
+                        <!-- <div class="ContainValue" >
+                              
+                                        <input type="number"  class="ipt"  name="il1"  [(ngModel)]="il1" (keyup)="update()"> 
+                                             
+                                      </div>
+                                      <div class="ContainValue" >
+                              
+                                        <input type="number"  class="ipt"  name="il2"  [(ngModel)]="il2" (keyup)="update()"> 
+                                            
+                                      </div>
+                                      -->
+                                      <div class="ContainValue" >
+                                        <input type="number"  class="ipt"  name="il3"  [(ngModel)]="il3" (keyup)="update()"> 
+                                        
+                                      </div>
+                                      <div class="ContainValue" >
+                                        <input type="number"  class="ipt"  name="il4"  [(ngModel)]="il4" (keyup)="update()"> 
+                                        
+                                      </div>
+                                      <div class="ContainValue" >
+                                        <input type="number"  class="ipt"  name="il5"  [(ngModel)]="il5" (keyup)="update()"> 
+                                        
+                                      </div>
+                                      <div class="ContainValue" >
+                                        <input type="number"  class="ipt"  name="a6"  [(ngModel)]="il6" (keyup)="update()"> 
+                                        
+                                      </div>
+                                      <div class="ContainValue" >
+                                        <input type="number"  class="ipt"  name="il7"  [(ngModel)]="il7" (keyup)="update()"> 
+                                        
+                                      </div>
+                                      <div class="ContainValue" >
+                                        <input type="number"  class="ipt"  name="il8"  [(ngModel)]="il8" (keyup)="update()"> 
+                                        
+                                      </div>
+                                    
+                                      <div class="ContainValue" >
+                                        <input type="number"  class="ipt"  name="il9"  [(ngModel)]="il9" (keyup)="update()"> 
+                                        
+                                      </div>
+                                    
+                          </div>
+                        </div>
+
+
+
+              <div *ngSwitchCase="'1'">
+                <div class="Contain" >
+                    <div class="ContainNo">
+                   b
+                    </div>
+                    <div class="ContainName" >
+                      Interest Payable. </div>
+                       
+                
+                <!-- <div class="ContainValue" >
+                      
+                                <input type="number"  class="ipt"   name="it1" [(ngModel)]="it1" (keyup)="update()"> 
+                                     
+                              </div>
+                              <div class="ContainValue" >
+                      
+                                <input type="number"  class="ipt" name="it2" [(ngModel)]="it2" (keyup)="update()"> 
+                                    
+                              </div>
+                              -->
+                              <div class="ContainValue" >
+                                <input type="number"  class="ipt"  name="it3" [(ngModel)]="it3" (keyup)="update()"> 
+                                
+                              </div> 
+                              <div class="ContainValue" >
+                                <input type="number"  class="ipt"  name="it4" [(ngModel)]="it4" (keyup)="update()"> 
+                                
+                              </div>
+                              <div class="ContainValue" >
+                                <input type="number"  class="ipt"  name="tt1"  [(ngModel)]="tt1" (keyup)="update()"> 
+                                
+                              </div>
+                             
+                  </div>
+          
+                </div>
+            <div *ngSwitchCase="'2'">
+            <div class="Contain" >
+                <div class="ContainNo">
+               b
+                </div>
+                <div class="ContainName" >
+                  Interest Payable.</div>
+                   
+            
+            <!-- <div class="ContainValue" >
+                  
+                            <input type="number"  class="ipt"  name="it1"  [(ngModel)]="it1" (keyup)="update()"> 
+                                 
+                          </div>
+                          <div class="ContainValue" >
+                  
+                            <input type="number"  class="ipt"  name="it2"  [(ngModel)]="it2" (keyup)="update()"> 
+                                
+                          </div>
+                           -->
+                           <div class="ContainValue" >
+                            <input type="number"  class="ipt"  name="it3"  [(ngModel)]="it3" (keyup)="update()"> 
+                            
+                          </div>
+                          <div class="ContainValue" >
+                            <input type="number"  class="ipt"  name="it4"  [(ngModel)]="it4" (keyup)="update()"> 
+                            
+                          </div>
+                          <div class="ContainValue" >
+                            <input type="number"  class="ipt"  name="it5"  [(ngModel)]="it5" (keyup)="update()"> 
+                            
+                          </div>
+                   
+                          <div class="ContainValue" >
+                            <input type="number"  class="ipt"  name="tt2"  [(ngModel)]="tt2" (keyup)="update()"> 
+                            
+                          </div>
+                        
+                
+              </div>
+            </div>
+            <div *ngSwitchCase="'3'">
+                <div class="Contain" >
+                    <div class="ContainNo">
+                   b
+                    </div>
+                    <div class="ContainName" >
+                       Interest Payable.
+                     </div>
+                       
+                
+                <!-- <div class="ContainValue" >
+                      
+                                <input type="number"  class="ipt"  name="it1"  [(ngModel)]="it1" (keyup)="update()"> 
+                                     
+                              </div>
+                              <div class="ContainValue" >
+                      
+                                <input type="number"  class="ipt"  name="it2"  [(ngModel)]="it2" (keyup)="update()"> 
+                                    
+                              </div>
+                              -->
+                              <div class="ContainValue" >
+                                <input type="number"  class="ipt"  name="it3"  [(ngModel)]="it3" (keyup)="update()"> 
+                                
+                              </div> 
+                              <div class="ContainValue" >
+                                <input type="number"  class="ipt"  name="it4"  [(ngModel)]="it4" (keyup)="update()"> 
+                                
+                              </div>
+                              <div class="ContainValue" >
+                                <input type="number"  class="ipt"  name="it5"  [(ngModel)]="it5" (keyup)="update()"> 
+                                
+                              </div>
+                       
+                              <div class="ContainValue" >
+                                <input type="number"  class="ipt"  name="it6"  [(ngModel)]="it6" (keyup)="update()"> 
+                                
+                              </div>
+                            
+                              <div class="ContainValue" >
+                                <input type="number"  class="ipt"  name="tt3"  [(ngModel)]="tt3" (keyup)="update()"> 
+                                
+                              </div>
+                            
+                    
+                  </div>
+                </div>
+                <div *ngSwitchCase="'4'">
+                    <div class="Contain" >
+                        <div class="ContainNo">
+                       b
+                        </div>
+                        <div class="ContainName" >
+                          Interest Payable.</div>
+                           
+                    
+                    <!-- <div class="ContainValue" >
+                          
+                                    <input type="number"  class="ipt"  name="it1"  [(ngModel)]="it1" (keyup)="update()"> 
+                                         
+                                  </div>
+                                  <div class="ContainValue" >
+                          
+                                    <input type="number"  class="ipt"  name="it2"  [(ngModel)]="it2" (keyup)="update()"> 
+                                        
+                                  </div>
+                                  -->
+                                  <div class="ContainValue" >
+                                    <input type="number"  class="ipt"  name="it3"  [(ngModel)]="it3" (keyup)="update()"> 
+                                    
+                                  </div>
+                                  <div class="ContainValue" >
+                                    <input type="number"  class="ipt"  name="it4"  [(ngModel)]="it4" (keyup)="update()"> 
+                                    
+                                  </div>
+                                  <div class="ContainValue" >
+                                    <input type="number"  class="ipt"  name="it5"  [(ngModel)]="it5" (keyup)="update()"> 
+                                    
+                                  </div>
+                                  <div class="ContainValue" >
+                                    <input type="number"  class="ipt"  name="it6"  [(ngModel)]="it6" (keyup)="update()"> 
+                                    
+                                  </div>
+                                  <div class="ContainValue" >
+                                    <input type="number"  class="ipt"  name="it7"  [(ngModel)]="it7" (keyup)="update()"> 
+                                    
+                                  </div>
+                                  
+                                  <div class="ContainValue" >
+                                    <input type="number"  class="ipt"  name="tt4"  [(ngModel)]="tt4" (keyup)="update()"> 
+                                    
+                                  </div>
+                                
+                           
+                                
+                        
+                      </div>
+                    </div>
+                    <div *ngSwitchCase="'5'">
+                        <div class="Contain" >
+                            <div class="ContainNo">
+                           b
+                            </div>
+                            <div class="ContainName" >
+                              Interest Payable. </div>
+                               
+                        
+                        <!-- <div class="ContainValue" >
+                              
+                                        <input type="number"  class="ipt"  name="it1"  [(ngModel)]="it1" (keyup)="update()"> 
+                                             
+                                      </div>
+                                      <div class="ContainValue" >
+                              
+                                        <input type="number"  class="ipt"  name="it2"  [(ngModel)]="it2" (keyup)="update()"> 
+                                            
+                                      </div>
+                                      -->
+                                      <div class="ContainValue" >
+                                        <input type="number"  class="ipt"  name="it3"  [(ngModel)]="it3" (keyup)="update()"> 
+                                        
+                                      </div> 
+                                      <div class="ContainValue" >
+                                        <input type="number"  class="ipt"  name="it4"  [(ngModel)]="it4" (keyup)="update()"> 
+                                        
+                                      </div>
+                                      <div class="ContainValue" >
+                                        <input type="number"  class="ipt"  name="it5"  [(ngModel)]="it5" (keyup)="update()"> 
+                                        
+                                      </div>
+                                      <div class="ContainValue" >
+                                        <input type="number"  class="ipt"  name="it6"  [(ngModel)]="it6" (keyup)="update()"> 
+                                        
+                                      </div>
+                                      <div class="ContainValue" >
+                                        <input type="number"  class="ipt"  name="it7"  [(ngModel)]="it7" (keyup)="update()"> 
+                                        
+                                      </div>
+                                      <div class="ContainValue" >
+                                        <input type="number"  class="ipt"  name="it8"  [(ngModel)]="it8" (keyup)="update()"> 
+                                        
+                                      </div>
+                                    
+                                      <div class="ContainValue" >
+                                        <input type="number"  class="ipt"  name="it9"  [(ngModel)]="it9" (keyup)="update()"> 
+                                        
+                                      </div>
+                                    
+                          </div>
+                        </div>
+          
+                        <div *ngSwitchCase="'1'">
+                          <div class="ContainAns" >
+                              <div class="ContainNo">
+                                B. 
+                              </div>
+                              <div class="ContainName" >
+                                Cash Outflows  </div>
+                                 
+<!--                           
+                          <div class="ContainValue" >
+                                
+                                          <input type="number"  class="ipt"   name="co1" [(ngModel)]="co1" (keyup)="update()"> 
+                                               
+                                        </div>
+                                        <div class="ContainValue" >
+                                
+                                          <input type="number"  class="ipt" name="co2" [(ngModel)]="co2" (keyup)="update()"> 
+                                              
+                                        </div>
+                                         -->
+                                         <div class="ContainValue" >
+                                          <input type="number"  class="ipt"  name="co3" [(ngModel)]="co3" (keyup)="update()"> 
+                                          
+                                        </div>
+                                        <div class="ContainValue" >
+                                          <input type="number"  class="ipt"  name="co4" [(ngModel)]="co4" (keyup)="update()"> 
+                                          
+                                        </div>
+                                        <div class="ContainValue" >
+                                          <input type="number"  class="ipt"  name="tc1"  [(ngModel)]="tc1" (keyup)="update()"> 
+                                          
+                                        </div>
+                                       
+                            </div>
+                    
+                          </div>
+                      <div *ngSwitchCase="'2'">
+                      <div class="ContainAns" >
+                          <div class="ContainNo">
+                            B. 
+                          </div>
+                          <div class="ContainName" >
+                            Cash Outflows </div>
+                             
+                      
+                      <!-- <div class="ContainValue" >
+                            
+                                      <input type="number"  class="ipt"  name="co1"  [(ngModel)]="co1" (keyup)="update()"> 
+                                           
+                                    </div>
+                                    <div class="ContainValue" >
+                            
+                                      <input type="number"  class="ipt"  name="co2"  [(ngModel)]="co2" (keyup)="update()"> 
+                                          
+                                    </div>
+                                    -->
+                                    <div class="ContainValue" >
+                                      <input type="number"  class="ipt"  name="co3"  [(ngModel)]="co3" (keyup)="update()"> 
+                                      
+                                    </div>
+                                    <div class="ContainValue" >
+                                      <input type="number"  class="ipt"  name="co4"  [(ngModel)]="co4" (keyup)="update()"> 
+                                      
+                                    </div>
+                                    <div class="ContainValue" >
+                                      <input type="number"  class="ipt"  name="co5"  [(ngModel)]="co5" (keyup)="update()"> 
+                                      
+                                    </div>
+                             
+                                    <div class="ContainValue" >
+                                      <input type="number"  class="ipt"  name="tc2"  [(ngModel)]="tc2" (keyup)="update()"> 
+                                      
+                                    </div>
+                                  
+                          
+                        </div>
+                      </div>
+                      <div *ngSwitchCase="'3'">
+                          <div class="ContainAns" >
+                              <div class="ContainNo">
+                                B. 
+                              </div>
+                              <div class="ContainName" >
+                                Cash Outflows
+                               </div>
+                                 
+                          
+                          <!-- <div class="ContainValue" >
+                                
+                                          <input type="number"  class="ipt"  name="co1"  [(ngModel)]="co1" (keyup)="update()"> 
+                                               
+                                        </div>
+                                        <div class="ContainValue" >
+                                
+                                          <input type="number"  class="ipt"  name="co2"  [(ngModel)]="co2" (keyup)="update()"> 
+                                              
+                                        </div>
+                                      -->
+                                      <div class="ContainValue" >
+                                        <input type="number"  class="ipt"  name="co3"  [(ngModel)]="co3" (keyup)="update()"> 
+                                        
+                                      </div> 
+                                        <div class="ContainValue" >
+                                          <input type="number"  class="ipt"  name="co4"  [(ngModel)]="co4" (keyup)="update()"> 
+                                          
+                                        </div>
+                                        <div class="ContainValue" >
+                                          <input type="number"  class="ipt"  name="co5"  [(ngModel)]="co5" (keyup)="update()"> 
+                                          
+                                        </div>
+                                 
+                                        <div class="ContainValue" >
+                                          <input type="number"  class="ipt"  name="co6"  [(ngModel)]="co6" (keyup)="update()"> 
+                                          
+                                        </div>
+                                      
+                                        <div class="ContainValue" >
+                                          <input type="number"  class="ipt"  name="tc3"  [(ngModel)]="tc3" (keyup)="update()"> 
+                                          
+                                        </div>
+                                      
+                              
+                            </div>
+                          </div>
+                          <div *ngSwitchCase="'4'">
+                              <div class="ContainAns" >
+                                  <div class="ContainNo">
+                                    B. 
+                                  </div>
+                                  <div class="ContainName" >
+                                    Cash Outflows  </div>
+                                     
+                              
+                              <!-- <div class="ContainValue" >
+                                    
+                                              <input type="number"  class="ipt"  name="co1"  [(ngModel)]="co1" (keyup)="update()"> 
+                                                   
+                                            </div>
+                                            <div class="ContainValue" >
+                                    
+                                              <input type="number"  class="ipt"  name="co2"  [(ngModel)]="co2" (keyup)="update()"> 
+                                                  
+                                            </div>
+                                             -->
+                                             <div class="ContainValue" >
+                                              <input type="number"  class="ipt"  name="co3"  [(ngModel)]="co3" (keyup)="update()"> 
+                                              
+                                            </div>
+                                            <div class="ContainValue" >
+                                              <input type="number"  class="ipt"  name="co4"  [(ngModel)]="co4" (keyup)="update()"> 
+                                              
+                                            </div>
+                                            <div class="ContainValue" >
+                                              <input type="number"  class="ipt"  name="co5"  [(ngModel)]="co5" (keyup)="update()"> 
+                                              
+                                            </div>
+                                            <div class="ContainValue" >
+                                              <input type="number"  class="ipt"  name="co6"  [(ngModel)]="co6" (keyup)="update()"> 
+                                              
+                                            </div>
+                                            <div class="ContainValue" >
+                                              <input type="number"  class="ipt"  name="co7"  [(ngModel)]="co7" (keyup)="update()"> 
+                                              
+                                            </div>
+                                            
+                                            <div class="ContainValue" >
+                                              <input type="number"  class="ipt"  name="tc4"  [(ngModel)]="tc4" (keyup)="update()"> 
+                                              
+                                            </div>
+                                          
+                                     
+                                          
+                                  
+                                </div>
+                              </div>
+                              <div *ngSwitchCase="'5'">
+                                  <div class="ContainAns" >
+                                      <div class="ContainNo">
+                                        B. 
+                                      </div>
+                                      <div class="ContainName" >
+                                      Cash Outflows </div>
+                                         
+                                  
+                                  <!-- <div class="ContainValue" >
+                                        
+                                                  <input type="number"  class="ipt"  name="co1"  [(ngModel)]="co1" (keyup)="update()"> 
+                                                       
+                                                </div>
+                                                <div class="ContainValue" >
+                                        
+                                                  <input type="number"  class="ipt"  name="co2"  [(ngModel)]="co2" (keyup)="update()"> 
+                                                      
+                                                </div>
+                                                 -->
+                                                 <div class="ContainValue" >
+                                                  <input type="number"  class="ipt"  name="co3"  [(ngModel)]="co3" (keyup)="update()"> 
+                                                  
+                                                </div>
+                                                <div class="ContainValue" >
+                                                  <input type="number"  class="ipt"  name="co4"  [(ngModel)]="co4" (keyup)="update()"> 
+                                                  
+                                                </div>
+                                                <div class="ContainValue" >
+                                                  <input type="number"  class="ipt"  name="co5"  [(ngModel)]="co5" (keyup)="update()"> 
+                                                  
+                                                </div>
+                                                <div class="ContainValue" >
+                                                  <input type="number"  class="ipt"  name="co6"  [(ngModel)]="co6" (keyup)="update()"> 
+                                                  
+                                                </div>
+                                                <div class="ContainValue" >
+                                                  <input type="number"  class="ipt"  name="co7"  [(ngModel)]="co7" (keyup)="update()"> 
+                                                  
+                                                </div>
+                                                <div class="ContainValue" >
+                                                  <input type="number"  class="ipt"  name="co8"  [(ngModel)]="co8" (keyup)="update()"> 
+                                                  
+                                                </div>
+                                              
+                                                <div class="ContainValue" >
+                                                  <input type="number"  class="ipt"  name="co9"  [(ngModel)]="co9" (keyup)="update()"> 
+                                                  
+                                                </div>
+                                              
+                                    </div>
+                                  </div>
+                                  <div class="Contain title">
+                                    <div class="ContainNo"></div>
+                                    <div class="ContainName"></div>
+                                    <div class="ContainValue"></div>
+                                  </div>
+                                  <div *ngSwitchCase="'1'">
+                                    <div class="ContainAns" >
+                                        <div class="ContainNo">
+                                         
+                                        </div>
+                                        <div class="ContainName" >
+                                           DSCR  </div>
+                                           
+                                    
+                                    <!-- <div class="ContainValue" >
+                                          
+                                                    <input type="number"  class="ipt"   name="ds1" [(ngModel)]="ds1" (keyup)="update()"> 
+                                                         
+                                                  </div>
+                                                  <div class="ContainValue" >
+                                          
+                                                    <input type="number"  class="ipt" name="ds2" [(ngModel)]="ds2" (keyup)="update()"> 
+                                                        
+                                                  </div>
+                                                  -->
+                                                  <div class="ContainValue" >
+                                                    <input type="number"  class="ipt"  name="ds3" [(ngModel)]="ds3" (keyup)="update()"> 
+                                                    
+                                                  </div>
+                                                  <div class="ContainValue" >
+                                                    <input type="number"  class="ipt"  name="ds4" [(ngModel)]="ds4" (keyup)="update()"> 
+                                                    
+                                                  </div>
+                                                  <div class="ContainValue" >
+                                                    <input type="number"  class="ipt"  name="ds8"  [(ngModel)]="ds8" (keyup)="update()"> 
+                                                    
+                                                  </div>
+                                                 
+                                      </div>
+                              
+                                    </div>
+                                <div *ngSwitchCase="'2'">
+                                <div class="ContainAns" >
+                                    <div class="ContainNo">
+                                    </div>
+                                    <div class="ContainName" >
+                                       DSCR </div>
+                                       
+                                
+                                <!-- <div class="ContainValue" >
+                                      
+                                                <input type="number"  class="ipt"  name="ds1"  [(ngModel)]="ds1" (keyup)="update()"> 
+                                                     
+                                              </div>
+                                              <div class="ContainValue" >
+                                      
+                                                <input type="number"  class="ipt"  name="ds2"  [(ngModel)]="ds2" (keyup)="update()"> 
+                                                    
+                                              </div>
+                                              -->
+                                              <div class="ContainValue" >
+                                                <input type="number"  class="ipt"  name="ds3"  [(ngModel)]="ds3" (keyup)="update()"> 
+                                                
+                                              </div> 
+                                              <div class="ContainValue" >
+                                                <input type="number"  class="ipt"  name="ds4"  [(ngModel)]="ds4" (keyup)="update()"> 
+                                                
+                                              </div>
+                                              <div class="ContainValue" >
+                                                <input type="number"  class="ipt"  name="ds5"  [(ngModel)]="ds5" (keyup)="update()"> 
+                                                
+                                              </div>
+                                       
+                                              <div class="ContainValue" >
+                                                <input type="number"  class="ipt"  name="ds8"  [(ngModel)]="ds8" (keyup)="update()"> 
+                                                
+                                              </div>
+                                            
+                                    
+                                  </div>
+                                </div>
+                                <div *ngSwitchCase="'3'">
+                                    <div class="ContainAns" >
+                                        <div class="ContainNo">
+                                        </div>
+                                        <div class="ContainName" >
+                                           DSCR
+                                         </div>
+                                           
+                                    
+                                    <!-- <div class="ContainValue" >
+                                          
+                                                    <input type="number"  class="ipt"  name="ds1"  [(ngModel)]="ds1" (keyup)="update()"> 
+                                                         
+                                                  </div>
+                                                  <div class="ContainValue" >
+                                          
+                                                    <input type="number"  class="ipt"  name="ds2"  [(ngModel)]="ds2" (keyup)="update()"> 
+                                                        
+                                                  </div>
+                                                   -->
+                                                   <div class="ContainValue" >
+                                                    <input type="number"  class="ipt"  name="ds3"  [(ngModel)]="ds3" (keyup)="update()"> 
+                                                    
+                                                  </div>
+                                                  <div class="ContainValue" >
+                                                    <input type="number"  class="ipt"  name="ds4"  [(ngModel)]="ds4" (keyup)="update()"> 
+                                                    
+                                                  </div>
+                                                  <div class="ContainValue" >
+                                                    <input type="number"  class="ipt"  name="ds5"  [(ngModel)]="ds5" (keyup)="update()"> 
+                                                    
+                                                  </div>
+                                           
+                                                  <div class="ContainValue" >
+                                                    <input type="number"  class="ipt"  name="ds6"  [(ngModel)]="ds6" (keyup)="update()"> 
+                                                    
+                                                  </div>
+                                                
+                                                
+                                        
+                                      </div>
+                                    </div>
+                                    <div *ngSwitchCase="'4'">
+                                        <div class="ContainAns" >
+                                            <div class="ContainNo">
+                                            </div>
+                                            <div class="ContainName" >
+                                               DSCR </div>
+                                               
+                                        
+                                        <!-- <div class="ContainValue" >
+                                              
+                                                        <input type="number"  class="ipt"  name="ds1"  [(ngModel)]="ds1" (keyup)="update()"> 
+                                                             
+                                                      </div>
+                                                      <div class="ContainValue" >
+                                              
+                                                        <input type="number"  class="ipt"  name="ds2"  [(ngModel)]="ds2" (keyup)="update()"> 
+                                                            
+                                                      </div>
+                                                   -->
+                                                   <div class="ContainValue" >
+                                                    <input type="number"  class="ipt"  name="ds3"  [(ngModel)]="ds3" (keyup)="update()"> 
+                                                    
+                                                  </div>
+                                                      <div class="ContainValue" >
+                                                        <input type="number"  class="ipt"  name="ds4"  [(ngModel)]="ds4" (keyup)="update()"> 
+                                                        
+                                                      </div>
+                                                      <div class="ContainValue" >
+                                                        <input type="number"  class="ipt"  name="ds5"  [(ngModel)]="ds5" (keyup)="update()"> 
+                                                        
+                                                      </div>
+                                                      <div class="ContainValue" >
+                                                        <input type="number"  class="ipt"  name="ds6"  [(ngModel)]="ds6" (keyup)="update()"> 
+                                                        
+                                                      </div>
+                                                      <div class="ContainValue" >
+                                                        <input type="number"  class="ipt"  name="ds7"  [(ngModel)]="ds7" (keyup)="update()"> 
+                                                        
+                                                      </div>
+                                                      
+                                                      <div class="ContainValue" >
+                                                        
+                                                      </div>
+                                                    
+                                               
+                                                    
+                                            
+                                          </div>
+                                        </div>
+                                        <div *ngSwitchCase="'5'">
+                                            <div class="ContainAns" >
+                                                <div class="ContainNo">
+                                                </div>
+                                                <div class="ContainName" >
+                                                   DSCR</div>
+                                                   
+                                            
+                                            <!-- <div class="ContainValue" >
+                                                  
+                                                            <input type="number"  class="ipt"  name="ds1"  [(ngModel)]="ds1" (keyup)="update()"> 
+                                                                 
+                                                          </div>
+                                                          <div class="ContainValue" >
+                                                  
+                                                            <input type="number"  class="ipt"  name="ds2"  [(ngModel)]="ds2" (keyup)="update()"> 
+                                                                
+                                                          </div>
+                                                          -->
+                                                          <div class="ContainValue" >
+                                                            <input type="number"  class="ipt"  name="ds3"  [(ngModel)]="ds3" (keyup)="update()"> 
+                                                            
+                                                          </div> 
+                                                          <div class="ContainValue" >
+                                                            <input type="number"  class="ipt"  name="ds4"  [(ngModel)]="ds4" (keyup)="update()"> 
+                                                            
+                                                          </div>
+                                                          <div class="ContainValue" >
+                                                            <input type="number"  class="ipt"  name="ds5"  [(ngModel)]="ds5" (keyup)="update()"> 
+                                                            
+                                                          </div>
+                                                          <div class="ContainValue" >
+                                                            <input type="number"  class="ipt"  name="ds6"  [(ngModel)]="ds6" (keyup)="update()"> 
+                                                            
+                                                          </div>
+                                                          <div class="ContainValue" >
+                                                            <input type="number"  class="ipt"  name="ds7"  [(ngModel)]="ds7" (keyup)="update()"> 
+                                                            
+                                                          </div>
+                                                          <div class="ContainValue" >
+                                                            <input type="number"  class="ipt"  name="ds8"  [(ngModel)]="ds8" (keyup)="update()"> 
+                                                            
+                                                          </div>
+                                                          <div class="ContainValue" >
+                                                            
+                                                          </div>
+                                                        
+                                                        
+                                              </div>
+                                            </div>
+                                            <div class="Contain title">
+                                              <div class="ContainNo"></div>
+                                              <div class="ContainName"></div>
+                                              <div class="ContainValue"></div>
+                                            </div>
+
+
+                                            <div *ngSwitchCase="'1'">
+                                              <div class="ContainAns" >
+                                                  <div class="ContainNo">
+                                                  </div>
+                                                  <div class="ContainName" >
+                                                    Average DSCR  </div>
+                                                     
+                                                    <div class="ContainValue" >
+                                                            
+                                                      <input type="number"  class="ad"  name="ad1"  [(ngModel)]="ad1" (keyup)="update()"> 
+                                                           
+                                                    </div>
+                                                           
+                                                </div>
+                                        
+                                              </div>
+                                          <div *ngSwitchCase="'2'">
+                                          <div class="ContainAns" >
+                                              <div class="ContainNo">
+                                               
+                                              </div>
+                                              <div class="ContainName" >
+                                                Average DSCR </div>
+                                                 
+                                                <div class="ContainValue" >
+                                                            
+                                                  <input type="number"  class="ad"  name="ad2"  [(ngModel)]="ad2" (keyup)="update()"> 
+                                                       
+                                                </div>
+                                                        
+                                                 
+                                                      
+                                              
+                                            </div>
+                                          </div>
+                                          <div *ngSwitchCase="'3'">
+                                              <div class="ContainAns" >
+                                                  <div class="ContainNo">
+                                                   
+                                                  </div>
+                                                  <div class="ContainName" >
+                                                    Average DSCR
+                                                   </div>
+                                                     
+                                              
+                                                   <div class="ContainValue" >
+                                                            
+                                                    <input type="number"  class="ad"  name="ad3"  [(ngModel)]="ad3" (keyup)="update()"> 
+                                                         
+                                                  </div>
+                                                         
+                                                          
+                                                  
+                                                </div>
+                                              </div>
+                                              <div *ngSwitchCase="'4'">
+                                                  <div class="ContainAns" >
+                                                      <div class="ContainNo">
+                                                        
+                                                      </div>
+                                                      <div class="ContainName" >
+                                                        Average DSCR  </div>
+                                                         
+                                                        <div class="ContainValue" >
+                                                            
+                                                          <input type="number"  class="ad"  name="ad4"  [(ngModel)]="ad4" (keyup)="update()"> 
+                                                               
+                                                        </div>
+                                                              
+                                                                
+                                                              
+                                                         
+                                                              
+                                                      
+                                                    </div>
+                                                  </div>
+                                                  <div *ngSwitchCase="'5'">
+                                                      <div class="ContainAns" >
+                                                          <div class="ContainNo">
+                                                            
+                                                          </div>
+                                                          <div class="ContainName" >
+                                                            Average DSCR </div>
+                                                             
+                                                      
+                                                      <div class="ContainValue" >
+                                                            
+                                                                      <input type="number"  class="ad"  name="ad5"  [(ngModel)]="ad5" (keyup)="update()"> 
+                                                                           
+                                                                    </div>
+                                                                  
+                                                                  
+                                                                 
+                                                        </div>
+                                                      </div>
+                                                      <div class="Contain title">
+                                                        <div class="ContainNo"></div>
+                                                        <div class="ContainName"></div>
+                                                        <div class="ContainValue"></div>
+                                                      </div>
+              
+</div>
+<div class="example-button-row ">
+  <input class="mat-button btn" type="submit" name="save"  value="Next">
+
+  <button type="button" mat-raised-button color="primary" (click)="printSheet()">Print</button>
+
+</div>
+</form>

@@ -1,0 +1,106 @@
+.Contain {
+  display: flex;
+  padding: 1rem;
+}
+
+.ContainAns {
+  display: flex;
+  padding: 1rem;
+  background-color: aquamarine;
+}
+
+.ContainNo {
+  width: 2%;
+}
+.title .ContainName, .title .ContainNo{
+  color: red !important;
+  font-weight: bold;
+}
+
+.ContainName {
+  width: 25%;
+  font-weight: bold;
+  color: #333333;
+}
+.ContainName5{
+  width: 22%;
+  font-weight: bold;
+  color: #333333;
+}
+
+.ContainValue {
+  width: 10%;
+}
+.ContainValue5 {
+  width: 11%;
+}
+
+.ipt {
+  width: 5rem;
+}
+table {
+  width: 100%;
+}
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 5px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.aliceblue {
+  background-color: aliceblue;
+}
+
+.aquamarine {
+  background-color: aquamarine;
+  padding: 1rem;
+}
+
+.sectionHeading {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.partHeading {
+  font-size: 18px;
+  font-weight: 400;
+}
+.example-button-row .mat-button-base {
+  margin: 8px 8px 8px 0;
+}
+.btn{
+  background: #28a745;
+    color: #fff;
+    margin: 8px;
+}

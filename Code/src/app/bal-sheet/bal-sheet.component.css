@@ -1,0 +1,18 @@
+.aliceblue {
+  background-color: aliceblue;
+}
+
+.aquamarine {
+  background-color: aquamarine;
+  padding: 1rem;
+}
+
+.sectionHeading {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.partHeading {
+  font-size: 18px;
+  font-weight: 400;
+}

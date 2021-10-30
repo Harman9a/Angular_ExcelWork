@@ -1,0 +1,16 @@
+.Contain {
+  display: flex;
+  padding: 1rem;
+}
+
+.ContainNo {
+  width: 2%;
+}
+
+.ContainName {
+  width: 25%;
+}
+
+.ContainValue {
+  width: 10%;
+}

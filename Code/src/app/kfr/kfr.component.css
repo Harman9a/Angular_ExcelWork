@@ -1,0 +1,58 @@
+.aliceblue {
+    background-color: aliceblue;
+  }
+  .sectionHeading {
+    font-size: 25px;
+    font-weight: 400;
+  }
+  .Contain {
+    display: flex;
+    padding: 1rem;
+  }
+  
+  .ContainAns {
+    display: flex;
+    padding: 1rem;
+    background-color: aquamarine;
+  }
+  
+  .ContainNo {
+    width: 2%;
+  }
+  .title .ContainName, .title .ContainNo{
+    color: red !important;
+    font-weight: bold;
+  }
+  
+  .ContainName {
+    width: 25%;
+    font-weight: bold;
+    color: #333333;
+  }
+  .ContainValue {
+    width: 10%;
+  }
+  .ad{
+    width:45rem;
+  }
+
+  
+  .ipt {
+    width: 5rem;
+  }
+  .show{
+    display: block !important;
+  }
+  .hide{
+    display: none !important;
+    ;
+  }
+
+  .btn{
+    background: #28a745;
+      color: #fff;
+      margin: 8px;
+  }
+  .example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
