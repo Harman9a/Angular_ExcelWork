@@ -9,65 +9,63 @@
 </mat-grid-list>
 
 <form #frm="ngForm" (ngSubmit)="GoToNext(frm.value)">
-<div>
-  <table id="customers">
-    <tr>
-      <th>Rating Scale</th>
-      <th>Rating</th>
-      <th>Level of Credit Worthiness </th>
-    </tr>
-    <tr>
-      <td>If Risk Score is <  35 %</td>
-      <td>MSME Internal (Medium) Credit Risk Rating :  1</td>
-      <td>A. Level of Credit Worthiness  : Highest</td>
-    </tr>
-    <tr>
-      <td>If Risk Score is 35 % and above but < 40 %.</td>
-      <td>MSME Internal (Medium) Credit Risk Rating :  2</td>
-      <td>B. Level of Credit Worthiness  : High</td>
-    </tr>
-    <tr>
-      <td>If Risk Score is 40 % and above but < 45 %.</td>
-      <td>MSME Internal (Medium) Credit Risk Rating :  3</td>
-      <td>C. Level of Credit Worthiness  : Good</td>
-    </tr>
-    <tr>
-      <td>If Risk Score is 45 % and above but < 55 %.</td>
-      <td>MSME Internal (Medium) Credit Risk Rating :  4</td>
-      <td>D. Level of Credit Worthiness  : Above Average</td>
-    </tr>
-    <tr>
-      <td>If Risk Score is 55 % and above but < 60 %.</td>
-      <td>MSME Internal (Medium) Credit Risk Rating :  5</td>
-      <td>E. Level of Credit Worthiness  : Average</td>
-    </tr>
-    <tr>
-      <td>If Risk Score is 60 % and above but < 65 %.</td>
-      <td>MSME Internal (Medium) Credit Risk Rating :  6</td>
-      <td>F. Level of Credit Worthiness  : Below Average </td>
-    </tr>
-    <tr>
-      <td>If Risk Score is 65 % and above but < 70 %.</td>
-      <td>MSME Internal (Medium) Credit Risk Rating :  7</td>
-      <td>G. Level of Credit Worthiness  : Weak </td>
-    </tr>
-    <tr>
-      <td>If Risk Score is 70 % and above.</td>
-      <td>MSME Internal (Medium) Credit Risk Rating :  8</td>
-      <td>H. Level of Credit Worthiness  : Poor</td>
-    </tr>
-  </table>
-</div>
+  <div>
+    <table id="customers">
+      <tr>
+        <th>Rating Scale</th>
+        <th>Rating</th>
+        <th>Level of Credit Worthiness</th>
+      </tr>
+      <tr>
+        <td>If Risk Score is < 35 %</td>
+        <td>MSME Internal (Medium) Credit Risk Rating : 1</td>
+        <td>A. Level of Credit Worthiness : Highest</td>
+      </tr>
+      <tr>
+        <td>If Risk Score is 35 % and above but < 40 %.</td>
+        <td>MSME Internal (Medium) Credit Risk Rating : 2</td>
+        <td>B. Level of Credit Worthiness : High</td>
+      </tr>
+      <tr>
+        <td>If Risk Score is 40 % and above but < 45 %.</td>
+        <td>MSME Internal (Medium) Credit Risk Rating : 3</td>
+        <td>C. Level of Credit Worthiness : Good</td>
+      </tr>
+      <tr>
+        <td>If Risk Score is 45 % and above but < 55 %.</td>
+        <td>MSME Internal (Medium) Credit Risk Rating : 4</td>
+        <td>D. Level of Credit Worthiness : Above Average</td>
+      </tr>
+      <tr>
+        <td>If Risk Score is 55 % and above but < 60 %.</td>
+        <td>MSME Internal (Medium) Credit Risk Rating : 5</td>
+        <td>E. Level of Credit Worthiness : Average</td>
+      </tr>
+      <tr>
+        <td>If Risk Score is 60 % and above but < 65 %.</td>
+        <td>MSME Internal (Medium) Credit Risk Rating : 6</td>
+        <td>F. Level of Credit Worthiness : Below Average</td>
+      </tr>
+      <tr>
+        <td>If Risk Score is 65 % and above but < 70 %.</td>
+        <td>MSME Internal (Medium) Credit Risk Rating : 7</td>
+        <td>G. Level of Credit Worthiness : Weak</td>
+      </tr>
+      <tr>
+        <td>If Risk Score is 70 % and above.</td>
+        <td>MSME Internal (Medium) Credit Risk Rating : 8</td>
+        <td>H. Level of Credit Worthiness : Poor</td>
+      </tr>
+    </table>
+  </div>
   <div class="example-button-row">
     <button
-      type="button"
+      type="submit"
       mat-raised-button
       color="primary"
-      style="margin: 1rem;"
-      (click)="GoToNext()"
+      style="margin: 1rem"
     >
       Next
     </button>
   </div>
 </form>
-  

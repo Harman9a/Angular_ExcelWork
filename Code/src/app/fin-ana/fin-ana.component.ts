@@ -10,11 +10,11 @@ interface finDataInterface {
     crC: number,
     crN: number,
     srg: number,
-    aDscr: number,
+    aDscr: any,
     aIscr: number,
     sr: number,
     dc: number,
-    roce: number,
+    roce: any,
 }
 
 @Component({
