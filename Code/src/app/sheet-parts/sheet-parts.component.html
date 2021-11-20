@@ -1,0 +1,40 @@
+<app-header></app-header>
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile >
+    <mat-card class="example-card">
+      <mat-card-title>Balance Sheet Analysis</mat-card-title>
+      <mat-card-subtitle>Step 1</mat-card-subtitle>
+      <mat-card-content>
+        <p></p>
+      </mat-card-content>
+      <mat-card-actions>
+        <div class="example-button-row">
+          <button
+            mat-flat-button
+            style="background-color: #E18942; color: white;"
+            (click)="openBalanceSheet()"
+          >
+            View
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile >
+	<mat-card class="example-card">
+	  <mat-card-title>MSME Internal (Medium)</mat-card-title>
+	  <mat-card-subtitle>Step 2</mat-card-subtitle>
+	  <mat-card-content>
+	    <p></p>
+	  </mat-card-content>
+	  <mat-card-actions>
+	    <button mat-button
+	    	style="background-color: #E18942; color: white;"
+	    	(click)="openMsmeSheet()"
+	    >
+	    	View
+		</button>
+	  </mat-card-actions>
+	</mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div class="aliceblue" style="padding: 1rem; border-bottom: 1px solid #333">
   <mat-grid-list cols="24" rowHeight="2:1">
     <mat-grid-tile [colspan]="24">
@@ -7,7 +8,7 @@
 </div>
 
 <app-sheet-head [year]="id"></app-sheet-head>
-
+<form #frm="ngForm" (ngSubmit)="savedata(frm.value)">
 <div [ngSwitch]="id">
   <div *ngSwitchCase="'1'">
     <div class="Contain">
@@ -5903,12 +5904,17 @@
   </div>
 </div>
 
-<div class="example-button-row" style="margin-left: 10px;">
- <button type="button" mat-raised-button color="primary" (click)="GoHome()">
+<div class="example-button-row" style="margin-left: 10px">
+  <button type="submit" mat-raised-button color="primary">
     Home
   </button>
-  <button type="button" mat-raised-button color="primary" (click)="printSheet()">
+  <button
+    type="button"
+    mat-raised-button
+    color="primary"
+    (click)="printSheet()"
+  >
     Print
   </button>
 </div>
-
+</form>

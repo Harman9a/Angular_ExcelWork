@@ -32,12 +32,14 @@ val:any;
     );
   //  console.log("Name"+this.name+"Comp Name"+this.cName+"Sheet Type"+this.type+"Year"+this.year);
   //  this.router.navigateByUrl('/balsheet');
+  let uid = localStorage.getItem('myuid');
   var fd = new FormData();
   fd.append("name",this.name );
   fd.append("action_id",'2' );
-fd.append("cname",this.cName);
-fd.append("type",this.type);
-fd.append("Year",this.year);
+  fd.append("cname",this.cName);
+  fd.append("type",this.type);
+  fd.append("Year",this.year);
+  fd.append("uid",uid);
 
 this.ds.addcompany(fd).subscribe((data)=>{
 console.log(data)

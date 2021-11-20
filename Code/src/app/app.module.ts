@@ -36,16 +36,45 @@ import { ProfitLossComponent } from './profit-loss/profit-loss.component';
 import { DscrComponent } from './dscr/dscr.component';
 import { IscrComponent } from './iscr/iscr.component';
 import { KfrComponent } from './kfr/kfr.component';
+import { SignupComponent } from './signup/signup.component';
+import { FinAnaComponent } from './fin-ana/fin-ana.component';
+import { ManAppComponent } from './man-app/man-app.component';
+import { OwnershipComponent } from './ownership/ownership.component';
+import { MarkIndComponent } from './mark-ind/mark-ind.component';
+import { TechProfComponent } from './tech-prof/tech-prof.component';
+import { CollGuaComponent } from './coll-gua/coll-gua.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { DataUploadComponent } from './data-upload/data-upload.component';
+import { SheetPartsComponent } from './sheet-parts/sheet-parts.component';
+import { FileUploadModule } from '@iplab/ngx-file-upload';
+import { SuperRatingComponent } from './super-rating/super-rating.component';
+import { IScoreComponent } from './i-score/i-score.component';
+import { RatParaComponent } from './rat-para/rat-para.component';
+import { FRatReportComponent } from './frat-report/frat-report.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/dashbord', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path:'login', component:LoginComponent },
+  { path:'signup', component:SignupComponent },
+  { path:'sheetParts', component:SheetPartsComponent },
+  { path:'FinAna', component:FinAnaComponent },
+  { path:'ManApp', component:ManAppComponent },
+  { path:'MarkInd', component:MarkIndComponent },
+  { path:'TechProf', component:TechProfComponent },
+  { path:'CollGua', component:CollGuaComponent },
+  { path:'SuperRating', component:SuperRatingComponent },
+  { path:'iScore', component:IScoreComponent },
+  { path:'RatPara', component:RatParaComponent },
+  { path:'FRatReport', component:FRatReportComponent },
+  { path:'ownership', component:OwnershipComponent },
+  { path:'dataUpload', component:DataUploadComponent },
   { path: 'dashbord', component: DashbordComponent },
   { path: 'balsheet/:id', component: BalSheetComponent },
   { path: 'sheet', component: SheetComponent },
   { path: 'dscr/:id', component: DscrComponent },
   { path: 'iscr/:id', component: IscrComponent },
   { path: 'kfr/:id', component: KfrComponent },
-
   { path: 'profit-loss/:id', component: ProfitLossComponent },
 ];
 
@@ -65,7 +94,20 @@ const appRoutes: Routes = [
     ProfitLossComponent,
     DscrComponent,
     IscrComponent,
-    KfrComponent
+    KfrComponent,
+    SignupComponent,
+    FinAnaComponent,
+    ManAppComponent,
+    OwnershipComponent,
+    MarkIndComponent,
+    TechProfComponent,
+    CollGuaComponent,
+    DataUploadComponent,
+    SheetPartsComponent,
+    SuperRatingComponent,
+    IScoreComponent,
+    RatParaComponent,
+    FRatReportComponent
   ],
   imports: [
     BrowserModule,
@@ -83,6 +125,9 @@ const appRoutes: Routes = [
     MatSelectModule,
     MatTableModule,
     HttpClientModule,
+    MatSidenavModule,
+    MatExpansionModule,
+    FileUploadModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: false } // <-- debugging purposes only

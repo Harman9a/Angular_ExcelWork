@@ -497,16 +497,25 @@ export class KfrComponent implements OnInit {
 
     if (this.id == 5) {
       head = [
-        ['', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
+        ['Demo 2', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
+        ['', this.th1, this.th2, this.th3, this.th4, this.th5, this.th6, this.th7, this.th8],
       ];
     } else if (this.id == 4) {
-      head = [['', '2019', '2020', '2021', '2022', '2023', '2024', '2025']];
+      head = [
+        ['', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+        ['', this.th1, this.th2, this.th3, this.th4, this.th5, this.th6, this.th7],
+      ];
     } else if (this.id == 3) {
-      head = [['', '2019', '2020', '2021', '2022', '2023', '2024']];
+      head = [
+        ['', '2019', '2020', '2021', '2022', '2023', '2024'],
+        ['', this.th1, this.th2, this.th3, this.th4, this.th5, this.th6],
+      ];
     } else if (this.id == 2) {
-      head = [['', '2019', '2020', '2021', '2022', '2023']];
+      head = [['', '2019', '2020', '2021', '2022', '2023']]
     } else {
-      head = [['', '2019', '2020', '2021', '2022']];
+      head = [
+        ['', '2019', '2020', '2021', '2022']
+      ];
     }
 
     if (this.id == 5) {
@@ -1200,16 +1209,33 @@ export class KfrComponent implements OnInit {
     console.log(TotalCell);
 
     var doc = new jsPDF();
-    doc.text('Key Financials and Ratios', 80, 10);
+    doc.rect(10, 10, doc.internal.pageSize.width - 20, doc.internal.pageSize.height - 20, 'S');
+    doc.text('Key Financials and Ratios', 80, 35);
     doc.setFontSize(9);
-    doc.text('Kyats in Mill', 178, 10);
+    doc.text('Kyats in Mill', 178, 35);
     // doc.autoTable({theme:'grid',head :head , body: body , styles: {overflow: 'linebreak',fontSize: 5}}) // one page
     // doc.autoTable({ theme: 'grid', head: head, body: body })
-    autoTable(doc, { theme: 'grid', head: head, body: body });
+    autoTable(doc, { theme: 'grid', head: head, body: body , margin: { top: 50 }});
     // Save
     doc.save('KeyFinancials.pdf');
   };
   GoHome(){
     this.router.navigateByUrl('/dashbord');
   }
+
+  savedata=(val) =>{
+    this.c_id =localStorage.getItem('c_id');
+    var jsdata = JSON.stringify(val);
+    var fd = new FormData();
+    fd.append("id",this.id );
+    fd.append("action_id",'SAVE_KFR' );
+    fd.append("a1",jsdata);
+    fd.append("c_id",this.c_id);
+    this.ds.addkfr(fd).subscribe((data)=>{
+    if(data == 1){
+      console.log(data)
+    }});
+  }
+
+
 }

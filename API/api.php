@@ -23,18 +23,15 @@ if($_POST['action_id'] == '1')
 
 if($_POST['action_id'] == '2')
 {
-  
-  // echo "SELECT * FROM Companies WHERE user_name='".$_POST['name']."'";
-     $check_company = mysqli_query($conn, "SELECT * FROM Companies WHERE user_name='".$_POST['name']."'"); 
+    $check_company = mysqli_query($conn, "SELECT * FROM companies WHERE user_name='".$_POST['name']."'"); 
     $check_company->num_rows;
    if($check_company->num_rows == 0){
-    $csql = "INSERT INTO Companies(user_name,company_name,facility, year) VALUES ('".$_POST['name']."','".$_POST['cname']."','".$_POST['type']."','".$_POST['Year']."')";
+    $csql = "INSERT INTO companies(user_name,company_name,facility, year,u_id) VALUES ('".$_POST['name']."','".$_POST['cname']."','".$_POST['type']."','".$_POST['Year']."','".$_POST['uid']."')";
         $cresult = mysqli_query($conn, $csql);
            if($cresult){
-            $res = mysqli_query($conn, "SELECT id FROM Companies WHERE user_name='".$_POST['name']."' || company_name = '".$_POST['cname']."'");
+            $res = mysqli_query($conn, "SELECT id FROM companies WHERE user_name='".$_POST['name']."' || company_name = '".$_POST['cname']."'");
             while ($row = mysqli_fetch_assoc($res)) {
                echo $row['id'];
-            
             }
         
            } 
@@ -47,7 +44,8 @@ if($_POST['action_id'] == '2')
 
 if($_POST['action_id'] == '3')
 {
-    $res = mysqli_query($conn, "SELECT * FROM Companies");
+    $uid = $_POST['uid'];
+    $res = mysqli_query($conn, "SELECT * FROM companies WHERE u_id ='$uid'");
     while ($row = mysqli_fetch_assoc($res)) {
         $response[] = $row;
     
@@ -71,6 +69,26 @@ if($_POST['action_id'] == '4')
         }
     }else{
         $sql_pf = " INSERT INTO profitloss(id,data,c_id) VALUES ('".$_POST['id']."','".$_POST['a1']."','".$_POST['c_id']."')";
+        $result_pf = mysqli_query($conn, $sql_pf);
+           if($result_pf){
+               echo 1;
+           }
+           }
+   
+}
+
+if($_POST['action_id'] == 'SAVE_KFR')
+{
+    
+    $check_pf = mysqli_query($conn, "SELECT * FROM key_financial_and_ratios WHERE c_id=".$_POST['c_id']); 
+
+    if($check_pf->num_rows != 0){
+      $u_res_pf =  mysqli_query($conn, "UPDATE key_financial_and_ratios SET data='".$_POST['a1']."'   WHERE c_id='".$_POST['c_id']."'");
+        if($u_res_pf){
+            echo 1;
+        }
+    }else{
+        $sql_pf = "INSERT INTO key_financial_and_ratios(id,data,c_id) VALUES ('".$_POST['id']."','".$_POST['a1']."','".$_POST['c_id']."')";
         $result_pf = mysqli_query($conn, $sql_pf);
            if($result_pf){
                echo 1;
@@ -159,7 +177,7 @@ if($_POST['action_id'] == '8')
 if($_POST['action_id'] == '9')
 {  
    
-        $del_sql = "DELETE fROM Companies WHERE id ='".$_POST['id']."'";
+        $del_sql = "DELETE fROM companies WHERE id ='".$_POST['id']."'";
         $result_del = mysqli_query($conn, $del_sql);
            if($result_del){
                echo 1;

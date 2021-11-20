@@ -1,0 +1,691 @@
+<app-header></app-header>
+
+<mat-grid-list cols="12" rowHeight="60px">
+  <mat-grid-tile [colspan]="12">
+    <span class="mainHeading">
+      A-Cra : MSME : Internal (Medium) Credit Risk Rating Model
+    </span>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<form #frm="ngForm" (ngSubmit)="GoToNext(frm.value)">
+<div>
+  <table id="customers">
+    <tr>
+      <th>Parameter</th>
+      <th>Measure</th>
+      <th>Score Options</th>
+      <th>Weight</th>
+      <th>Max. Score</th>
+      <th>Assigned Score</th>
+      <th>Assigned Weigted Score</th>
+    </tr>
+    <tr>
+      <td style="font-weight: bold; font-size: 15px">
+        A. Financial Analysis :
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="aquamarine">
+      <td>1. Leverage :</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>(Debt-Equity Ratio)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Last Year</td>
+      <td>Based on Last Year Financials (Audited/ Provisional)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>A. Less than 1</td>
+      <td>1</td>
+      <td rowspan="7">4</td>
+      <td rowspan="7">28</td>
+      <td rowspan="7" class="finAnaIptTd"><input type="text" name="derL" [(ngModel)]="finData.derL" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="7">4</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>B. 1 and More but < 2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>C. 2 and More but < 3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>D. 3 and More but < 4</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>E. 4 and More but < 5</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>F. 5 and More.</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>G. New Business - NB</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>(Debt-Equity Ratio)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Current Year</td>
+      <td>Based on Current Year Financials (Estimates)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>A. Less than 1</td>
+      <td>1</td>
+      <td rowspan="6">6</td>
+      <td rowspan="6">36</td>
+      <td rowspan="6" class="finAnaIptTd"><input type="number" name="derC" [(ngModel)]="finData.derC" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="6">12</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>B. 1 and More but < 2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>C. 2 and More but < 3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>D. 3 and More but < 4</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>E. 4 and More but < 5</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>F. 5 and More.</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>(Debt-Equity Ratio)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Next Year</td>
+      <td>Based on Next Year Financials (Projections)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>A. Less than 1</td>
+      <td>1</td>
+      <td rowspan="6">6</td>
+      <td rowspan="6">36</td>
+      <td rowspan="6" class="finAnaIptTd"><input type="number" name="derN" [(ngModel)]="finData.derN" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="6">12</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>B. 1 and More but < 2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>C. 2 and More but < 3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>D. 3 and More but < 4</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>E. 4 and More but < 5</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>F. 5 and More.</td>
+      <td>6</td>
+    </tr>
+    <tr class="aquamarine">
+      <td>2. LIQUIDITY</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>(Current Ratio)</td>
+      <td>(Current Assets / Current Liabilities)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Last Year</td>
+      <td>Based on Last Year Financials (Audited/ Provisional)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>A. 1.33 & More.</td>
+      <td>1</td>
+      <td rowspan="5">2</td>
+      <td rowspan="5">10</td>
+      <td rowspan="5" class="finAnaIptTd"><input type="number" name="crL" [(ngModel)]="finData.crL" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="5">6</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>B. 1.00 & More but < 1.33</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>C. 0.75 & More but < 1.00</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>D. < 0.75</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>E. New Business - NB</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>(Current Ratio)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Current Year</td>
+      <td>Based on Current Year Financials (Estimates)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>A. 1.33 & More.</td>
+      <td>1</td>
+      <td rowspan="4">3</td>
+      <td rowspan="4">12</td>
+      <td rowspan="4" class="finAnaIptTd"><input type="number" name="crC" [(ngModel)]="finData.crC" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="4">6</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>B. 1.00 & More but < 1.33</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>C. 0.75 & More but < 1.00</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>D. < 0.75</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>(Current Ratio)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Next Year</td>
+      <td>Based on Next Year Financials (Projections)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>A. 1.33 & More.</td>
+      <td>1</td>
+      <td rowspan="4">3</td>
+      <td rowspan="4">12</td>
+      <td rowspan="4" class="finAnaIptTd"><input type="number" name="crN" [(ngModel)]="finData.crN" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="4">6</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>B. 1.00 & More but < 1.33</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>C. 0.75 & More but < 1.00</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>D. < 0.75</td>
+      <td>4</td>
+    </tr>
+    <tr class="aquamarine">
+      <td>3. SALES / REVENUE : (Growth)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        A. An Increasing Trend in Sales / Revenue which is considered
+        satisfactory growth for firm's business activity.
+      </td>
+      <td>1</td>
+      <td rowspan="6">2</td>
+      <td rowspan="6">10</td>
+      <td rowspan="6" class="finAnaIptTd"><input type="number" name="srg" [(ngModel)]="finData.srg" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="6">6</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td style="width: 35%">
+        B. Almost No Change in Trend in sales / revenue which is in line with
+        other firms dealing in similar busniess activity.
+      </td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        C. Company's Net Sales have decreased marginally over previous year
+        which is in line with other companies having similar business activity.
+      </td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        E. Company's Net Sales have decreased sharply over previous year which
+        is in line with other companies having similar business due to External
+        factors like Covid-19.
+      </td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        D. Company's Net Sales have decreased sharply against previous year
+        which is NOT in line with other companies having similar business.
+      </td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>E. New Business - NB</td>
+      <td>6</td>
+    </tr>
+    <tr class="aquamarine">
+      <td>4. COVERAGE</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>A. Debt Service Coverage Ratio (Average DSCR)</td>
+      <td>Based on Projected Cash Flows (During Repayment Period)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>A. 2.00 & More</td>
+      <td>1</td>
+      <td rowspan="5">8</td>
+      <td rowspan="5">32</td>
+      <td rowspan="5" class="finAnaIptTd"><input type="number" name="aDscr" [(ngModel)]="finData.aDscr" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="5">16</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>B. 1.50 & More but < 2.00</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>C. 1.00 & More but < 1.50</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>D. < 1.00</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>E. Not Applicable - NA</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>B. Interest Service Coverage Ratio (Average ISCR).</td>
+      <td>Based on Projected Cash Flows ( During Repayment Period).</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>A. 3.00 & More</td>
+      <td>1</td>
+      <td rowspan="5">8</td>
+      <td rowspan="5">20</td>
+      <td rowspan="5" class="finAnaIptTd"><input type="number" name="aIscr" [(ngModel)]="finData.aIscr" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="5">8</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>B. 2.00 & More but < 3.00</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>C. 1.50 & More but < 2.00</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>D. 1.00 & More but < 1.50</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>E. < 1.00</td>
+      <td>5</td>
+    </tr>
+    <tr class="aquamarine">
+      <td>5. EFFICIENCY</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Debt Collection</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        A. If Company has only Cash Sales or Near Cash Sales ( Near Cash Sales
+        mean "Collection in less than 15 days" without any defaults during last
+        1 Year)
+      </td>
+      <td>1</td>
+      <td rowspan="5">3</td>
+      <td rowspan="5">15</td>
+      <td rowspan="5" class="finAnaIptTd"><input type="number" name="dc" [(ngModel)]="finData.dc" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="5">9</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        B. If Company has Credit Sales but the average debt collection period is
+        Less Than market trend (Less than 90 days) and company has no bad debts
+        during last 1 Year.
+      </td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        C. If Company has Credit Sales but the average debt collection period is
+        More Than market trend ( 90 and above days) and company has few bad
+        debts during last 1 Year ( Max. Upto 1 % of sales).
+      </td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        D. If Company has Credit Sales and the debt collection period is more
+        than market trend ( 90 days and above ) with bad debts beyond acceptable
+        level during last 1 Year ( > 1 % of sales).
+      </td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>E. New Business - NB</td>
+      <td>5</td>
+    </tr>
+    <tr class="aquamarine">
+      <td>6. PROFITABILITY</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>A. PAT : SALES Ratio</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        A. Company's PAT Ratio is Excellent ( > than 5 % for wholesale firms And
+        > 10 % for manufacturing , retail and service firms).
+      </td>
+      <td>1</td>
+      <td rowspan="6">3</td>
+      <td rowspan="6">18</td>
+      <td rowspan="6" class="finAnaIptTd"><input type="number" name="sr" [(ngModel)]="finData.sr" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="6">9</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        B. Company's PAT Ratio is Good ( > than 2.00 % upto 5.00 % for wholesale
+        firms And > than 5 % upto 10 % for manufacturing, retail and service
+        firms)
+      </td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        C. Company's PAT Ratio is Satisfactory ( > than 0.50 % upto 2.00 % for
+        wholesale firms And > than 2.00 % upto 5 % for manufacturing, retail and
+        service firms)
+      </td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        D. Company's PAT Ratio is Unsatisfactory ( upto 0.50 % for wholesale
+        firms And upto 2.00 % for manufacturing , retail and service firms)
+      </td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>E. Company had Loss during last Year</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>E. New Business - NB</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>B. Return on Capital Employed (ROCE) - Last Year</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>A. Company's ROCE is Excellent ( > than 15 % )</td>
+      <td>1</td>
+      <td rowspan="6">8</td>
+      <td rowspan="6">32</td>
+      <td rowspan="6" class="finAnaIptTd"><input type="number" name="roce" [(ngModel)]="finData.roce" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="6">16</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>B. Company's ROCE is Good ( > than 10 % upto 15 % )</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>C. Company's ROCE is Satisfactory ( > than 5 % upto 10 % )</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>D. Company's ROCE is Unsatisfactory (Upto 5 % )</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>E. Company had LOSS during last year</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>F. New Business - NB</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="aquamarine">
+      <td colspan="2" style="text-align: center">
+        A. TOTAL OF FINANCIAL ANALYSIS SCORE
+      </td>
+      <td>XXX</td>
+      <td>XXX</td>
+      <td>253</td>
+      <td>{{allTotal}}</td>
+      <td>160</td>
+    </tr>
+  </table>
+</div>
+  <div class="example-button-row">
+    <button
+      type="submit"
+      mat-raised-button
+      color="primary"
+      style="margin: 1rem;"
+    >
+      Next
+    </button>
+  </div>
+</form>

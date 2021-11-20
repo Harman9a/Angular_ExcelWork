@@ -1,0 +1,158 @@
+<app-header></app-header>
+
+<mat-grid-list cols="12" rowHeight="60px">
+  <mat-grid-tile [colspan]="12">
+    <span class="mainHeading">
+      A-Cra : MSME : Internal (Medium) Credit Risk Rating Model
+    </span>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<form #frm="ngForm" (ngSubmit)="GoToNext(frm.value)">
+<div>
+  <table id="customers">
+    <tr>
+      <th>Parameter</th>
+      <th>Measure</th>
+      <th>Score Options</th>
+      <th>Weight</th>
+      <th>Max. Score</th>
+      <th>Assigned Score</th>
+      <th>Assigned Weigted Score</th>
+    </tr>
+    <tr >
+      <td style="font-weight: bold; text-align: center; font-size: 18px; padding: 12px;" colspan="7">
+       F. Collaterals and Guarantors Review
+      </td>
+    </tr>
+    <tr class="aquamarine">
+      <td>
+	 a. Value of total Collaterals
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="7"></td>
+      <td>A. Company has offered Total Collaterals  having 200 % and more value of the proposed exposure.</td>
+      <td>1</td>
+      <td rowspan="7">5</td>
+      <td rowspan="7">20</td>
+	   <td rowspan="7" class="finAnaIptTd"><input type="number" name="vtc" [(ngModel)]="finData.vtc" class="finAnaIpt"></td>
+      <td rowspan="7">10</td>
+    </tr>
+    <tr>
+      <td>B. Company has offered Total Collaterals  having 150 % and more value but less than 200 % of the proposed exposure.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>C. Company has offered Total Collaterals  having 100 % and more value but less than 150 % of the proposed exposure.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>D. Company has offered Total Collaterals  having 75 % and more value but less than 100 % of the proposed exposure.</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>E. Company has offered Total Collaterals  having 50 % and more value but less than 75 % of the proposed exposure.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>F. Company has offered Total Collaterals  having value LESS Than 50 % of the proposed exposure.</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>G. Company has offered NO Collaterals to secure the proposed exposure.</td>
+      <td>7</td>
+    </tr>
+    <tr class="aquamarine">
+      <td>
+		  b. Value of Cash and Cash Equivalent Collaterals
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="4"></td>
+      <td>A. Company has offered Cash and Cash Equivalent Collaterals having 50 % and more value of the total proposed exposure.</td>
+      <td>1</td>
+      <td rowspan="4">5</td>
+      <td rowspan="4">20</td>
+   <td rowspan="4" class="finAnaIptTd"><input type="number" name="vccec" [(ngModel)]="finData.vccec" class="finAnaIpt"></td>
+      <td rowspan="4">10</td>
+    </tr>
+    <tr>
+      <td>B. Company has offered Cash and Cash Equivalent Collaterals having 25 % and more but less than 50 % value of the total proposed exposure.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>C. Company has offered Cash and Cash Equivalent Collaterals having 10 % and more but less than 25 % value of the total proposed exposure.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>D. Company has offered Cash and Cash Equivalent Collaterals  having Less than 10  %  value of the total proposed exposure or No Cash or Cash Equivalent Collaterals are offered.</td>
+      <td>4</td>
+    </tr>
+    <tr class="aquamarine">
+      <td>
+	   c. Guarantor's credentials and their worth
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="4"></td>
+      <td>A. The proposed guarantors are highly reputed persons and have high networth.</td>
+      <td>1</td>
+      <td rowspan="4">5</td>
+      <td rowspan="4">20</td>
+   <td rowspan="4" class="finAnaIptTd"><input type="number" name="gctw" [(ngModel)]="finData.gctw" class="finAnaIpt"></td>
+      <td rowspan="4">10</td>
+    </tr>
+    <tr>
+      <td>B. The proposed guarantors are highly reputed persons with moderate networth.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>C. The proposed guarantors are respectable persons with  limited means and networth.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>D. The proposed guarantors are respectable persons but have almost negligible worth.</td>
+      <td>4</td>
+    </tr>
+    <tr class="aquamarine">
+      <td colspan="2" style="text-align: center">
+		Total of Collaterals and Guarantors Review Score :
+      </td>
+      <td>XXX</td>
+      <td>XXX</td>
+      <td>84</td>
+      <td>xxx</td>
+      <td>34</td>
+    </tr>
+  </table>
+</div>
+  <div class="example-button-row">
+    <button
+      type="submit"
+      mat-raised-button
+      color="primary"
+      style="margin: 1rem;"
+    >
+      Next
+    </button>
+  </div>
+</form>

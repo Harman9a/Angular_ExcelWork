@@ -1,0 +1,178 @@
+<app-header></app-header>
+
+<mat-grid-list cols="12" rowHeight="60px">
+  <mat-grid-tile [colspan]="12">
+    <span class="mainHeading">
+      A-Cra : MSME : Internal (Medium) Credit Risk Rating Model
+    </span>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<form #frm="ngForm" (ngSubmit)="GoToNext(frm.value)">
+<div>
+  <table id="customers">
+    <tr>
+      <th>Parameter</th>
+      <th>Measure</th>
+      <th>Score Options</th>
+      <th>Weight</th>
+      <th>Max. Score</th>
+      <th>Assigned Score</th>
+      <th>Assigned Weigted Score</th>
+    </tr>
+    <tr >
+      <td style="font-weight: bold; text-align: center; font-size: 18px; padding: 12px;" colspan="7">
+       D.  Market and Industry Appraisal
+      </td>
+    </tr>
+    <tr class="aquamarine">
+      <td>
+	     a. Market Potential.
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="4"></td>
+      <td>A. Company's products have High Potential with fast growth in demand.</td>
+      <td>1</td>
+      <td rowspan="4">5</td>
+      <td rowspan="4">20</td>
+	   <td rowspan="4" class="finAnaIptTd"><input type="number" name="inter" [(ngModel)]="finData.mp" class="finAnaIpt"></td>
+      <td rowspan="4">10</td>
+    </tr>
+    <tr>
+      <td>B. Company's products have Moderate Potential with  no threat in short and medium term.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>C. Company's products have Low  Potential as demand is expected  to shrink in short and medium term.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>D. Dying Market with almost no potential for growth.</td>
+      <td>4</td>
+    </tr>
+    <tr class="aquamarine">
+      <td>
+   b. Customer Quality and Concentration.
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="4"></td>
+      <td>A. Diversified Customer Base with and stable purchase pattern. They pay  invoices on timely basis.</td>
+      <td>1</td>
+      <td rowspan="4">5</td>
+      <td rowspan="4">20</td>
+   <td rowspan="4" class="finAnaIptTd"><input type="number" name="cqc" [(ngModel)]="finData.cqc" class="finAnaIpt"></td>
+      <td rowspan="4">10</td>
+    </tr>
+    <tr>
+      <td>B. Generally Diversified Customer Base who may not have  stable purchase pattern from the firm. Generally, they pay outstanding invoices on a timely basis.  </td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>C. Company's customer base is not diversified but they are reasonably loyal  customers with  a stable purchase pattern. Generally, they  pay outstanding invoices on a timely basis. </td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>D. Company's customer base is not diversified and they are also not  loyal with  an uncertain purchase pattern. They also generally delay in paying outstanding invoices with possibility of defaults as well.</td>
+      <td>4</td>
+    </tr>
+    <tr class="aquamarine">
+      <td>
+	   c. Supplier Quality and Concentration Risk
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="4"></td>
+      <td>A. Company has a choice of suppliers supplying quality goods & services.</td>
+      <td>1</td>
+      <td rowspan="4">5</td>
+      <td rowspan="4">20</td>
+   <td rowspan="4" class="finAnaIptTd"><input type="number" name="sqcr" [(ngModel)]="finData.sqcr" class="finAnaIpt"></td>
+      <td rowspan="4">10</td>
+    </tr>
+    <tr>
+      <td>B. Company has a choice of suppliers but the quality of goods & services from most of them may be average.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>C. Company has very few suppliers supplying goods & services.  Quality of goods & services is also not very good.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>D. There is almost monopolistic situation of suppliers with no control over quality of goods and services.</td>
+      <td>4</td>
+    </tr>
+    <tr class="aquamarine">
+      <td>
+	  d.  Element of Seasonality.
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="4"></td>
+      <td>A. Company's product line has ZERO  element of seasonality both in terms of Demand and Price Fluctuations.</td>
+      <td>1</td>
+      <td rowspan="4">5</td>
+      <td rowspan="4">20</td>
+   <td rowspan="4" class="finAnaIptTd"><input type="number" name="es" [(ngModel)]="finData.es" class="finAnaIpt"></td>
+      <td rowspan="4">10</td>
+    </tr>
+    <tr>
+      <td>B. Company's product line has SMALL element of seasonality both in terms of Demand and Price Fluctuations.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>C. Company's product line has MODERATE element of seasonality both in terms of Demand and Price Fluctuations resulting in some risk of losses. </td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>D. Company's product line has HIGH Degree of seasonality both in terms of Demand and Price Fluctuations resulting in high risk of losses. </td>
+      <td>4</td>
+    </tr>
+    <tr class="aquamarine">
+      <td colspan="2" style="text-align: center">
+     'D. Market and Industry Appraisal Score:
+      </td>
+      <td>XXX</td>
+      <td>XXX</td>
+      <td>84</td>
+      <td>xxx</td>
+      <td>40</td>
+    </tr>
+  </table>
+</div>
+  <div class="example-button-row">
+    <button
+      type="submit"
+      mat-raised-button
+      color="primary"
+      style="margin: 1rem;"
+    >
+      Next
+    </button>
+  </div>
+</form>

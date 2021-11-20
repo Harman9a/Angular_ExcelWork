@@ -1,0 +1,89 @@
+<app-header></app-header>
+
+<mat-grid-list cols="12" rowHeight="60px">
+  <mat-grid-tile [colspan]="12">
+    <span class="mainHeading">
+      A-Cra : MSME : Internal (Medium) Credit Risk Rating Model
+    </span>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<form #frm="ngForm" (ngSubmit)="GoToNext(frm.value)">
+<div>
+  <table id="customers">
+    <tr>
+      <th>Parameter</th>
+      <th>Measure</th>
+      <th>Score Options</th>
+      <th>Weight</th>
+      <th>Max. Score</th>
+      <th>Assigned Score</th>
+      <th>Assigned Weigted Score</th>
+    </tr>
+    <tr class="aquamarine">
+      <td>
+       G. Supervisory Rating Score 
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="finAnaIptTd"><input style="width: unset;" placeholder="Enter Name" type="text" name="cma" [(ngModel)]="finData.cma" class="finAnaIpt"></td>
+      <td></td>
+      <td></td>
+      <td>100</td>
+	  <td class="finAnaIptTd"><input type="number" name="m1" [(ngModel)]="finData.m1" class="finAnaIpt"></td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="finAnaIptTd"><input style="width: unset;" placeholder="Enter Name" type="text" name="cmb" [(ngModel)]="finData.cmb" class="finAnaIpt"></td>
+      <td></td>
+      <td></td>
+      <td>100</td>
+	  <td class="finAnaIptTd"><input type="number" name="m2" [(ngModel)]="finData.m2" class="finAnaIpt"></td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="finAnaIptTd"><input style="width: unset;" placeholder="Enter Name" type="text" name="cmc" [(ngModel)]="finData.cmc" class="finAnaIpt"></td>
+      <td></td>
+      <td></td>
+      <td>100</td>
+	  <td class="finAnaIptTd"><input type="number" name="m3" [(ngModel)]="finData.m3" class="finAnaIpt"></td>
+      <td>45</td>
+    </tr>
+    <tr class="aquamarine">
+      <td colspan="2" style="text-align: center">
+	     Total of Supervisory Rating Score :
+      </td>
+      <td></td>
+      <td></td>
+      <td>300</td>
+      <td></td>
+      <td>138</td>
+    </tr>
+    <tr class="aquamarine">
+      <td colspan="4" style="text-align: center">
+	     Rating Committee Meeting : Date
+      </td>
+      <td colspan="3">5th November, 2021</td>
+    </tr>
+  </table>
+</div>
+  <div class="example-button-row">
+    <button
+      type="submit"
+      mat-raised-button
+      color="primary"
+      style="margin: 1rem;"
+    >
+      Next
+    </button>
+  </div>
+</form>

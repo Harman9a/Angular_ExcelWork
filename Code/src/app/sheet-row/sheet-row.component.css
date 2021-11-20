@@ -20,12 +20,10 @@
 .ContainName {
   width: 25%;
   font-weight: bold;
-  color: #333333;
 }
 .ContainName5{
   width: 22%;
   font-weight: bold;
-  color: #333333;
 }
 
 .ContainValue {
@@ -83,8 +81,9 @@ table {
 }
 
 .aquamarine {
-  background-color: aquamarine;
+  background-color: #E18942;
   padding: 1rem;
+  color: white;
 }
 
 .sectionHeading {

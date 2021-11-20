@@ -127,5 +127,10 @@
   "cli": {
     "defaultCollection": "@ngrx/schematics",
     "analytics": "17d4ee1b-2aaa-4e10-9ce8-6aad8e3861ba"
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
   }
 }

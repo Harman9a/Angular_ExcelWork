@@ -4,6 +4,7 @@ import { MyModalComponent } from '../my-modal/my-modal.component'
 import { Router } from '@angular/router';
 import { SheetData } from '../model/sheetData.model';
 import { Store } from '@ngrx/store';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -14,11 +15,16 @@ export class HeaderComponent {
   title:string;
   isavailable:any;
   default_data: SheetData;
-  constructor(public dialog: MatDialog, private router: Router, private store: Store<any>) {
+  dontShowHeader: boolean;
+  constructor(public dialog: MatDialog, private router: Router, private store: Store<any>,private location: Location) {
     this.store.select('sheet').subscribe((state => this.default_data = state))
    }
    ngOnInit(): void {
-     
+    
+    this.dontShowHeader = this.location.path() == '/login' || this.location.path() == '/signup'; 
+
+    console.log(this.dontShowHeader);
+
     this.title =localStorage.getItem('c_name');
     console.log(localStorage.getItem('loggedin'));
     if(localStorage.getItem('loggedin') == 'TRUE' ){
@@ -27,8 +33,7 @@ export class HeaderComponent {
    }
 
    logout = () => {
-     this.isavailable = false;
-
+    this.isavailable = false;
     localStorage.setItem('loggedin','FALSE');
     console.log(localStorage.getItem('loggedin'));
     this.router.navigateByUrl('/');
@@ -45,7 +50,7 @@ export class HeaderComponent {
 
   goHome = () => {
   //  console.log(this.default_data.cName);
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/dashbord');
   }
 
 }

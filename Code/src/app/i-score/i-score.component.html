@@ -1,0 +1,103 @@
+<app-header></app-header>
+
+<mat-grid-list cols="12" rowHeight="60px">
+  <mat-grid-tile [colspan]="12">
+    <span class="mainHeading">
+      A-Cra : MSME : Internal (Medium) Credit Risk Rating Model
+    </span>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list cols="12" rowHeight="60px">
+  <mat-grid-tile [colspan]="12">
+    <span class="mainHeading">
+    	Company Name
+    </span>
+  </mat-grid-tile>
+</mat-grid-list>
+<form #frm="ngForm" (ngSubmit)="GoToNext(frm.value)">
+<div>
+  <table id="customers">
+    <tr>
+      <th colspan="2">Parameter</th>
+      <th>Max. Score</th>
+      <th>Actual Score</th>
+      <th>Max. Risk Weighted Score</th>
+      <th>Actual Risk Weighted Score</th>
+    </tr>
+    <tr>
+      <td>A</td>
+      <td>Financial Analysis Score</td>
+      <td>253</td>
+      <td>106</td>
+      <td>20.00</td>
+      <td>8.38</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>Management Appraisal Score.</td>
+      <td>253</td>
+      <td>106</td>
+      <td>20.00</td>
+      <td>8.38</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>Ownership Appraisal Score</td>
+      <td>253</td>
+      <td>106</td>
+      <td>20.00</td>
+      <td>8.38</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>Market and Industry Appraisal Score</td>
+      <td>253</td>
+      <td>106</td>
+      <td>20.00</td>
+      <td>8.38</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td>Technological Appraisal Score</td>
+      <td>253</td>
+      <td>106</td>
+      <td>20.00</td>
+      <td>8.38</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>Collateral and Guarantor Review Score</td>
+      <td>253</td>
+      <td>106</td>
+      <td>20.00</td>
+      <td>8.38</td>
+    </tr>
+    <tr>
+      <td>G</td>
+      <td>Supervisory Rating Score (Rating Committee)</td>
+      <td>253</td>
+      <td>106</td>
+      <td>20.00</td>
+      <td>8.38</td>
+    </tr>
+    <tr  class="aquamarine">
+      <td colspan="2"  style="text-align: center;">Overall Risk Score :</td>
+      <td>626</td>
+      <td>252</td>
+      <td>100</td>
+      <td>41.18</td>
+    </tr>
+  </table>
+</div>
+  <div class="example-button-row">
+    <button
+      type="submit"
+      mat-raised-button
+      color="primary"
+      style="margin: 1rem;"
+    >
+      Next
+    </button>
+  </div>
+</form>

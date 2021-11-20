@@ -1,0 +1,146 @@
+<app-header></app-header>
+
+<mat-grid-list cols="12" rowHeight="60px">
+  <mat-grid-tile [colspan]="12">
+    <span class="mainHeading">
+      A-Cra : MSME : Internal (Medium) Credit Risk Rating Model
+    </span>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<form #frm="ngForm" (ngSubmit)="GoToNext(frm.value)">
+<div>
+  <table id="customers">
+    <tr>
+      <th>Parameter</th>
+      <th>Measure</th>
+      <th>Score Options</th>
+      <th>Weight</th>
+      <th>Max. Score</th>
+      <th>Assigned Score</th>
+      <th>Assigned Weigted Score</th>
+    </tr>
+    <tr >
+      <td style="font-weight: bold; text-align: center; font-size: 18px; padding: 12px;" colspan="7">
+       E.  Technological Appraisal :
+      </td>
+    </tr>
+    <tr class="aquamarine">
+      <td>
+	     a. Technology Dependence
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="4"></td>
+      <td>A. Technology used by the company is Tested and Not Likely  to change in the long run (Over 5 Yrs) / Or the company  has no dependence on technology.</td>
+      <td>1</td>
+      <td rowspan="4">5</td>
+      <td rowspan="4">20</td>
+	   <td rowspan="4" class="finAnaIptTd"><input type="number" name="td" [(ngModel)]="finData.td" class="finAnaIpt"></td>
+      <td rowspan="4">10</td>
+    </tr>
+    <tr>
+      <td>B. Technology used by the company is Tested and Not Likely  to change in the medium term (3-5 years) / Or the company has low dependence on technology.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>C. Technology used by the company is  Tested but likely to change in the medium term (3-5 Yrs).</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>D. Technology used by the company is outdated  or  subject to very fast obsolescence or technology as yet untried/untested</td>
+      <td>4</td>
+    </tr>
+    <tr class="aquamarine">
+      <td>
+		  b. Environmental Impact.
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="4"></td>
+      <td>A. Company comes in the category of non-poluting industries  and is not likely to face any pollution related issues in future. Or The Company is a Service Industry or in any such business which has No Pollution Issue.</td>
+      <td>1</td>
+      <td rowspan="4">5</td>
+      <td rowspan="4">20</td>
+   <td rowspan="4" class="finAnaIptTd"><input type="number" name="ei" [(ngModel)]="finData.ei" class="finAnaIpt"></td>
+      <td rowspan="4">10</td>
+    </tr>
+    <tr>
+      <td>B. Company comes in the category of polluting industries  but fully complies with current norms which may change in future.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>C. Company comes in the category of polluting industries  but Partially complies with current norms which may change in future.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>D. Company comes in the category of polluting industries  but does not care to comply with current norms.</td>
+      <td>4</td>
+    </tr>
+    <tr class="aquamarine">
+      <td>
+	   c. Technical and Professional Competence
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="4"></td>
+      <td>A. Company has  FULLY Technically and Professionally Skilled Personnel to run the business successfully. </td>
+      <td>1</td>
+      <td rowspan="4">5</td>
+      <td rowspan="4">20</td>
+   <td rowspan="4" class="finAnaIptTd"><input type="number" name="tpc" [(ngModel)]="finData.tpc" class="finAnaIpt"></td>
+      <td rowspan="4">10</td>
+    </tr>
+    <tr>
+      <td>B. Company has  "PARTIALLY" Technically and Professionally Skilled Personnel to run the business.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>C. Company has "Low number of Technically and Professionally Skilled" Personnel to run the business which is  affecting it's performance.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>D. Company has NO Technically and Professionally Skilled personnel to run the business which is very badly affecting it's performance.</td>
+      <td>4</td>
+    </tr>
+    <tr class="aquamarine">
+      <td colspan="2" style="text-align: center">
+		E.  Technological Appraisal Score:
+      </td>
+      <td>XXX</td>
+      <td>XXX</td>
+      <td>84</td>
+      <td>xxx</td>
+      <td>40</td>
+    </tr>
+  </table>
+</div>
+  <div class="example-button-row">
+    <button
+      type="submit"
+      mat-raised-button
+      color="primary"
+      style="margin: 1rem;"
+    >
+      Next
+    </button>
+  </div>
+</form>

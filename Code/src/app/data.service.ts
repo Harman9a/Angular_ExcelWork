@@ -9,35 +9,38 @@ export class DataService {
   constructor(private http:HttpClient) { }
 
    demoapi(fdata){
-  return this.http.post('http://localhost/Harman/Node/Angular/EXCEL_WORK/EXCEL_WORK/Code/api.php',fdata);
+  return this.http.post('http://localhost/Harman/Node/Angular/angular9App/API/api.php',fdata);
 
    }
 
    addpf(pfdata){
-    return this.http.post('http://localhost/Harman/Node/Angular/EXCEL_WORK/EXCEL_WORK/Code/api.php',pfdata);
+    return this.http.post('http://localhost/Harman/Node/Angular/angular9App/API/api.php',pfdata);
   
      }
 
+     addkfr(pfdata){
+      return this.http.post('http://localhost/Harman/Node/Angular/angular9App/API/api.php',pfdata);
+    
+       }
+
      addis(cid){
-      return this.http.post('http://localhost/Harman/Node/Angular/EXCEL_WORK/EXCEL_WORK/Code/api.php',cid);
+      return this.http.post('http://localhost/Harman/Node/Angular/angular9App/API/api.php',cid);
     
        }
        delete(did){
-        return this.http.post('http://localhost/Harman/Node/Angular/EXCEL_WORK/EXCEL_WORK/Code/api.php',did);
+        return this.http.post('http://localhost/Harman/Node/Angular/angular9App/API/api.php',did);
       
          }
    addcompany(cdata){
-    return this.http.post('http://localhost/Harman/Node/Angular/EXCEL_WORK/EXCEL_WORK/Code/api.php',cdata);
+    return this.http.post('http://localhost/Harman/Node/Angular/angular9App/API/api.php',cdata);
 
    }
    getclist(fd){
-    return this.http.post('http://localhost/Harman/Node/Angular/EXCEL_WORK/EXCEL_WORK/Code/api.php',fd);
-
-
+    return this.http.post('http://localhost/Harman/Node/Angular/angular9App/API/api.php',fd);
    }
 
    gethead(dd){
-    return this.http.post('http://localhost/Harman/Node/Angular/EXCEL_WORK/EXCEL_WORK/Code/api.php',dd);
+    return this.http.post('http://localhost/Harman/Node/Angular/angular9App/API/api.php',dd);
 
 
    }
@@ -45,7 +48,7 @@ export class DataService {
    getdata(id){
    
 
-    return this.http.get('http://localhost/Harman/Node/Angular/EXCEL_WORK/EXCEL_WORK/Code/getdata.php?id='+id);
+    return this.http.get('http://localhost/Harman/Node/Angular/angular9App/API/getdata.php?id='+id);
 
 
    }
@@ -53,14 +56,14 @@ export class DataService {
    getpfdata(pfid){
    
 
-    return this.http.get<any>('http://localhost/Harman/Node/Angular/EXCEL_WORK/EXCEL_WORK/Code/getdata.php?pfid='+pfid);
+    return this.http.get<any>('http://localhost/Harman/Node/Angular/angular9App/API/getdata.php?pfid='+pfid);
 
 
    }
    getcdata(cid){
    
 
-    return this.http.get<any>('http://localhost/Harman/Node/Angular/EXCEL_WORK/EXCEL_WORK/Code/getdata.php?cid='+cid);
+    return this.http.get<any>('http://localhost/Harman/Node/Angular/angular9App/API/getdata.php?cid='+cid);
 
 
    }
@@ -68,7 +71,7 @@ export class DataService {
    getdidata(di){
    
 
-    return this.http.get<any>('http://localhost/Harman/Node/Angular/EXCEL_WORK/EXCEL_WORK/Code/getdata.php?di='+di);
+    return this.http.get<any>('http://localhost/Harman/Node/Angular/angular9App/API/getdata.php?di='+di);
 
 
    }
@@ -76,8 +79,30 @@ export class DataService {
    getisdata(is){
    
 
-    return this.http.get<any>('http://localhost/Harman/Node/Angular/EXCEL_WORK/EXCEL_WORK/Code/getdata.php?is='+is);
+    return this.http.get<any>('http://localhost/Harman/Node/Angular/angular9App/API/getdata.php?is='+is);
 
 
    }
+
+// Harman Api's Start
+   SignupUser(data){    
+    return this.http.post('http://localhost/Harman/Node/Angular/angular9App/API/Axios.php',data);
+  }
+
+  LoginUser(data){    
+    return this.http.post('http://localhost/Harman/Node/Angular/angular9App/API/Axios.php',data);
+  }
+
+  GetFinalForFinAna(data){
+    return this.http.post('http://localhost/Harman/Node/Angular/angular9App/API/Axios.php',data);
+  }
+
+  UploadUserData(data){
+    return this.http.post('http://localhost/Harman/Node/Angular/angular9App/API/Axios.php',data);
+  }
+
+  SaveStep2(data){
+    return this.http.post('http://localhost/Harman/Node/Angular/angular9App/API/Axios.php',data);
+  }
+// Harman Api's End
 }

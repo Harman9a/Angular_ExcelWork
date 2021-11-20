@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'http://localhost/Harman/Node/Angular/angular9App/API/api.php',
+  getdataUrl: 'http://localhost/Harman/Node/Angular/angular9App/API/getdata.php',
+  AxiosUrl: 'http://localhost/Harman/Node/Angular/angular9App/API/Axios.php',
 };
 
 /*

@@ -1,9 +1,9 @@
-<mat-toolbar color="primary">
+<mat-toolbar style="background-color: #3D3242; color: white;" *ngIf="!dontShowHeader">
   <span (click)="goHome()" class="HandCussor">My App</span>
   <span class="example-spacer"></span>
   <!-- <span *ngIf = "isavailable; then condition1 else condition2"></span>
   <ng-template #condition2> -->
-  <button mat-raised-button color="accent" (click)="openDialog()">
+  <button mat-raised-button style="background-color:#E18942; color:white;" (click)="openDialog()">
     Create
   </button>
   <!-- </ng-template> -->

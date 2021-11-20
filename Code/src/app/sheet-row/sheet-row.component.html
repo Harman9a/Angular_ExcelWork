@@ -1,25 +1,4 @@
-<!-- <div [ngClass]="[type === 'value' ? 'Contain' : 'ContainAns']">
-  <div class="ContainNo">
-    {{ no }}
-  </div>
-  <div class="ContainName">
-    {{ Name }}
-  </div>
-  <div *ngFor="let i of RowData" class="ContainValue">
-     <input
-      class="ipt"
-      type="number"
-      [value]="i.value"
-      (input)="iptValue = $event.target.value"
-      (keyup)="addSum( i.name)"
-
-    />
-
-    <input class="ipt"  name=""  type="number" [(ngModel)]="stbfb_0" (keyup)="addSum()"/>
-  </div>
-</div> -->
 <app-sheet-head [year]="id"></app-sheet-head>
-
 <form #frm="ngForm" (ngSubmit)="savedata(frm.value)">
   <div [ngSwitch]="id">
     <div *ngSwitchCase="'1'">

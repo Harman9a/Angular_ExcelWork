@@ -1,0 +1,154 @@
+<app-header></app-header>
+
+<mat-grid-list cols="12" rowHeight="60px">
+  <mat-grid-tile [colspan]="12">
+    <span class="mainHeading">
+      A-Cra : MSME : Internal (Medium) Credit Risk Rating Model
+    </span>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<form #frm="ngForm" (ngSubmit)="GoToNext(frm.value)">
+<div>
+  <table id="customers">
+    <tr>
+      <th>Parameter</th>
+      <th>Measure</th>
+      <th>Score Options</th>
+      <th>Weight</th>
+      <th>Max. Score</th>
+      <th>Assigned Score</th>
+      <th>Assigned Weigted Score</th>
+    </tr>
+    <tr >
+      <td style="font-weight: bold; text-align: center; font-size: 18px; padding: 12px;" colspan="7">
+       	B. Management Appraisal
+      </td>
+    </tr>
+    <tr class="aquamarine">
+      <td>
+      a. Competence
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="4"></td>
+      <td>A. Company Promoters / Managers have Excellent Skills to handle company's affairs.</td>
+      <td>1</td>
+      <td rowspan="4">5</td>
+      <td rowspan="4">20</td>
+   <td rowspan="4" class="finAnaIptTd"><input type="number" name="comp" [(ngModel)]="finData.comp" class="finAnaIpt"></td>
+      <td rowspan="4">10</td>
+    </tr>
+    <tr>
+      <td>B. Company Promoters / Managers have Good Skills to handle company's affairs.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>C. Company Promoters / Managers have Moderate Skills to handle company's affairs.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>D. Company Promoters / Managers lack desired managerial skills and are unable to handle company's affairs properly.</td>
+      <td>4</td>
+    </tr>
+    <tr class="aquamarine">
+      <td>
+     b. Employee Quality
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="5"></td>
+      <td>A. Company has loyal and dedicated employees and their SKILLs and MOTIVATION Level is Excellent.</td>
+      <td>1</td>
+      <td rowspan="5">5</td>
+      <td rowspan="5">20</td>
+   <td rowspan="5" class="finAnaIptTd"><input type="number" name="emp" [(ngModel)]="finData.emp" class="finAnaIpt"></td>
+      <td rowspan="5">10</td>
+    </tr>
+    <tr>
+      <td>B. Company has loyal and dedicated employees and their SKILLs and MOTIVATION Level is High.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>C. Company has loyal and dedicated employees and their SKILLs and MOTIVATION Level is Satisfactory.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>D. Company has Loyal, Dedicated and Skilled Employees but their MOTIVATION Level is Low.</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>E. Company's Employees are Not  loyal and dedicated  and their SKILLs and MOTIVATION Level is also Low.</td>
+      <td>4</td>
+    </tr>
+    <tr class="aquamarine">
+      <td>
+    c. Regulatory Compliances and Reportings
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="5"></td>
+      <td>A. Company has been very regular and punctual all the times in payment of taxes, filing of annual / periodical  returns with all concerned regulatory bodies and  other agencies /  departments.</td>
+      <td>1</td>
+      <td rowspan="5">5</td>
+      <td rowspan="5">20</td>
+   <td rowspan="5" class="finAnaIptTd"><input type="number" name="reg" [(ngModel)]="finData.reg" class="finAnaIpt"></td>
+      <td rowspan="5">10</td>
+    </tr>
+    <tr>
+      <td>B. Company has been generally  regular and punctual  in payment of taxes, filing of annual / periodical  returns with all concerned regulatory bodies and  other agencies /  departments.   </td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>C. Company has delayed on many occassions  payment of taxes, filing of annual / periodical  returns with some regulatory bodies and other agencies / departments.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>D. Company has no systems in place  and ignores timely  payment of taxes, filing of annual / periodical quarterly returns and has been punished on few occassions for such violations in the past.</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>E. New Business - NB</td>
+      <td>4</td>
+    </tr>
+    <tr class="aquamarine">
+      <td colspan="2" style="text-align: center">
+        B. Total of Management Appraisal Score.
+      </td>
+      <td>XXX</td>
+      <td>XXX</td>
+      <td>51</td>
+      <td>xxx</td>
+      <td>24</td>
+    </tr>
+  </table>
+</div>
+  <div class="example-button-row">
+    <button
+      type="submit"
+      mat-raised-button
+      color="primary"
+      style="margin: 1rem;"
+    >
+      Next
+    </button>
+  </div>
+</form>
