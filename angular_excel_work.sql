@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2021 at 08:25 AM
+-- Generation Time: Nov 26, 2021 at 11:57 AM
 -- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.11
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -271,7 +271,8 @@ CREATE TABLE `step_2` (
 --
 
 INSERT INTO `step_2` (`id`, `c_id`, `year`, `FinAna`, `ManApp`, `ownership`, `MarkInd`, `TechProf`, `CollGua`, `dataUpload`, `SuperRating`, `iScore`, `RatPara`, `FRatReport`) VALUES
-(10, '27', '5', '{\"derL\":1,\"derC\":2,\"derN\":2,\"crL\":1,\"crC\":1,\"crN\":1,\"srg\":0,\"aDscr\":1,\"aIscr\":1,\"dc\":0,\"sr\":0,\"roce\":3}', '{\"comp\":0,\"emp\":0,\"reg\":0}', '{\"inter\":0,\"loan\":0,\"firm\":0}', '{\"inter\":0,\"cqc\":0,\"sqcr\":0,\"es\":0}', '{\"td\":0,\"ei\":0,\"tpc\":0}', '{\"vtc\":0,\"vccec\":0,\"gctw\":0}', '\"data\"', '{\"cma\":\"\",\"m1\":0,\"cmb\":\"\",\"m2\":0,\"cmc\":\"\",\"m3\":0}', '\"data\"', '\"data\"', '');
+(10, '27', '5', '{\"derL\":1,\"derC\":2,\"derN\":2,\"crL\":1,\"crC\":1,\"crN\":1,\"srg\":0,\"aDscr\":1,\"aIscr\":1,\"dc\":0,\"sr\":4,\"roce\":5}', '{\"comp\":1,\"emp\":1,\"reg\":1}', '{\"inter\":1,\"loan\":1,\"firm\":1}', '{\"mp\":1,\"cqc\":1,\"sqcr\":1,\"es\":1}', '{\"td\":1,\"ei\":1,\"tpc\":1}', '{\"vtc\":1,\"vccec\":1,\"gctw\":1}', '[[\"m1.jpg\",\"m2.jpg\",\"m3.jpg\"],null,null,null,null,null,null,null]', '{\"cma\":\"Jon Snow\",\"m1\":50,\"cmb\":\"Dani\",\"m2\":50,\"cmc\":\"sersi\",\"m3\":25}', '\"data\"', '\"data\"', ''),
+(13, '32', '4', '{\"derL\":1,\"derC\":2,\"derN\":2,\"crL\":1,\"crC\":1,\"crN\":1,\"srg\":0,\"aDscr\":1,\"aIscr\":1,\"dc\":0,\"sr\":0,\"roce\":3}', '{\"comp\":1,\"emp\":1,\"reg\":1}', '{\"inter\":0,\"loan\":0,\"firm\":0}', '{\"mp\":0,\"cqc\":0,\"sqcr\":0,\"es\":0}', '{\"td\":0,\"ei\":0,\"tpc\":0}', '{\"vtc\":0,\"vccec\":0,\"gctw\":0}', '[[\"p1.jpg\"],[\"p2.jpg\"],[\"p4.jpg\"],[\"p4.jpg\"],[\"p5.jpg\"],[\"p6.jpg\"],[\"p7.jpg\"],[\"p8.jpg\"]]', '{\"cma\":\"A\",\"m1\":12,\"cmb\":\"B\",\"m2\":13,\"cmc\":\"C\",\"m3\":14}', '\"data\"', '\"data\"', 'null');
 
 -- --------------------------------------------------------
 
@@ -494,7 +495,7 @@ ALTER TABLE `sheets`
 -- AUTO_INCREMENT for table `step_2`
 --
 ALTER TABLE `step_2`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `test`
