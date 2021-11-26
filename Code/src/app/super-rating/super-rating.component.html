@@ -37,7 +37,7 @@
       <td></td>
       <td></td>
       <td>100</td>
-	  <td class="finAnaIptTd"><input type="number" name="m1" [(ngModel)]="finData.m1" class="finAnaIpt"></td>
+	  <td class="finAnaIptTd"><input type="number" name="m1" [(ngModel)]="finData.m1" class="finAnaIpt" (change)="updateData()"></td>
       <td>48</td>
     </tr>
     <tr>
@@ -46,7 +46,7 @@
       <td></td>
       <td></td>
       <td>100</td>
-	  <td class="finAnaIptTd"><input type="number" name="m2" [(ngModel)]="finData.m2" class="finAnaIpt"></td>
+	  <td class="finAnaIptTd"><input type="number" name="m2" [(ngModel)]="finData.m2" class="finAnaIpt" (change)="updateData()"></td>
       <td>45</td>
     </tr>
     <tr>
@@ -55,7 +55,7 @@
       <td></td>
       <td></td>
       <td>100</td>
-	  <td class="finAnaIptTd"><input type="number" name="m3" [(ngModel)]="finData.m3" class="finAnaIpt"></td>
+	  <td class="finAnaIptTd"><input type="number" name="m3" [(ngModel)]="finData.m3" class="finAnaIpt" (change)="updateData()"></td>
       <td>45</td>
     </tr>
     <tr class="aquamarine">
@@ -65,7 +65,7 @@
       <td></td>
       <td></td>
       <td>300</td>
-      <td></td>
+      <td>{{allTotal}}</td>
       <td>138</td>
     </tr>
     <tr class="aquamarine">

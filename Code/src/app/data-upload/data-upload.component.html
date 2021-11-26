@@ -16,12 +16,24 @@
 </mat-grid-list>
 <file-upload  [(ngModel)]="uploadedFiles1" [multiple]="true" [animation]="true"></file-upload>
 
+<mat-grid-list cols="12" rowHeight="150px" *ngIf="finData[0]">
+  <mat-grid-tile [colspan]="2" *ngFor="let i of finData[0]">
+  	<img src="http://localhost/Harman/Node/Angular/angular9App/API/upload/{{i}}" class="myImg" />
+  </mat-grid-tile>
+</mat-grid-list>
+
 <mat-grid-list cols="1" rowHeight="50px" class="aquamarine" style="font-size: 20px;">
 	  <mat-grid-tile>
 		  Office Pics
 	  </mat-grid-tile>
 </mat-grid-list>
 <file-upload  [(ngModel)]="uploadedFiles2" [multiple]="true" [animation]="true"></file-upload>
+
+<mat-grid-list cols="12" rowHeight="150px" *ngIf="finData[1]">
+  <mat-grid-tile [colspan]="2" *ngFor="let i of finData[1]">
+  	<img src="http://localhost/Harman/Node/Angular/angular9App/API/upload/{{i}}" class="myImg" />
+  </mat-grid-tile>
+</mat-grid-list>
 
 <mat-grid-list cols="1" rowHeight="50px" class="aquamarine" style="font-size: 20px;">
 	  <mat-grid-tile>
@@ -30,12 +42,24 @@
 </mat-grid-list>
 <file-upload  [(ngModel)]="uploadedFiles3" [multiple]="true" [animation]="true"></file-upload>
 
+<mat-grid-list cols="12" rowHeight="150px" *ngIf="finData[2]">
+  <mat-grid-tile [colspan]="2" *ngFor="let i of finData[2]">
+  	<img src="http://localhost/Harman/Node/Angular/angular9App/API/upload/{{i}}" class="myImg" />
+  </mat-grid-tile>
+</mat-grid-list>
+
 <mat-grid-list cols="1" rowHeight="50px" class="aquamarine" style="font-size: 20px;">
 	  <mat-grid-tile>
 		  Godown Pics
 	  </mat-grid-tile>
 </mat-grid-list>
 <file-upload  [(ngModel)]="uploadedFiles4" [multiple]="true" [animation]="true"></file-upload>
+
+<mat-grid-list cols="12" rowHeight="150px" *ngIf="finData[3]">
+  <mat-grid-tile [colspan]="2" *ngFor="let i of finData[3]">
+  	<img src="http://localhost/Harman/Node/Angular/angular9App/API/upload/{{i}}" class="myImg" />
+  </mat-grid-tile>
+</mat-grid-list>
 
 <mat-grid-list cols="1" rowHeight="50px" class="aquamarine" style="font-size: 20px;">
 	  <mat-grid-tile>
@@ -44,12 +68,24 @@
 </mat-grid-list>
 <file-upload  [(ngModel)]="uploadedFiles5" [multiple]="true" [animation]="true"></file-upload>
 
+<mat-grid-list cols="12" rowHeight="150px" *ngIf="finData[4]">
+  <mat-grid-tile [colspan]="2" *ngFor="let i of finData[4]">
+  	<img src="http://localhost/Harman/Node/Angular/angular9App/API/upload/{{i}}" class="myImg" />
+  </mat-grid-tile>
+</mat-grid-list>
+
 <mat-grid-list cols="1" rowHeight="50px" class="aquamarine" style="font-size: 20px;">
 	  <mat-grid-tile>
 		  Factory Videos
 	  </mat-grid-tile>
 </mat-grid-list>
 <file-upload  [(ngModel)]="uploadedFiles6" [multiple]="true" [animation]="true"></file-upload>
+
+<mat-grid-list cols="12" rowHeight="150px" *ngIf="finData[5]">
+  <mat-grid-tile [colspan]="2" *ngFor="let i of finData[5]">
+  	<img src="http://localhost/Harman/Node/Angular/angular9App/API/upload/{{i}}" class="myImg" />
+  </mat-grid-tile>
+</mat-grid-list>
 
 <mat-grid-list cols="1" rowHeight="50px" class="aquamarine" style="font-size: 20px;">
 	  <mat-grid-tile>
@@ -58,12 +94,24 @@
 </mat-grid-list>
 <file-upload  [(ngModel)]="uploadedFiles7" [multiple]="true" [animation]="true"></file-upload>
 
+<mat-grid-list cols="12" rowHeight="150px" *ngIf="finData[6]">
+  <mat-grid-tile [colspan]="2" *ngFor="let i of finData[6]">
+  	<img src="http://localhost/Harman/Node/Angular/angular9App/API/upload/{{i}}" class="myImg" />
+  </mat-grid-tile>
+</mat-grid-list>
+
 <mat-grid-list cols="1" rowHeight="50px" class="aquamarine" style="font-size: 20px;">
 	  <mat-grid-tile>
 		  Collateral Videos
 	  </mat-grid-tile>
 </mat-grid-list>
 <file-upload  [(ngModel)]="uploadedFiles8" [multiple]="true" [animation]="true"></file-upload>
+
+<mat-grid-list cols="12" rowHeight="150px" *ngIf="finData[7]">
+  <mat-grid-tile [colspan]="2" *ngFor="let i of finData[7]">
+  	<img src="http://localhost/Harman/Node/Angular/angular9App/API/upload/{{i}}" class="myImg" />
+  </mat-grid-tile>
+</mat-grid-list>
 
   <div class="example-button-row">
     <button
@@ -72,6 +120,16 @@
       color="primary"
       style="margin: 1rem;"
       (click)="saveImage()"
+    >
+      Save
+    </button>
+    <button
+      type="button"
+      mat-raised-button
+      color="primary"
+      style="margin: 1rem;"
+     	[disabled]="nextbtn"
+      (click)="nextGo()"
     >
       Next
     </button>

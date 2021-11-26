@@ -40,10 +40,10 @@
       <td rowspan="4"></td>
       <td>A. Promoters are reportedly to be highly respected in the business communty and society in general and their integrity is unquestionable.</td>
       <td>1</td>
-      <td rowspan="4">5</td>
-      <td rowspan="4">20</td>
-	   <td rowspan="4" class="finAnaIptTd"><input type="number" name="inter" [(ngModel)]="finData.inter" class="finAnaIpt"></td>
-      <td rowspan="4">10</td>
+      <td rowspan="4">4</td>
+      <td rowspan="4">24</td>
+	   <td rowspan="4" class="finAnaIptTd"><input type="number" name="inter" [(ngModel)]="finData.inter" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="4">8</td>
     </tr>
     <tr>
       <td>B. Promoters are Generally Respected in the business community and society and there are no adverse reports on their integrity.</td>
@@ -73,8 +73,8 @@
       <td>A. Company has never violated any repayment terms of it's loan agreements OR has never  availed any credit facility.</td>
       <td>1</td>
       <td rowspan="5">5</td>
-      <td rowspan="5">20</td>
-   <td rowspan="5" class="finAnaIptTd"><input type="number" name="loan" [(ngModel)]="finData.loan" class="finAnaIpt"></td>
+      <td rowspan="5">40</td>
+   <td rowspan="5" class="finAnaIptTd"><input type="number" name="loan" [(ngModel)]="finData.loan" class="finAnaIpt" (change)="updateData()"></td>
       <td rowspan="5">10</td>
     </tr>
     <tr>
@@ -108,10 +108,10 @@
       <td rowspan="5"></td>
       <td>A. Firm is in Active Business for 5  years and more.</td>
       <td>1</td>
-      <td rowspan="5">5</td>
-      <td rowspan="5">20</td>
-   <td rowspan="5" class="finAnaIptTd"><input type="number" name="firm" [(ngModel)]="finData.firm" class="finAnaIpt"></td>
-      <td rowspan="5">10</td>
+      <td rowspan="5">6</td>
+      <td rowspan="5">30</td>
+   <td rowspan="5" class="finAnaIptTd"><input type="number" name="firm" [(ngModel)]="finData.firm" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="5">12</td>
     </tr>
     <tr>
       <td>B. Firm is in Active Business  for 3 years and more  but less than 5  years.</td>
@@ -136,7 +136,7 @@
       <td>XXX</td>
       <td>XXX</td>
       <td>94</td>
-      <td>xxx</td>
+      <td>{{allTotal}}</td>
       <td>30</td>
     </tr>
   </table>

@@ -52,10 +52,22 @@ export class FinAnaComponent implements OnInit {
   }
 
   getData(){
+    let c_id =localStorage.getItem('c_id');
     var fd = new FormData();
-    fd.append('action_id', 'GET_FINAL_DATA_FIN_ANA');
+    fd.append('action_id', 'CHECK_FINAL_DATA_FIN_ANA');
+    fd.append("c_id",c_id);
     this.ds.GetFinalForFinAna(fd).subscribe((res) => {
-      this.setData(JSON.parse(res[0].data));
+      if(res == null){
+        var fd1 = new FormData();
+        fd1.append('action_id', 'GET_FINAL_DATA_FIN_ANA');
+        this.ds.GetFinalForFinAna(fd1).subscribe((res1) => {
+          this.setData(JSON.parse(res1[0].data));
+        })
+      }else{
+        this.finData = JSON.parse(res[0].FinAna);
+        this.updateData()
+      }
+      console.log(res);
     });
   }
   
@@ -177,7 +189,7 @@ export class FinAnaComponent implements OnInit {
   }
 
   updateData(){
-    let total = this.finData.derL + this.finData.derC + this.finData.derN + this.finData.crL +this.finData.crC + this.finData.crN + this.finData.aDscr + this.finData.aIscr + this.finData.roce;
+    let total = this.finData.derL + this.finData.derC + this.finData.derN + this.finData.crL +this.finData.crC + this.finData.crN + this.finData.aDscr + this.finData.aIscr + this.finData.roce + this.finData.sr + this.finData.srg + this.finData.dc;
     this.allTotal = total
   }
 

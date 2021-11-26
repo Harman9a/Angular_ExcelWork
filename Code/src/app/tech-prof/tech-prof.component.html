@@ -40,10 +40,10 @@
       <td rowspan="4"></td>
       <td>A. Technology used by the company is Tested and Not Likely  to change in the long run (Over 5 Yrs) / Or the company  has no dependence on technology.</td>
       <td>1</td>
-      <td rowspan="4">5</td>
-      <td rowspan="4">20</td>
-	   <td rowspan="4" class="finAnaIptTd"><input type="number" name="td" [(ngModel)]="finData.td" class="finAnaIpt"></td>
-      <td rowspan="4">10</td>
+      <td rowspan="4">4</td>
+      <td rowspan="4">16</td>
+	   <td rowspan="4" class="finAnaIptTd"><input type="number" name="td" [(ngModel)]="finData.td" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="4">4</td>
     </tr>
     <tr>
       <td>B. Technology used by the company is Tested and Not Likely  to change in the medium term (3-5 years) / Or the company has low dependence on technology.</td>
@@ -72,10 +72,10 @@
       <td rowspan="4"></td>
       <td>A. Company comes in the category of non-poluting industries  and is not likely to face any pollution related issues in future. Or The Company is a Service Industry or in any such business which has No Pollution Issue.</td>
       <td>1</td>
-      <td rowspan="4">5</td>
-      <td rowspan="4">20</td>
-   <td rowspan="4" class="finAnaIptTd"><input type="number" name="ei" [(ngModel)]="finData.ei" class="finAnaIpt"></td>
-      <td rowspan="4">10</td>
+      <td rowspan="4">6</td>
+      <td rowspan="4">24</td>
+   <td rowspan="4" class="finAnaIptTd"><input type="number" name="ei" [(ngModel)]="finData.ei" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="4">6</td>
     </tr>
     <tr>
       <td>B. Company comes in the category of polluting industries  but fully complies with current norms which may change in future.</td>
@@ -104,10 +104,10 @@
       <td rowspan="4"></td>
       <td>A. Company has  FULLY Technically and Professionally Skilled Personnel to run the business successfully. </td>
       <td>1</td>
-      <td rowspan="4">5</td>
-      <td rowspan="4">20</td>
-   <td rowspan="4" class="finAnaIptTd"><input type="number" name="tpc" [(ngModel)]="finData.tpc" class="finAnaIpt"></td>
-      <td rowspan="4">10</td>
+      <td rowspan="4">4</td>
+      <td rowspan="4">16</td>
+   <td rowspan="4" class="finAnaIptTd"><input type="number" name="tpc" [(ngModel)]="finData.tpc" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="4">8</td>
     </tr>
     <tr>
       <td>B. Company has  "PARTIALLY" Technically and Professionally Skilled Personnel to run the business.</td>
@@ -127,9 +127,9 @@
       </td>
       <td>XXX</td>
       <td>XXX</td>
-      <td>84</td>
-      <td>xxx</td>
-      <td>40</td>
+      <td>56</td>
+      <td>{{allTotal}}</td>
+      <td>18</td>
     </tr>
   </table>
 </div>

@@ -2,13 +2,18 @@
 	include('config.php');
 
 	function moveData($name){
+		$uploaded_data = [];
 		$status = true;
 		$count = $_POST[$name.'L'];
-		for ($i=0; $i < $count ; $i++) { 
-	        $tmp_name = $_FILES[$name.$i]["tmp_name"];
-	        $name_File = $_FILES[$name.$i]["name"];
-	        $uploads_dir = 'upload';
-			move_uploaded_file($tmp_name, "$uploads_dir/$name_File");
+		if ($count != 0) {
+			for ($i=0; $i < $count ; $i++) {
+		        $tmp_name = $_FILES[$name.$i]["tmp_name"];
+		        $name_File = $_FILES[$name.$i]["name"];
+		        $uploads_dir = 'upload';
+				move_uploaded_file($tmp_name, "$uploads_dir/$name_File");
+				$uploaded_data[] = $name_File;
+			}
+			return $uploaded_data;;
 		}
 	}
 
@@ -47,16 +52,15 @@
 
 
 	if($_POST['action_id'] == 'UPLOAD_USER_DATA') {
-		$status = true;
-		moveData('pop');
-		moveData('op');
-		moveData('fp');
-		moveData('gp');
-		moveData('cp');
-		moveData('fv');
-		moveData('gv');
-		moveData('cv');
-		echo json_encode($status);
+		$res[] = moveData('pop');
+		$res[] = moveData('op');
+		$res[] = moveData('fp');
+		$res[] = moveData('gp');
+		$res[] = moveData('cp');
+		$res[] = moveData('fv');
+		$res[] = moveData('gv');
+		$res[] = moveData('cv');
+		echo json_encode($res);
 	}
 
 
@@ -68,7 +72,7 @@
 		$res = mysqli_query($conn, "SELECT * FROM step_2 WHERE c_id='$c_id'");
 
 		if(mysqli_num_rows($res) == 0){
-			$res = mysqli_query($conn, "INSERT INTO step_2(c_id, year, FinAna, ManApp, ownership, MarkInd, TechProf, CollGua, dataUpload, SuperRating, iScore, RatPara, FRatReport) VALUES ('$c_id','$year','$data','','','','','','','','','','')");
+			$res = mysqli_query($conn, "INSERT INTO step_2(c_id, year, FinAna, ManApp, ownership, MarkInd, TechProf, CollGua, dataUpload, SuperRating, iScore, RatPara, FRatReport) VALUES ('$c_id','$year','$data','null','null','null','null','null','null','null','null','null','null')");
 		}else{
 			$res = mysqli_query($conn, "UPDATE step_2 SET FinAna='$data' WHERE c_id='$c_id' ");
 		}
@@ -156,5 +160,14 @@
 
 		$res = mysqli_query($conn, "UPDATE step_2 SET RatPara='$data' WHERE c_id='$c_id' ");
 		echo json_encode($res);
+	}
+
+	if($_POST['action_id'] == 'CHECK_FINAL_DATA_FIN_ANA'){
+		$c_id = $_POST['c_id'];
+		$res = mysqli_query($conn, "SELECT * FROM step_2 WHERE c_id='$c_id'");
+		while ($row = mysqli_fetch_assoc($res)) {
+	        $response[] = $row;
+	    }
+	    echo json_encode($response);
 	}
 ?>

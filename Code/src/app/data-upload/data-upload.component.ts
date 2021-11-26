@@ -22,11 +22,31 @@ export class DataUploadComponent implements OnInit {
   public uploadedFiles6: Array<File> = [];
   public uploadedFiles7: Array<File> = [];
   public uploadedFiles8: Array<File> = [];
+
+  nextbtn = true;
+
+  finData = [];
   
   ngOnInit(): void {
+    this.getData();
+  }
+
+  getData(){
+    var fd = new FormData();
+    let c_id = localStorage.getItem('c_id');
+    fd.append("c_id",c_id);
+    fd.append('action_id', 'CHECK_FINAL_DATA_FIN_ANA');
+    this.ds.GetFinalForFinAna(fd).subscribe((res) => {
+        if(res[0].dataUpload != 'null'){
+          this.finData = JSON.parse(res[0].dataUpload)
+          this.nextbtn = false;
+        }
+        console.log(this.finData);
+    });
   }
 
   saveImage(){
+    console.log(this.uploadedFiles1)
     const formData = new FormData();
     formData.append('action_id', 'UPLOAD_USER_DATA');
 
@@ -82,12 +102,12 @@ export class DataUploadComponent implements OnInit {
 
     this.ds.UploadUserData(formData).subscribe(
       (res) => {
-        console.log(res)
-        if(res == true){
-            alert('Done');
+        // console.log(res)
+        if(true){
+            // alert('Done');
             let c_id =localStorage.getItem('c_id');
             let year =localStorage.getItem('year');
-            var jsdata = JSON.stringify('data');
+            var jsdata = JSON.stringify(res);
 
             var fd = new FormData();
             fd.append("action_id",'SAVE_DATA_UPLOAD' );
@@ -98,16 +118,21 @@ export class DataUploadComponent implements OnInit {
             this.ds.SaveStep2(fd).subscribe((res)=>{
               console.log(res);
               if(res == true){
-                this.router.navigateByUrl('/SuperRating');
+                // this.router.navigateByUrl('/SuperRating');
+                this.nextbtn = false;
               }
             });
         }else{
-          alert('error');
+          // alert('error');
         }
       },
       (err) => {  
-          alert('error');
+          // alert('error');
       }
     );
+  }
+
+  nextGo(){
+    this.router.navigateByUrl('/SuperRating');
   }
 }

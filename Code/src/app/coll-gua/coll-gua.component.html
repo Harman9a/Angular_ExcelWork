@@ -40,10 +40,10 @@
       <td rowspan="7"></td>
       <td>A. Company has offered Total Collaterals  having 200 % and more value of the proposed exposure.</td>
       <td>1</td>
-      <td rowspan="7">5</td>
-      <td rowspan="7">20</td>
-	   <td rowspan="7" class="finAnaIptTd"><input type="number" name="vtc" [(ngModel)]="finData.vtc" class="finAnaIpt"></td>
-      <td rowspan="7">10</td>
+      <td rowspan="7">8</td>
+      <td rowspan="7">64</td>
+	   <td rowspan="7" class="finAnaIptTd"><input type="number" name="vtc" [(ngModel)]="finData.vtc" (change)="updateData()" class="finAnaIpt"></td>
+      <td rowspan="7">16</td>
     </tr>
     <tr>
       <td>B. Company has offered Total Collaterals  having 150 % and more value but less than 200 % of the proposed exposure.</td>
@@ -84,10 +84,10 @@
       <td rowspan="4"></td>
       <td>A. Company has offered Cash and Cash Equivalent Collaterals having 50 % and more value of the total proposed exposure.</td>
       <td>1</td>
-      <td rowspan="4">5</td>
-      <td rowspan="4">20</td>
-   <td rowspan="4" class="finAnaIptTd"><input type="number" name="vccec" [(ngModel)]="finData.vccec" class="finAnaIpt"></td>
-      <td rowspan="4">10</td>
+      <td rowspan="4">3</td>
+      <td rowspan="4">12</td>
+   <td rowspan="4" class="finAnaIptTd"><input type="number" name="vccec" [(ngModel)]="finData.vccec" (change)="updateData()" class="finAnaIpt"></td>
+      <td rowspan="4">12</td>
     </tr>
     <tr>
       <td>B. Company has offered Cash and Cash Equivalent Collaterals having 25 % and more but less than 50 % value of the total proposed exposure.</td>
@@ -116,10 +116,10 @@
       <td rowspan="4"></td>
       <td>A. The proposed guarantors are highly reputed persons and have high networth.</td>
       <td>1</td>
-      <td rowspan="4">5</td>
-      <td rowspan="4">20</td>
-   <td rowspan="4" class="finAnaIptTd"><input type="number" name="gctw" [(ngModel)]="finData.gctw" class="finAnaIpt"></td>
-      <td rowspan="4">10</td>
+      <td rowspan="4">3</td>
+      <td rowspan="4">12</td>
+   <td rowspan="4" class="finAnaIptTd"><input type="number" name="gctw" [(ngModel)]="finData.gctw" (change)="updateData()" class="finAnaIpt"></td>
+      <td rowspan="4">6</td>
     </tr>
     <tr>
       <td>B. The proposed guarantors are highly reputed persons with moderate networth.</td>
@@ -139,8 +139,8 @@
       </td>
       <td>XXX</td>
       <td>XXX</td>
-      <td>84</td>
-      <td>xxx</td>
+      <td>88</td>
+      <td>{{allTotal}}</td>
       <td>34</td>
     </tr>
   </table>

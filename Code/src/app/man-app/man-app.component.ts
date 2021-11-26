@@ -25,16 +25,15 @@ export class ManAppComponent implements OnInit {
 
   getData() {
     var fd = new FormData();
-    fd.append('action_id', 'GET_FINAL_DATA_FIN_ANA');
+    let c_id = localStorage.getItem('c_id');
+    fd.append("c_id",c_id);
+    fd.append('action_id', 'CHECK_FINAL_DATA_FIN_ANA');
     this.ds.GetFinalForFinAna(fd).subscribe((res) => {
-      this.fData = JSON.parse(res[0].data);
-      this.setData();
-      this.updateData();
+      if(res[0].ManApp != 'null'){      
+        this.finData = JSON.parse(res[0].ManApp)
+        this.updateData();
+      }
     });
-  }
-
-  setData() {
-    console.log(this.fData);
   }
 
   updateData() {
@@ -46,7 +45,6 @@ export class ManAppComponent implements OnInit {
     let c_id = localStorage.getItem('c_id');
     let year = localStorage.getItem('year');
     var jsdata = JSON.stringify(data);
-
     var fd = new FormData();
     fd.append('action_id', 'SAVE_MAN_APP');
     fd.append('c_id', c_id);

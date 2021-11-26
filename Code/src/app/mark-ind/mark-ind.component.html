@@ -40,10 +40,10 @@
       <td rowspan="4"></td>
       <td>A. Company's products have High Potential with fast growth in demand.</td>
       <td>1</td>
-      <td rowspan="4">5</td>
+      <td rowspan="4">4</td>
       <td rowspan="4">20</td>
-	   <td rowspan="4" class="finAnaIptTd"><input type="number" name="inter" [(ngModel)]="finData.mp" class="finAnaIpt"></td>
-      <td rowspan="4">10</td>
+	   <td rowspan="4" class="finAnaIptTd"><input type="number" name="mp" [(ngModel)]="finData.mp" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="4">8</td>
     </tr>
     <tr>
       <td>B. Company's products have Moderate Potential with  no threat in short and medium term.</td>
@@ -72,10 +72,10 @@
       <td rowspan="4"></td>
       <td>A. Diversified Customer Base with and stable purchase pattern. They pay  invoices on timely basis.</td>
       <td>1</td>
-      <td rowspan="4">5</td>
-      <td rowspan="4">20</td>
-   <td rowspan="4" class="finAnaIptTd"><input type="number" name="cqc" [(ngModel)]="finData.cqc" class="finAnaIpt"></td>
-      <td rowspan="4">10</td>
+      <td rowspan="4">4</td>
+      <td rowspan="4">16</td>
+   <td rowspan="4" class="finAnaIptTd"><input type="number" name="cqc" [(ngModel)]="finData.cqc" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="4">8</td>
     </tr>
     <tr>
       <td>B. Generally Diversified Customer Base who may not have  stable purchase pattern from the firm. Generally, they pay outstanding invoices on a timely basis.  </td>
@@ -104,10 +104,10 @@
       <td rowspan="4"></td>
       <td>A. Company has a choice of suppliers supplying quality goods & services.</td>
       <td>1</td>
-      <td rowspan="4">5</td>
-      <td rowspan="4">20</td>
-   <td rowspan="4" class="finAnaIptTd"><input type="number" name="sqcr" [(ngModel)]="finData.sqcr" class="finAnaIpt"></td>
-      <td rowspan="4">10</td>
+      <td rowspan="4">3</td>
+      <td rowspan="4">12</td>
+   <td rowspan="4" class="finAnaIptTd"><input type="number" name="sqcr" [(ngModel)]="finData.sqcr" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="4">6</td>
     </tr>
     <tr>
       <td>B. Company has a choice of suppliers but the quality of goods & services from most of them may be average.</td>
@@ -136,10 +136,10 @@
       <td rowspan="4"></td>
       <td>A. Company's product line has ZERO  element of seasonality both in terms of Demand and Price Fluctuations.</td>
       <td>1</td>
-      <td rowspan="4">5</td>
-      <td rowspan="4">20</td>
-   <td rowspan="4" class="finAnaIptTd"><input type="number" name="es" [(ngModel)]="finData.es" class="finAnaIpt"></td>
-      <td rowspan="4">10</td>
+      <td rowspan="4">6</td>
+      <td rowspan="4">36</td>
+   <td rowspan="4" class="finAnaIptTd"><input type="number" name="es" [(ngModel)]="finData.es" class="finAnaIpt" (change)="updateData()"></td>
+      <td rowspan="4">18</td>
     </tr>
     <tr>
       <td>B. Company's product line has SMALL element of seasonality both in terms of Demand and Price Fluctuations.</td>
@@ -160,7 +160,7 @@
       <td>XXX</td>
       <td>XXX</td>
       <td>84</td>
-      <td>xxx</td>
+      <td>{{ allTotal }}</td>
       <td>40</td>
     </tr>
   </table>
