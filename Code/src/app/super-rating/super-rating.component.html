@@ -9,7 +9,7 @@
 </mat-grid-list>
 
 <form #frm="ngForm" (ngSubmit)="GoToNext(frm.value)">
-<div>
+<div style="margin:1rem 3rem">
   <table id="customers">
     <tr>
       <th>Parameter</th>
@@ -37,8 +37,8 @@
       <td></td>
       <td></td>
       <td>100</td>
-	  <td class="finAnaIptTd"><input type="number" name="m1" [(ngModel)]="finData.m1" class="finAnaIpt" (change)="updateData()"></td>
-      <td>48</td>
+      <td></td>
+  	  <td ><input type="number" name="m1" [(ngModel)]="finData.m1" class="finAnaIpt" (change)="updateData()"></td>
     </tr>
     <tr>
       <td></td>
@@ -46,8 +46,8 @@
       <td></td>
       <td></td>
       <td>100</td>
-	  <td class="finAnaIptTd"><input type="number" name="m2" [(ngModel)]="finData.m2" class="finAnaIpt" (change)="updateData()"></td>
-      <td>45</td>
+      <td></td>
+	  <td><input type="number" name="m2" [(ngModel)]="finData.m2" class="finAnaIpt" (change)="updateData()"></td>
     </tr>
     <tr>
       <td></td>
@@ -55,8 +55,8 @@
       <td></td>
       <td></td>
       <td>100</td>
-	  <td class="finAnaIptTd"><input type="number" name="m3" [(ngModel)]="finData.m3" class="finAnaIpt" (change)="updateData()"></td>
-      <td>45</td>
+      <td class="finAnaIptTd"></td>
+	  <td><input type="number" name="m3" [(ngModel)]="finData.m3" class="finAnaIpt" (change)="updateData()"></td>
     </tr>
     <tr class="aquamarine">
       <td colspan="2" style="text-align: center">
@@ -65,8 +65,8 @@
       <td></td>
       <td></td>
       <td>300</td>
+      <td></td>
       <td>{{allTotal}}<input type="hidden" [(ngModel)]="allTotal" name='allTotal' /></td>
-      <td>138</td>
     </tr>
     <tr class="aquamarine">
       <td colspan="4" style="text-align: center">
@@ -81,7 +81,7 @@
       type="submit"
       mat-raised-button
       color="primary"
-      style="margin: 1rem;"
+      style="margin:1rem 3rem"
     >
       Next
     </button>

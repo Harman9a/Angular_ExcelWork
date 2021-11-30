@@ -9,7 +9,7 @@
 </mat-grid-list>
 
 <form #frm="ngForm" (ngSubmit)="GoToNext(frm.value)">
-<div>
+<div  style="margin:1rem 3rem">
   <table id="customers">
     <tr>
       <th>Parameter</th>
@@ -38,23 +38,23 @@
     </tr>
     <tr>
       <td rowspan="4"></td>
-      <td>A. Company's products have High Potential with fast growth in demand.</td>
+      <td class="selectable" (click)="finData.mp = 1;updateData();">A. Company's products have High Potential with fast growth in demand.</td>
       <td>1</td>
       <td rowspan="4">4</td>
       <td rowspan="4">20</td>
 	   <td rowspan="4" class="finAnaIptTd"><input type="number" name="mp" [(ngModel)]="finData.mp" class="finAnaIpt" (change)="updateData()"></td>
-      <td rowspan="4">8</td>
+      <td rowspan="4">{{finData._mp}}</td>
     </tr>
     <tr>
-      <td>B. Company's products have Moderate Potential with  no threat in short and medium term.</td>
+      <td class="selectable" (click)="finData.mp = 2;updateData();">B. Company's products have Moderate Potential with  no threat in short and medium term.</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>C. Company's products have Low  Potential as demand is expected  to shrink in short and medium term.</td>
+      <td class="selectable" (click)="finData.mp = 3;updateData();">C. Company's products have Low  Potential as demand is expected  to shrink in short and medium term.</td>
       <td>3</td>
     </tr>
     <tr>
-      <td>D. Dying Market with almost no potential for growth.</td>
+      <td class="selectable" (click)="finData.mp = 4;updateData();">D. Dying Market with almost no potential for growth.</td>
       <td>4</td>
     </tr>
     <tr class="aquamarine">
@@ -70,23 +70,23 @@
     </tr>
     <tr>
       <td rowspan="4"></td>
-      <td>A. Diversified Customer Base with and stable purchase pattern. They pay  invoices on timely basis.</td>
+      <td class="selectable" (click)="finData.cqc = 1;updateData();">A. Diversified Customer Base with and stable purchase pattern. They pay  invoices on timely basis.</td>
       <td>1</td>
       <td rowspan="4">4</td>
       <td rowspan="4">16</td>
    <td rowspan="4" class="finAnaIptTd"><input type="number" name="cqc" [(ngModel)]="finData.cqc" class="finAnaIpt" (change)="updateData()"></td>
-      <td rowspan="4">8</td>
+      <td rowspan="4">{{finData._cqc}}</td>
     </tr>
     <tr>
-      <td>B. Generally Diversified Customer Base who may not have  stable purchase pattern from the firm. Generally, they pay outstanding invoices on a timely basis.  </td>
+      <td class="selectable" (click)="finData.cqc = 2;updateData();">B. Generally Diversified Customer Base who may not have  stable purchase pattern from the firm. Generally, they pay outstanding invoices on a timely basis.  </td>
       <td>2</td>
     </tr>
     <tr>
-      <td>C. Company's customer base is not diversified but they are reasonably loyal  customers with  a stable purchase pattern. Generally, they  pay outstanding invoices on a timely basis. </td>
+      <td class="selectable" (click)="finData.cqc = 3;updateData();">C. Company's customer base is not diversified but they are reasonably loyal  customers with  a stable purchase pattern. Generally, they  pay outstanding invoices on a timely basis. </td>
       <td>3</td>
     </tr>
     <tr>
-      <td>D. Company's customer base is not diversified and they are also not  loyal with  an uncertain purchase pattern. They also generally delay in paying outstanding invoices with possibility of defaults as well.</td>
+      <td class="selectable" (click)="finData.cqc = 4;updateData();">D. Company's customer base is not diversified and they are also not  loyal with  an uncertain purchase pattern. They also generally delay in paying outstanding invoices with possibility of defaults as well.</td>
       <td>4</td>
     </tr>
     <tr class="aquamarine">
@@ -102,23 +102,23 @@
     </tr>
     <tr>
       <td rowspan="4"></td>
-      <td>A. Company has a choice of suppliers supplying quality goods & services.</td>
+      <td  class="selectable" (click)="finData.sqcr = 1;updateData();">A. Company has a choice of suppliers supplying quality goods & services.</td>
       <td>1</td>
       <td rowspan="4">3</td>
       <td rowspan="4">12</td>
    <td rowspan="4" class="finAnaIptTd"><input type="number" name="sqcr" [(ngModel)]="finData.sqcr" class="finAnaIpt" (change)="updateData()"></td>
-      <td rowspan="4">6</td>
+      <td rowspan="4">{{finData._sqcr}}</td>
     </tr>
     <tr>
-      <td>B. Company has a choice of suppliers but the quality of goods & services from most of them may be average.</td>
+      <td class="selectable" (click)="finData.sqcr = 2;updateData();">B. Company has a choice of suppliers but the quality of goods & services from most of them may be average.</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>C. Company has very few suppliers supplying goods & services.  Quality of goods & services is also not very good.</td>
+      <td class="selectable" (click)="finData.sqcr = 3;updateData();">C. Company has very few suppliers supplying goods & services.  Quality of goods & services is also not very good.</td>
       <td>3</td>
     </tr>
     <tr>
-      <td>D. There is almost monopolistic situation of suppliers with no control over quality of goods and services.</td>
+      <td class="selectable" (click)="finData.sqcr = 4;updateData();">D. There is almost monopolistic situation of suppliers with no control over quality of goods and services.</td>
       <td>4</td>
     </tr>
     <tr class="aquamarine">
@@ -134,23 +134,23 @@
     </tr>
     <tr>
       <td rowspan="4"></td>
-      <td>A. Company's product line has ZERO  element of seasonality both in terms of Demand and Price Fluctuations.</td>
+      <td class="selectable" (click)="finData.es = 1;updateData();">A. Company's product line has ZERO  element of seasonality both in terms of Demand and Price Fluctuations.</td>
       <td>1</td>
       <td rowspan="4">6</td>
       <td rowspan="4">36</td>
    <td rowspan="4" class="finAnaIptTd"><input type="number" name="es" [(ngModel)]="finData.es" class="finAnaIpt" (change)="updateData()"></td>
-      <td rowspan="4">18</td>
+      <td rowspan="4">{{finData._es}}</td>
     </tr>
     <tr>
-      <td>B. Company's product line has SMALL element of seasonality both in terms of Demand and Price Fluctuations.</td>
+      <td class="selectable" (click)="finData.es = 2;updateData();">B. Company's product line has SMALL element of seasonality both in terms of Demand and Price Fluctuations.</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>C. Company's product line has MODERATE element of seasonality both in terms of Demand and Price Fluctuations resulting in some risk of losses. </td>
+      <td class="selectable" (click)="finData.es = 3;updateData();">C. Company's product line has MODERATE element of seasonality both in terms of Demand and Price Fluctuations resulting in some risk of losses. </td>
       <td>3</td>
     </tr>
     <tr>
-      <td>D. Company's product line has HIGH Degree of seasonality both in terms of Demand and Price Fluctuations resulting in high risk of losses. </td>
+      <td class="selectable" (click)="finData.es = 4;updateData();">D. Company's product line has HIGH Degree of seasonality both in terms of Demand and Price Fluctuations resulting in high risk of losses. </td>
       <td>4</td>
     </tr>
     <tr class="aquamarine">
@@ -160,8 +160,8 @@
       <td>XXX</td>
       <td>XXX</td>
       <td>84</td>
+      <td>XXX</td>
       <td>{{ allTotal }}<input type="hidden" [(ngModel)]="allTotal" name='allTotal' /></td>
-      <td>40</td>
     </tr>
   </table>
 </div>
@@ -170,7 +170,7 @@
       type="submit"
       mat-raised-button
       color="primary"
-      style="margin: 1rem;"
+      style="margin:1rem 3rem"
     >
       Next
     </button>

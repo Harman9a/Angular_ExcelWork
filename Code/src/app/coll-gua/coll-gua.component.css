@@ -59,3 +59,11 @@
 .finAnaIptTd{
   width: 8%;
 }
+
+.selectable{
+  cursor: pointer;
+}
+
+.selectable:hover {
+  color: green;
+}

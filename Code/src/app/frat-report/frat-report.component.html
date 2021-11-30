@@ -16,7 +16,7 @@
   </mat-grid-tile>
 </mat-grid-list>
 
-<div>
+<div style="margin:1rem 3rem">
   <table id="customers">
     <tr>
       <td></td>
@@ -25,16 +25,16 @@
     </tr>
     <tr>
       <td>Credit Risk Rating Score</td>
-      <td>100.00</td>
-      <td>41.18</td>
+      <td>{{finData.allTotal}}</td>
+      <td>{{finData.allTotalA}}</td>
     </tr>
     <tr>
       <td>Credit  Risk Rating</td>
-      <td colspan="2" style="text-align: center">MSME Internal (Medium) Credit Rating  :  3</td>
+      <td colspan="2" style="text-align: center">MSME Internal (Medium) Credit Rating  :  {{CRRno}}</td>
     </tr>
     <tr>
       <td>Level of Credit Worthiness</td>
-      <td colspan="2" style="text-align: center">Good</td>
+      <td colspan="2" style="text-align: center">{{CRRname}}</td>
     </tr>
     <tr class="aquamarine">
       <td colspan="3" style="text-align: center">Rating Explanations :</td>
@@ -46,35 +46,35 @@
       <td>Credit Rating : Scale</td>
       <td colspan="2">Level of Credit Worthiness</td>
     </tr>
-    <tr class="center">
+    <tr [ngClass]="{'active': fData.a}" class="center">
       <td>1</td>
       <td colspan="2">Highest</td>
     </tr>
-    <tr class="center">
+    <tr [ngClass]="{'active': fData.b}" class="center">
       <td>2</td>
       <td colspan="2">High</td>
     </tr>
-    <tr class="center bold green">
+    <tr [ngClass]="{'active': fData.c}" class="center">
       <td>3</td>
       <td colspan="2">Good</td>
     </tr>
-    <tr class="center">
+    <tr [ngClass]="{'active': fData.d}" class="center">
       <td>4</td>
       <td colspan="2">Above Average</td>
     </tr>
-    <tr class="center">
+    <tr [ngClass]="{'active': fData.e}" class="center">
       <td>5</td>
       <td colspan="2">Average</td>
     </tr>
-    <tr class="center">
+    <tr [ngClass]="{'active': fData.f}" class="center">
       <td>6</td>
       <td colspan="2">Below Average</td>
     </tr>
-    <tr class="center">
+    <tr [ngClass]="{'active': fData.g}" class="center">
       <td>7</td>
       <td colspan="2">Weak</td>
     </tr>
-    <tr class="center">
+    <tr [ngClass]="{'active': fData.h}" class="center">
       <td>8</td>
       <td colspan="2">Poor</td>
     </tr>
@@ -83,31 +83,31 @@
     </tr>
     <tr>
       <td style="width: 10%;">1</td>
-      <td>Name :</td>
+      <td>Name : {{SuperRating.cma}}</td>
       <td style="text-align: center">Designation (Institution)</td>
     </tr>
     <tr>
       <td>2</td>
-      <td>Name :</td>
+      <td>Name : {{SuperRating.cmb}}</td>
       <td style="text-align: center">Designation (Institution)</td>
     </tr>
     <tr>
       <td>3</td>
-      <td>Name :</td>
+      <td>Name : {{SuperRating.cmc}}</td>
       <td style="text-align: center">Designation (Institution)</td>
     </tr>
     <tr>
-      <td>Date : 18/11/2021</td>
-      <td colspan="2" style="text-align: center">5th Novmber 2021</td>
+      <td>Date : {{current_date}}</td>
+      <td colspan="2" style="text-align: center">{{current_date2}}</td>
     </tr>
   </table>
 </div>
-  <div class="example-button-row">
+  <div style="margin:1rem 3rem">
     <button
       type="button"
       mat-raised-button
       color="primary"
-      style="margin: 1rem;"
+      style="margin: 1rem 0;"
       (click)="GoToNext()"
     >
       Home

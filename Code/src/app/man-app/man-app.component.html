@@ -9,8 +9,8 @@
 </mat-grid-list>
 
 <form #frm="ngForm" (ngSubmit)="GoToNext(frm.value)">
-  <div>
-    <table id="customers">
+  <div   style="margin:1rem 3rem">
+    <table id="customers" >
       <tr>
         <th>Parameter</th>
         <th>Measure</th>
@@ -44,7 +44,7 @@
       </tr>
       <tr>
         <td rowspan="4"></td>
-        <td>
+        <td class="selectable" (click)="finData.comp = 1;updateData();">
           A. Company Promoters / Managers have Excellent Skills to handle
           company's affairs.
         </td>
@@ -60,24 +60,24 @@
             (change)="updateData()"
           />
         </td>
-        <td rowspan="4">10</td>
+        <td rowspan="4">{{finData._comp}}</td>
       </tr>
       <tr>
-        <td>
+        <td class="selectable" (click)="finData.comp = 2;updateData();">
           B. Company Promoters / Managers have Good Skills to handle company's
           affairs.
         </td>
         <td>2</td>
       </tr>
       <tr>
-        <td>
+        <td class="selectable" (click)="finData.comp = 3;updateData();">
           C. Company Promoters / Managers have Moderate Skills to handle
           company's affairs.
         </td>
         <td>3</td>
       </tr>
       <tr>
-        <td>
+        <td class="selectable" (click)="finData.comp = 4;updateData();">
           D. Company Promoters / Managers lack desired managerial skills and are
           unable to handle company's affairs properly.
         </td>
@@ -94,12 +94,12 @@
       </tr>
       <tr>
         <td rowspan="5"></td>
-        <td>
+        <td class="selectable" (click)="finData.emp = 1;updateData();">
           A. Company has loyal and dedicated employees and their SKILLs and
           MOTIVATION Level is Excellent.
         </td>
         <td>1</td>
-        <td rowspan="5">5</td>
+        <td rowspan="5">3</td>
         <td rowspan="5">15</td>
         <td rowspan="5" class="finAnaIptTd">
           <input
@@ -110,35 +110,35 @@
             (change)="updateData()"
           />
         </td>
-        <td rowspan="5">6</td>
+        <td rowspan="5">{{finData._emp}}</td>
       </tr>
       <tr>
-        <td>
+        <td class="selectable" (click)="finData.emp = 2;updateData();">
           B. Company has loyal and dedicated employees and their SKILLs and
           MOTIVATION Level is High.
         </td>
         <td>2</td>
       </tr>
       <tr>
-        <td>
+        <td class="selectable" (click)="finData.emp = 3;updateData();">
           C. Company has loyal and dedicated employees and their SKILLs and
           MOTIVATION Level is Satisfactory.
         </td>
         <td>3</td>
       </tr>
       <tr>
-        <td>
+        <td class="selectable" (click)="finData.emp = 4;updateData();">
           D. Company has Loyal, Dedicated and Skilled Employees but their
           MOTIVATION Level is Low.
         </td>
         <td>4</td>
       </tr>
       <tr>
-        <td>
+        <td class="selectable" (click)="finData.emp = 5;updateData();">
           E. Company's Employees are Not loyal and dedicated and their SKILLs
           and MOTIVATION Level is also Low.
         </td>
-        <td>4</td>
+        <td>5</td>
       </tr>
       <tr class="aquamarine">
         <td>c. Regulatory Compliances and Reportings</td>
@@ -151,7 +151,7 @@
       </tr>
       <tr>
         <td rowspan="5"></td>
-        <td>
+        <td class="selectable" (click)="finData.reg = 1;updateData();">
           A. Company has been very regular and punctual all the times in payment
           of taxes, filing of annual / periodical returns with all concerned
           regulatory bodies and other agencies / departments.
@@ -168,10 +168,10 @@
             (change)="updateData()"
           />
         </td>
-        <td rowspan="5">8</td>
+        <td rowspan="5">{{finData._reg}}</td>
       </tr>
       <tr>
-        <td>
+        <td class="selectable" (click)="finData.reg = 2;updateData();">
           B. Company has been generally regular and punctual in payment of
           taxes, filing of annual / periodical returns with all concerned
           regulatory bodies and other agencies / departments.
@@ -179,7 +179,7 @@
         <td>2</td>
       </tr>
       <tr>
-        <td>
+        <td class="selectable" (click)="finData.reg = 3;updateData();">
           C. Company has delayed on many occassions payment of taxes, filing of
           annual / periodical returns with some regulatory bodies and other
           agencies / departments.
@@ -187,7 +187,7 @@
         <td>3</td>
       </tr>
       <tr>
-        <td>
+        <td class="selectable" (click)="finData.reg = 4;updateData();">
           D. Company has no systems in place and ignores timely payment of
           taxes, filing of annual / periodical quarterly returns and has been
           punished on few occassions for such violations in the past.
@@ -195,8 +195,8 @@
         <td>4</td>
       </tr>
       <tr>
-        <td>E. New Business - NB</td>
-        <td>4</td>
+        <td class="selectable" (click)="finData.reg = 0;updateData();">E. New Business - NB</td>
+        <td>5</td>
       </tr>
       <tr class="aquamarine">
         <td colspan="2" style="text-align: center">
@@ -205,8 +205,8 @@
         <td>XXX<input type="hidden" [value]="'xxx'" name='t1' /></td>
         <td>XXX<input type="hidden" [value]="'xxx'" name='t2' /></td>
         <td>51<input type="hidden" [value]="'51'" name='t3' /></td>
+        <td>XXX<input type="hidden" [value]="'24'" name='t4' /></td>
         <td>{{ allTotal }}<input type="hidden" [(ngModel)]="allTotal" name='allTotal' /></td>
-        <td>24<input type="hidden" [value]="'24'" name='t5' /></td>
       </tr>
     </table>
   </div>
@@ -215,7 +215,7 @@
       type="submit"
       mat-raised-button
       color="primary"
-      style="margin: 1rem"
+        style="margin:1rem 3rem"
     >
       Next
     </button>

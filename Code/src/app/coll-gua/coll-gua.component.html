@@ -9,7 +9,7 @@
 </mat-grid-list>
 
 <form #frm="ngForm" (ngSubmit)="GoToNext(frm.value)">
-<div>
+<div style="margin:1rem 3rem">
   <table id="customers">
     <tr>
       <th>Parameter</th>
@@ -38,35 +38,35 @@
     </tr>
     <tr>
       <td rowspan="7"></td>
-      <td>A. Company has offered Total Collaterals  having 200 % and more value of the proposed exposure.</td>
+      <td class="selectable" (click)="finData.vtc = 1;updateData();">A. Company has offered Total Collaterals  having 200 % and more value of the proposed exposure.</td>
       <td>1</td>
       <td rowspan="7">8</td>
       <td rowspan="7">64</td>
 	   <td rowspan="7" class="finAnaIptTd"><input type="number" name="vtc" [(ngModel)]="finData.vtc" (change)="updateData()" class="finAnaIpt"></td>
-      <td rowspan="7">16</td>
+      <td rowspan="7">{{finData._vtc}}</td>
     </tr>
     <tr>
-      <td>B. Company has offered Total Collaterals  having 150 % and more value but less than 200 % of the proposed exposure.</td>
+      <td class="selectable" (click)="finData.vtc = 2;updateData();">B. Company has offered Total Collaterals  having 150 % and more value but less than 200 % of the proposed exposure.</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>C. Company has offered Total Collaterals  having 100 % and more value but less than 150 % of the proposed exposure.</td>
+      <td class="selectable" (click)="finData.vtc = 3;updateData();">C. Company has offered Total Collaterals  having 100 % and more value but less than 150 % of the proposed exposure.</td>
       <td>3</td>
     </tr>
     <tr>
-      <td>D. Company has offered Total Collaterals  having 75 % and more value but less than 100 % of the proposed exposure.</td>
+      <td class="selectable" (click)="finData.vtc = 4;updateData();">D. Company has offered Total Collaterals  having 75 % and more value but less than 100 % of the proposed exposure.</td>
       <td>4</td>
     </tr>
     <tr>
-      <td>E. Company has offered Total Collaterals  having 50 % and more value but less than 75 % of the proposed exposure.</td>
+      <td class="selectable" (click)="finData.vtc = 5;updateData();">E. Company has offered Total Collaterals  having 50 % and more value but less than 75 % of the proposed exposure.</td>
       <td>5</td>
     </tr>
     <tr>
-      <td>F. Company has offered Total Collaterals  having value LESS Than 50 % of the proposed exposure.</td>
+      <td class="selectable" (click)="finData.vtc = 6;updateData();">F. Company has offered Total Collaterals  having value LESS Than 50 % of the proposed exposure.</td>
       <td>6</td>
     </tr>
     <tr>
-      <td>G. Company has offered NO Collaterals to secure the proposed exposure.</td>
+      <td class="selectable" (click)="finData.vtc = 7;updateData();">G. Company has offered NO Collaterals to secure the proposed exposure.</td>
       <td>7</td>
     </tr>
     <tr class="aquamarine">
@@ -82,23 +82,23 @@
     </tr>
     <tr>
       <td rowspan="4"></td>
-      <td>A. Company has offered Cash and Cash Equivalent Collaterals having 50 % and more value of the total proposed exposure.</td>
+      <td class="selectable" (click)="finData.vccec = 1;updateData();">A. Company has offered Cash and Cash Equivalent Collaterals having 50 % and more value of the total proposed exposure.</td>
       <td>1</td>
       <td rowspan="4">3</td>
       <td rowspan="4">12</td>
    <td rowspan="4" class="finAnaIptTd"><input type="number" name="vccec" [(ngModel)]="finData.vccec" (change)="updateData()" class="finAnaIpt"></td>
-      <td rowspan="4">12</td>
+      <td rowspan="4">{{finData._vccec}}</td>
     </tr>
     <tr>
-      <td>B. Company has offered Cash and Cash Equivalent Collaterals having 25 % and more but less than 50 % value of the total proposed exposure.</td>
+      <td class="selectable" (click)="finData.vccec = 2;updateData();">B. Company has offered Cash and Cash Equivalent Collaterals having 25 % and more but less than 50 % value of the total proposed exposure.</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>C. Company has offered Cash and Cash Equivalent Collaterals having 10 % and more but less than 25 % value of the total proposed exposure.</td>
+      <td class="selectable" (click)="finData.vccec = 3;updateData();">C. Company has offered Cash and Cash Equivalent Collaterals having 10 % and more but less than 25 % value of the total proposed exposure.</td>
       <td>3</td>
     </tr>
     <tr>
-      <td>D. Company has offered Cash and Cash Equivalent Collaterals  having Less than 10  %  value of the total proposed exposure or No Cash or Cash Equivalent Collaterals are offered.</td>
+      <td class="selectable" (click)="finData.vccec = 4;updateData();">D. Company has offered Cash and Cash Equivalent Collaterals  having Less than 10  %  value of the total proposed exposure or No Cash or Cash Equivalent Collaterals are offered.</td>
       <td>4</td>
     </tr>
     <tr class="aquamarine">
@@ -114,23 +114,23 @@
     </tr>
     <tr>
       <td rowspan="4"></td>
-      <td>A. The proposed guarantors are highly reputed persons and have high networth.</td>
+      <td class="selectable" (click)="finData.gctw = 1;updateData();">A. The proposed guarantors are highly reputed persons and have high networth.</td>
       <td>1</td>
       <td rowspan="4">3</td>
       <td rowspan="4">12</td>
    <td rowspan="4" class="finAnaIptTd"><input type="number" name="gctw" [(ngModel)]="finData.gctw" (change)="updateData()" class="finAnaIpt"></td>
-      <td rowspan="4">6</td>
+      <td rowspan="4">{{finData._gctw}}</td>
     </tr>
     <tr>
-      <td>B. The proposed guarantors are highly reputed persons with moderate networth.</td>
+      <td class="selectable" (click)="finData.gctw = 2;updateData();">B. The proposed guarantors are highly reputed persons with moderate networth.</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>C. The proposed guarantors are respectable persons with  limited means and networth.</td>
+      <td class="selectable" (click)="finData.gctw = 3;updateData();">C. The proposed guarantors are respectable persons with  limited means and networth.</td>
       <td>3</td>
     </tr>
     <tr>
-      <td>D. The proposed guarantors are respectable persons but have almost negligible worth.</td>
+      <td class="selectable" (click)="finData.gctw = 4;updateData();">D. The proposed guarantors are respectable persons but have almost negligible worth.</td>
       <td>4</td>
     </tr>
     <tr class="aquamarine">
@@ -140,8 +140,8 @@
       <td>XXX</td>
       <td>XXX</td>
       <td>88</td>
+      <td>XXX</td>
       <td>{{allTotal}}<input type="hidden" [(ngModel)]="allTotal" name='allTotal' /></td>
-      <td>34</td>
     </tr>
   </table>
 </div>
@@ -150,7 +150,7 @@
       type="submit"
       mat-raised-button
       color="primary"
-      style="margin: 1rem;"
+     style="margin:1rem 3rem"
     >
       Next
     </button>

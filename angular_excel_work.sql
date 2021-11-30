@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 26, 2021 at 11:57 AM
+-- Generation Time: Nov 30, 2021 at 07:46 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -271,7 +271,7 @@ CREATE TABLE `step_2` (
 --
 
 INSERT INTO `step_2` (`id`, `c_id`, `year`, `FinAna`, `ManApp`, `ownership`, `MarkInd`, `TechProf`, `CollGua`, `dataUpload`, `SuperRating`, `iScore`, `RatPara`, `FRatReport`) VALUES
-(10, '27', '5', '{\"derL\":1,\"derC\":2,\"derN\":2,\"crL\":1,\"crC\":1,\"crN\":1,\"srg\":0,\"aDscr\":1,\"aIscr\":1,\"dc\":0,\"sr\":4,\"roce\":5}', '{\"comp\":1,\"emp\":1,\"reg\":1}', '{\"inter\":1,\"loan\":1,\"firm\":1}', '{\"mp\":1,\"cqc\":1,\"sqcr\":1,\"es\":1}', '{\"td\":1,\"ei\":1,\"tpc\":1}', '{\"vtc\":1,\"vccec\":1,\"gctw\":1}', '[[\"m1.jpg\",\"m2.jpg\",\"m3.jpg\"],null,null,null,null,null,null,null]', '{\"cma\":\"Jon Snow\",\"m1\":50,\"cmb\":\"Dani\",\"m2\":50,\"cmc\":\"sersi\",\"m3\":25}', '\"data\"', '\"data\"', ''),
+(10, '27', '5', '{\"derL\":1,\"derC\":2,\"derN\":2,\"crL\":3,\"crC\":2,\"crN\":2,\"srg\":3,\"aDscr\":2,\"aIscr\":2,\"dc\":3,\"sr\":3,\"roce\":4,\"t1\":4,\"allTotal\":106}', '{\"comp\":2,\"emp\":2,\"reg\":2,\"allTotal\":24}', '{\"inter\":2,\"loan\":2,\"firm\":2,\"allTotal\":30}', '{\"mp\":2,\"cqc\":2,\"sqcr\":2,\"es\":3,\"allTotal\":40}', '{\"td\":1,\"ei\":1,\"tpc\":1,\"allTotal\":3}', '{\"vtc\":1,\"vccec\":1,\"gctw\":1,\"allTotal\":3}', '[[\"m1.jpg\",\"m2.jpg\",\"m3.jpg\"],null,null,null,null,null,null,null]', '{\"cma\":\"Jon Snow\",\"m1\":50,\"cmb\":\"Dani\",\"m2\":50,\"cmc\":\"sersi\",\"m3\":25,\"allTotal\":125}', '{\"allTotal1\":626,\"allTotal2\":252,\"allTotal\":331,\"allTotalA\":\"143.94\"}', '\"data\"', ''),
 (13, '32', '4', '{\"derL\":1,\"derC\":2,\"derN\":2,\"crL\":1,\"crC\":1,\"crN\":1,\"srg\":0,\"aDscr\":1,\"aIscr\":1,\"dc\":0,\"sr\":0,\"roce\":3}', '{\"comp\":1,\"emp\":1,\"reg\":1}', '{\"inter\":0,\"loan\":0,\"firm\":0}', '{\"mp\":0,\"cqc\":0,\"sqcr\":0,\"es\":0}', '{\"td\":0,\"ei\":0,\"tpc\":0}', '{\"vtc\":0,\"vccec\":0,\"gctw\":0}', '[[\"p1.jpg\"],[\"p2.jpg\"],[\"p4.jpg\"],[\"p4.jpg\"],[\"p5.jpg\"],[\"p6.jpg\"],[\"p7.jpg\"],[\"p8.jpg\"]]', '{\"cma\":\"A\",\"m1\":12,\"cmb\":\"B\",\"m2\":13,\"cmc\":\"C\",\"m3\":14}', '\"data\"', '\"data\"', 'null');
 
 -- --------------------------------------------------------

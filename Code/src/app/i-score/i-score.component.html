@@ -16,7 +16,7 @@
   </mat-grid-tile>
 </mat-grid-list>
 <form #frm="ngForm" (ngSubmit)="GoToNext(frm.value)">
-<div>
+<div style="margin:1rem 3rem">
   <table id="customers">
     <tr>
       <th colspan="2">Parameter</th>
@@ -29,64 +29,64 @@
       <td>A</td>
       <td>Financial Analysis Score</td>
       <td>253</td>
-      <td>106</td>
-      <td>20.00</td>
-      <td>8.38</td>
+      <td>{{finData.FinAna}}</td>
+      <td>20</td>
+      <td>{{finDataTotal.FinAna}}</td>
     </tr>
     <tr>
       <td>B</td>
       <td>Management Appraisal Score.</td>
-      <td>253</td>
-      <td>106</td>
-      <td>20.00</td>
-      <td>8.38</td>
+      <td>51</td>
+      <td>{{finData.ManApp}}</td>
+      <td>10</td>
+      <td>{{finDataTotal.ManApp}}</td>
     </tr>
     <tr>
       <td>C</td>
       <td>Ownership Appraisal Score</td>
-      <td>253</td>
-      <td>106</td>
-      <td>20.00</td>
-      <td>8.38</td>
+      <td>94</td>
+      <td>{{finData.ownership}}</td>
+      <td>10</td>
+      <td>{{finDataTotal.ownership}}</td>
     </tr>
     <tr>
       <td>D</td>
       <td>Market and Industry Appraisal Score</td>
-      <td>253</td>
-      <td>106</td>
-      <td>20.00</td>
-      <td>8.38</td>
+      <td>84</td>
+      <td>{{finData.MarkInd}}</td>
+      <td>10</td>
+      <td>{{finDataTotal.MarkInd}}</td>
     </tr>
     <tr>
       <td>E</td>
       <td>Technological Appraisal Score</td>
-      <td>253</td>
-      <td>106</td>
-      <td>20.00</td>
-      <td>8.38</td>
+      <td>56</td>
+      <td>{{finData.TechProf}}</td>
+      <td>10</td>
+      <td>{{finDataTotal.TechProf}}</td>
     </tr>
     <tr>
       <td>F</td>
       <td>Collateral and Guarantor Review Score</td>
-      <td>253</td>
-      <td>106</td>
-      <td>20.00</td>
-      <td>8.38</td>
+      <td>88</td>
+      <td>{{finData.CollGua}}</td>
+      <td>20</td>
+      <td>{{finDataTotal.CollGua}}</td>
     </tr>
     <tr>
       <td>G</td>
       <td>Supervisory Rating Score (Rating Committee)</td>
-      <td>253</td>
-      <td>106</td>
-      <td>20.00</td>
-      <td>8.38</td>
+      <td>300</td>
+      <td>{{finData.SuperRating}}</td>
+      <td>20</td>
+      <td>{{finDataTotal.SuperRating}}</td>
     </tr>
     <tr  class="aquamarine">
       <td colspan="2"  style="text-align: center;">Overall Risk Score :</td>
-      <td>626</td>
-      <td>252</td>
-      <td>100</td>
-      <td>41.18</td>
+      <td>{{ allTotal1 }}<input type="hidden" [(ngModel)]="allTotal1" name='allTotal1' /></td>
+      <td>{{ allTotal }}<input type="hidden" [(ngModel)]="allTotal" name='allTotal' /></td>
+      <td>{{ allTotal2 }}<input type="hidden" [(ngModel)]="allTotal2" name='allTotal2' /></td>
+      <td>{{ allTotalA }}<input type="hidden" [(ngModel)]="allTotalA" name='allTotalA' /></td>
     </tr>
   </table>
 </div>
@@ -95,7 +95,7 @@
       type="submit"
       mat-raised-button
       color="primary"
-      style="margin: 1rem;"
+      style="margin:1rem 3rem"
     >
       Next
     </button>

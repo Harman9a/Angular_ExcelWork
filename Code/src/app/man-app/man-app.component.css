@@ -11,6 +11,10 @@
 	width: 100%;
 }
 
+.hide{
+  display: none;
+}
+
 #customers {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -58,4 +62,11 @@
 
 .finAnaIptTd{
   width: 8%;
+}
+.selectable{
+  cursor: pointer;
+}
+
+.selectable:hover {
+  color: green;
 }

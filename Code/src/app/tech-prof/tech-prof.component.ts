@@ -15,8 +15,11 @@ export class TechProfComponent implements OnInit {
 
   finData = {
     td:0,
+    _td:0,
     ei:0,
+    _ei:0,
     tpc:0,
+    _tpc:0,
   }
 
   allTotal = 0;
@@ -26,7 +29,11 @@ export class TechProfComponent implements OnInit {
   }
 
   updateData() {
-    let total = this.finData.td + this.finData.ei + this.finData.tpc;
+    this.finData._td = this.finData.td * 4;
+    this.finData._ei = this.finData.ei * 6;
+    this.finData._tpc = this.finData.tpc * 4;
+
+    let total = this.finData._td + this.finData._ei + this.finData._tpc;
     this.allTotal = total;
   }
 

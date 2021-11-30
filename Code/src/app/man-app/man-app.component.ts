@@ -14,30 +14,55 @@ export class ManAppComponent implements OnInit {
 
   finData = {
     comp: 0,
+    _comp: 0,
     emp: 0,
+    _emp: 0,
     reg: 0,
+    _reg: 0,
   };
   allTotal = 0;
 
   ngOnInit(): void {
     this.getData();
+    this.hideCell();
+  }
+
+  hideCell() {
+    // for(let i = 0 ; i < document.getElementById('customers').rows.length ; i++){
+    //   let l = document.getElementById('customers').rows[i].cells.length;
+    //   console.log(l)
+    //   console.log(document.getElementById('customers').rows[i])
+    //   if(l == 7){
+    //     document.getElementById('customers').rows[i].cells[2].style.display = 'none';
+    //   }
+    //   if(l == 2){
+    //     document.getElementById('customers').rows[i].cells[1].style.display = 'none';
+    //   }
+    //   if(l == 6){
+    //     document.getElementById('customers').rows[i].cells[1].style.display = 'none';
+    //   }
+    // }
   }
 
   getData() {
     var fd = new FormData();
     let c_id = localStorage.getItem('c_id');
-    fd.append("c_id",c_id);
+    fd.append('c_id', c_id);
     fd.append('action_id', 'CHECK_FINAL_DATA_FIN_ANA');
     this.ds.GetFinalForFinAna(fd).subscribe((res) => {
-      if(res[0].ManApp != 'null'){      
-        this.finData = JSON.parse(res[0].ManApp)
+      if (res[0].ManApp != 'null') {
+        this.finData = JSON.parse(res[0].ManApp);
         this.updateData();
       }
     });
   }
 
   updateData() {
-    let total = this.finData.comp + this.finData.emp + this.finData.reg;
+   this.finData._comp = this.finData.comp * 5;
+   this.finData._emp = this.finData.emp * 3;
+   this.finData._reg = this.finData.reg * 4;
+
+    let total = this.finData._comp + this.finData._emp + this.finData._reg;
     this.allTotal = total;
   }
 

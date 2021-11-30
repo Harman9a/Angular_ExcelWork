@@ -8,7 +8,7 @@
   </mat-grid-tile>
 </mat-grid-list>
 
-
+<div style="margin:1rem 3rem">
 <mat-grid-list cols="1" rowHeight="50px" class="aquamarine" style="font-size: 20px;">
 	  <mat-grid-tile>
 		  Promoer's / Owner's Pics
@@ -81,9 +81,12 @@
 </mat-grid-list>
 <file-upload  [(ngModel)]="uploadedFiles6" [multiple]="true" [animation]="true"></file-upload>
 
-<mat-grid-list cols="12" rowHeight="150px" *ngIf="finData[5]">
+<mat-grid-list cols="12" rowHeight="250px" *ngIf="finData[5]">
   <mat-grid-tile [colspan]="2" *ngFor="let i of finData[5]">
-  	<img src="http://localhost/Harman/Node/Angular/angular9App/API/upload/{{i}}" class="myImg" />
+    <video width="320" height="240" controls="" class="myImg">
+      <source src="http://localhost/Harman/Node/Angular/angular9App/API/upload/{{i}}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </mat-grid-tile>
 </mat-grid-list>
 
@@ -94,9 +97,12 @@
 </mat-grid-list>
 <file-upload  [(ngModel)]="uploadedFiles7" [multiple]="true" [animation]="true"></file-upload>
 
-<mat-grid-list cols="12" rowHeight="150px" *ngIf="finData[6]">
+<mat-grid-list cols="12" rowHeight="250px" *ngIf="finData[6]">
   <mat-grid-tile [colspan]="2" *ngFor="let i of finData[6]">
-  	<img src="http://localhost/Harman/Node/Angular/angular9App/API/upload/{{i}}" class="myImg" />
+    <video width="320" height="240" controls="" class="myImg">
+      <source src="http://localhost/Harman/Node/Angular/angular9App/API/upload/{{i}}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </mat-grid-tile>
 </mat-grid-list>
 
@@ -107,30 +113,33 @@
 </mat-grid-list>
 <file-upload  [(ngModel)]="uploadedFiles8" [multiple]="true" [animation]="true"></file-upload>
 
-<mat-grid-list cols="12" rowHeight="150px" *ngIf="finData[7]">
+<mat-grid-list cols="12" rowHeight="250px" *ngIf="finData[7]">
   <mat-grid-tile [colspan]="2" *ngFor="let i of finData[7]">
-  	<img src="http://localhost/Harman/Node/Angular/angular9App/API/upload/{{i}}" class="myImg" />
+    <video width="320" height="240" controls="" class="myImg">
+      <source src="http://localhost/Harman/Node/Angular/angular9App/API/upload/{{i}}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </mat-grid-tile>
 </mat-grid-list>
+</div>
 
   <div class="example-button-row">
     <button
       type="button"
       mat-raised-button
       color="primary"
-      style="margin: 1rem;"
-      (click)="saveImage()"
-    >
-      Save
-    </button>
-    <button
-      type="button"
-      mat-raised-button
-      color="primary"
-      style="margin: 1rem;"
+      style="margin:1rem 3rem"
      	[disabled]="nextbtn"
       (click)="nextGo()"
     >
       Next
+    </button>
+    <button
+      type="button"
+      mat-raised-button
+      style="background-color: green; color: white;margin:1rem 0rem"
+      (click)="saveImage()"
+    >
+      Save
     </button>
   </div>

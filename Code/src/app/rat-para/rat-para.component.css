@@ -59,3 +59,7 @@
 .finAnaIptTd{
   /*width: 8%;*/
 }
+.active{
+  color: green;
+  border: 2px dashed green;
+}

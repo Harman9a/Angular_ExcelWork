@@ -9,7 +9,7 @@
 </mat-grid-list>
 
 <form #frm="ngForm" (ngSubmit)="GoToNext(frm.value)">
-<div>
+<div style="margin:1rem 3rem">
   <table id="customers">
     <tr>
       <th>Parameter</th>
@@ -38,23 +38,23 @@
     </tr>
     <tr>
       <td rowspan="4"></td>
-      <td>A. Technology used by the company is Tested and Not Likely  to change in the long run (Over 5 Yrs) / Or the company  has no dependence on technology.</td>
+      <td class="selectable" (click)="finData.td = 1;updateData();">A. Technology used by the company is Tested and Not Likely  to change in the long run (Over 5 Yrs) / Or the company  has no dependence on technology.</td>
       <td>1</td>
       <td rowspan="4">4</td>
       <td rowspan="4">16</td>
 	   <td rowspan="4" class="finAnaIptTd"><input type="number" name="td" [(ngModel)]="finData.td" class="finAnaIpt" (change)="updateData()"></td>
-      <td rowspan="4">4</td>
+      <td rowspan="4">{{finData._td}}</td>
     </tr>
     <tr>
-      <td>B. Technology used by the company is Tested and Not Likely  to change in the medium term (3-5 years) / Or the company has low dependence on technology.</td>
+      <td class="selectable" (click)="finData.td = 2;updateData();" >B. Technology used by the company is Tested and Not Likely  to change in the medium term (3-5 years) / Or the company has low dependence on technology.</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>C. Technology used by the company is  Tested but likely to change in the medium term (3-5 Yrs).</td>
+      <td class="selectable" (click)="finData.td = 3;updateData();">C. Technology used by the company is  Tested but likely to change in the medium term (3-5 Yrs).</td>
       <td>3</td>
     </tr>
     <tr>
-      <td>D. Technology used by the company is outdated  or  subject to very fast obsolescence or technology as yet untried/untested</td>
+      <td class="selectable" (click)="finData.td = 4;updateData();">D. Technology used by the company is outdated  or  subject to very fast obsolescence or technology as yet untried/untested</td>
       <td>4</td>
     </tr>
     <tr class="aquamarine">
@@ -70,23 +70,23 @@
     </tr>
     <tr>
       <td rowspan="4"></td>
-      <td>A. Company comes in the category of non-poluting industries  and is not likely to face any pollution related issues in future. Or The Company is a Service Industry or in any such business which has No Pollution Issue.</td>
+      <td class="selectable" (click)="finData.ei = 1;updateData();">A. Company comes in the category of non-poluting industries  and is not likely to face any pollution related issues in future. Or The Company is a Service Industry or in any such business which has No Pollution Issue.</td>
       <td>1</td>
       <td rowspan="4">6</td>
       <td rowspan="4">24</td>
    <td rowspan="4" class="finAnaIptTd"><input type="number" name="ei" [(ngModel)]="finData.ei" class="finAnaIpt" (change)="updateData()"></td>
-      <td rowspan="4">6</td>
+      <td rowspan="4">{{finData._ei}}</td>
     </tr>
     <tr>
-      <td>B. Company comes in the category of polluting industries  but fully complies with current norms which may change in future.</td>
+      <td class="selectable" (click)="finData.ei = 2;updateData();">B. Company comes in the category of polluting industries  but fully complies with current norms which may change in future.</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>C. Company comes in the category of polluting industries  but Partially complies with current norms which may change in future.</td>
+      <td class="selectable" (click)="finData.ei = 3;updateData();">C. Company comes in the category of polluting industries  but Partially complies with current norms which may change in future.</td>
       <td>3</td>
     </tr>
     <tr>
-      <td>D. Company comes in the category of polluting industries  but does not care to comply with current norms.</td>
+      <td class="selectable" (click)="finData.ei = 4;updateData();">D. Company comes in the category of polluting industries  but does not care to comply with current norms.</td>
       <td>4</td>
     </tr>
     <tr class="aquamarine">
@@ -102,23 +102,23 @@
     </tr>
     <tr>
       <td rowspan="4"></td>
-      <td>A. Company has  FULLY Technically and Professionally Skilled Personnel to run the business successfully. </td>
+      <td class="selectable" (click)="finData.tpc = 1;updateData();">A. Company has  FULLY Technically and Professionally Skilled Personnel to run the business successfully. </td>
       <td>1</td>
       <td rowspan="4">4</td>
       <td rowspan="4">16</td>
    <td rowspan="4" class="finAnaIptTd"><input type="number" name="tpc" [(ngModel)]="finData.tpc" class="finAnaIpt" (change)="updateData()"></td>
-      <td rowspan="4">8</td>
+      <td rowspan="4">{{finData._tpc}}</td>
     </tr>
     <tr>
-      <td>B. Company has  "PARTIALLY" Technically and Professionally Skilled Personnel to run the business.</td>
+      <td class="selectable" (click)="finData.tpc = 2;updateData();">B. Company has  "PARTIALLY" Technically and Professionally Skilled Personnel to run the business.</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>C. Company has "Low number of Technically and Professionally Skilled" Personnel to run the business which is  affecting it's performance.</td>
+      <td class="selectable" (click)="finData.tpc = 3;updateData();">C. Company has "Low number of Technically and Professionally Skilled" Personnel to run the business which is  affecting it's performance.</td>
       <td>3</td>
     </tr>
     <tr>
-      <td>D. Company has NO Technically and Professionally Skilled personnel to run the business which is very badly affecting it's performance.</td>
+      <td class="selectable" (click)="finData.tpc = 4;updateData();">D. Company has NO Technically and Professionally Skilled personnel to run the business which is very badly affecting it's performance.</td>
       <td>4</td>
     </tr>
     <tr class="aquamarine">
@@ -128,8 +128,8 @@
       <td>XXX</td>
       <td>XXX</td>
       <td>56</td>
+      <td>XXX</td>
       <td>{{allTotal}}<input type="hidden" [(ngModel)]="allTotal" name='allTotal' /></td>
-      <td>18</td>
     </tr>
   </table>
 </div>
@@ -138,7 +138,7 @@
       type="submit"
       mat-raised-button
       color="primary"
-      style="margin: 1rem;"
+     style="margin:1rem 3rem"
     >
       Next
     </button>

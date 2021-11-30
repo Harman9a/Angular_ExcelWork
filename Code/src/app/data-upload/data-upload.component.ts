@@ -120,6 +120,7 @@ export class DataUploadComponent implements OnInit {
               if(res == true){
                 // this.router.navigateByUrl('/SuperRating');
                 this.nextbtn = false;
+                this.getData()
               }
             });
         }else{

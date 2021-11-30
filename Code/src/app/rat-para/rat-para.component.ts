@@ -11,14 +11,18 @@ export class RatParaComponent implements OnInit {
  
   constructor(private ds: DataService, private router:Router) { }
 
-  fData = [];
+  fData = {
+    a:false,
+    b:false,
+    c:false,
+    d:false,
+    e:false,
+    f:false,
+    g:false,
+    h:false,
+  };
 
-  finData = {
-    mp:0,
-    cqc:0,
-    sqcr:0,
-    es:0
-  }
+  finData = [];
 
   ngOnInit(): void {
     this.getData();
@@ -26,15 +30,33 @@ export class RatParaComponent implements OnInit {
 
   getData(){
     var fd = new FormData();
-    fd.append('action_id', 'GET_FINAL_DATA_FIN_ANA');
+    let c_id = localStorage.getItem('c_id');
+    fd.append("c_id",c_id);
+    fd.append('action_id', 'CHECK_FINAL_DATA_FIN_ANA');
     this.ds.GetFinalForFinAna(fd).subscribe((res) => {
-      this.fData = JSON.parse(res[0].data);
-      this.setData()
+      this.finData = JSON.parse(res[0].iScore);
+      this.updateData(JSON.parse(res[0].iScore))
     });
   }
-  
-  setData(){
-    console.log(this.fData)
+
+  updateData(iScore){
+    if(iScore.allTotalA < 35){
+      this.fData.a = true;
+    }else if(iScore.allTotalA >= 35 && iScore.allTotalA < 40){
+      this.fData.b = true;
+    }else if(iScore.allTotalA >= 40 && iScore.allTotalA < 45){
+      this.fData.c = true;
+    }else if(iScore.allTotalA >= 45 && iScore.allTotalA < 55){
+      this.fData.d = true;
+    }else if(iScore.allTotalA >= 55 && iScore.allTotalA < 60){
+      this.fData.e = true;
+    }else if(iScore.allTotalA >= 60 && iScore.allTotalA < 65){
+      this.fData.f = true;
+    }else if(iScore.allTotalA >= 65 && iScore.allTotalA < 70){
+      this.fData.g = true;
+    }else if(iScore.allTotalA > 70){
+      this.fData.h = true;
+    }
   }
 
   GoToNext(data){

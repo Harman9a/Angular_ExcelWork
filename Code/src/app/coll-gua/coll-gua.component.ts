@@ -15,8 +15,11 @@ export class CollGuaComponent implements OnInit {
 
   finData = {
     vtc:0,
+    _vtc:0,
     vccec:0,
+    _vccec:0,
     gctw:0,
+    _gctw:0,
   }
 
   allTotal = 0;
@@ -39,7 +42,11 @@ export class CollGuaComponent implements OnInit {
   }
 
   updateData() {
-    let total = this.finData.vtc + this.finData.vccec + this.finData.gctw;
+    this.finData._vtc = this.finData.vtc * 8;
+    this.finData._vccec = this.finData.vccec * 3;
+    this.finData._gctw = this.finData.gctw * 3;
+
+    let total = this.finData._vtc + this.finData._vccec + this.finData._gctw;
     this.allTotal = total;
   }
 
